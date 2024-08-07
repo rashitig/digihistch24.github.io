@@ -194,9 +194,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "book-of-abstracts",
+    "title": "Digital History Switzerland 2024 Book of Abstracts",
     "section": "",
-    "text": "This repository contains Book of Abstracts for the Digital History Switzerland 2024. Historical Research, Digital Literacy and Algorithmic Criticism. The data in this repository is openly available to everyone and is intended to support reproducible research.\n    \n\n\n\nThe structure of this repository follows the Advanced Structure for Data Analysis of The Turing Way and is organized as follows:\n\nsubmissions/: a directory containing the submissions for the conference\nbook-of-abstracts.md: the introduction to the Book of Abstracts\n\n\n\n\nThese data are openly available to everyone and can be used for any research or educational purpose. If you use this data in your research, please cite as specified in CITATION.cff. The following citation formats are also available through Zenodo:\n\nBibTeX\nCSL\nDataCite\nDublin Core\nDCAT\nJSON\nJSON-LD\nGeoJSON\nMARCXML\n\nZenodo provides an API (REST & OAI-PMH) to access the data. For example, the following command will return the metadata for the most recent version of the data\ncurl -i https://zenodo.org/api/records/ZENODO_RECORD\n\n\n\nThis project is maintained by @digihistch24. Please understand that we can’t provide individual support via email. We also believe that help is much more valuable when it’s shared publicly, so more people can benefit from it.\n\n\n\nType\nPlatforms\n\n\n\n\n🚨 Bug Reports\nGitHub Issue Tracker\n\n\n📊 Report bad data\nGitHub Issue Tracker\n\n\n📚 Docs Issue\nGitHub Issue Tracker\n\n\n🎁 Feature Requests\nGitHub Issue Tracker\n\n\n🛡 Report a security vulnerability\nSee SECURITY.md\n\n\n💬 General Questions\nGitHub Discussions\n\n\n\n\n\n\n\nAdd all submissions to the Book of Abstracts\nAdd a Table of Contents to the Book of Abstracts\nAdd an introduction to the Book of Abstracts\nAdd styling to the Book of Abstracts\n\n\n\n\nAll contributions to this repository are welcome! If you find errors or problems with the data, or if you want to add new data or features, please open an issue or pull request. Please read CONTRIBUTING.md for details on our code of conduct and the process for submitting pull requests.\n\n\n\nWe use SemVer for versioning. The available versions are listed in the tags on this repository.\n\n\n\n\nMoritz Mähr - Initial work - maehr\nMoritz Twente - Submissions - mtwente\nKapitolina Kostina - Submissions - consincopa\n\nSee also the list of contributors who contributed to this project.\n\n\n\nThe data in this repository is released under the Creative Commons Attribution 4.0 International (CC BY 4.0) License - see the LICENSE-CCBYSA file for details. By using this data, you agree to give appropriate credit to the original author(s) and to indicate if any modifications have been made.\nThe code in this repository is released under the GNU Affero General Public License v3.0 - see the LICENSE-AGPL file for details. By using this code, you agree to make any modifications available under the same license.",
+    "text": "This repository contains This repository contains Book of Abstracts for the Digital History Switzerland 2024. Historical Research, Digital Literacy and Algorithmic Criticism. The data in this repository is openly available to everyone and is intended to support reproducible research.\n    \n\n\n\nThe structure of this repository follows the Advanced Structure for Data Analysis of The Turing Way and is organized as follows:\n\nsubmissions/: Contains the submissions for the conference.\nbook-of-abstracts.md: The introduction to the book of abstracts.\n\n\n\n\nThese data are openly available to everyone and can be used for any research or educational purpose. If you use this data in your research, please cite as specified in CITATION.cff. The following citation formats are also available through Zenodo:\n\nBibTeX\nCSL\nDataCite\nDublin Core\nDCAT\nJSON\nJSON-LD\nGeoJSON\nMARCXML\n\nZenodo provides an API (REST & OAI-PMH) to access the data. For example, the following command will return the metadata for the most recent version of the data\ncurl -i https://zenodo.org/api/records/ZENODO_RECORD\n\n\n\nThis project is maintained by @digihistch24. Please understand that we can’t provide individual support via email. We also believe that help is much more valuable when it’s shared publicly, so more people can benefit from it.\n\n\n\nType\nPlatforms\n\n\n\n\n🚨 Bug Reports\nGitHub Issue Tracker\n\n\n📊 Report bad data\nGitHub Issue Tracker\n\n\n📚 Docs Issue\nGitHub Issue Tracker\n\n\n🎁 Feature Requests\nGitHub Issue Tracker\n\n\n🛡 Report a security vulnerability\nSee SECURITY.md\n\n\n💬 General Questions\nGitHub Discussions\n\n\n\n\n\n\n\nAdd all submissions to the Book of Abstracts\nAdd a Table of Contents to the Book of Abstracts\nAdd an introduction to the Book of Abstracts\nAdd styling to the Book of Abstracts\n\n\n\n\nAll contributions to this repository are welcome! If you find errors or problems with the data, or if you want to add new data or features, please open an issue or pull request. Please read CONTRIBUTING.md for details on our code of conduct and the process for submitting pull requests.\n\n\n\nWe use SemVer for versioning. The available versions are listed in the tags on this repository.\n\n\n\n\nMoritz Mähr - Initial work - maehr\nMoritz Twente - Submissions - mtwente\nKapitolina Kostina - Submissions - consincopa\n\nSee also the list of contributors who contributed to this project.\n\n\n\nThe data in this repository is released under the Creative Commons Attribution 4.0 International (CC BY 4.0) License - see the LICENSE-CCBYSA file for details. By using this data, you agree to give appropriate credit to the original author(s) and to indicate if any modifications have been made.\nThe code in this repository is released under the GNU Affero General Public License v3.0 - see the LICENSE-AGPL file for details. By using this code, you agree to make any modifications available under the same license.",
     "crumbs": [
       "Abstracts",
       "About"
@@ -205,9 +205,9 @@
   {
     "objectID": "index.html#repository-structure",
     "href": "index.html#repository-structure",
-    "title": "book-of-abstracts",
+    "title": "Digital History Switzerland 2024 Book of Abstracts",
     "section": "",
-    "text": "The structure of this repository follows the Advanced Structure for Data Analysis of The Turing Way and is organized as follows:\n\nsubmissions/: a directory containing the submissions for the conference\nbook-of-abstracts.md: the introduction to the Book of Abstracts",
+    "text": "The structure of this repository follows the Advanced Structure for Data Analysis of The Turing Way and is organized as follows:\n\nsubmissions/: Contains the submissions for the conference.\nbook-of-abstracts.md: The introduction to the book of abstracts.",
     "crumbs": [
       "Abstracts",
       "About"
@@ -216,7 +216,7 @@
   {
     "objectID": "index.html#use",
     "href": "index.html#use",
-    "title": "book-of-abstracts",
+    "title": "Digital History Switzerland 2024 Book of Abstracts",
     "section": "",
     "text": "These data are openly available to everyone and can be used for any research or educational purpose. If you use this data in your research, please cite as specified in CITATION.cff. The following citation formats are also available through Zenodo:\n\nBibTeX\nCSL\nDataCite\nDublin Core\nDCAT\nJSON\nJSON-LD\nGeoJSON\nMARCXML\n\nZenodo provides an API (REST & OAI-PMH) to access the data. For example, the following command will return the metadata for the most recent version of the data\ncurl -i https://zenodo.org/api/records/ZENODO_RECORD",
     "crumbs": [
@@ -227,7 +227,7 @@
   {
     "objectID": "index.html#support",
     "href": "index.html#support",
-    "title": "book-of-abstracts",
+    "title": "Digital History Switzerland 2024 Book of Abstracts",
     "section": "",
     "text": "This project is maintained by @digihistch24. Please understand that we can’t provide individual support via email. We also believe that help is much more valuable when it’s shared publicly, so more people can benefit from it.\n\n\n\nType\nPlatforms\n\n\n\n\n🚨 Bug Reports\nGitHub Issue Tracker\n\n\n📊 Report bad data\nGitHub Issue Tracker\n\n\n📚 Docs Issue\nGitHub Issue Tracker\n\n\n🎁 Feature Requests\nGitHub Issue Tracker\n\n\n🛡 Report a security vulnerability\nSee SECURITY.md\n\n\n💬 General Questions\nGitHub Discussions",
     "crumbs": [
@@ -238,7 +238,7 @@
   {
     "objectID": "index.html#roadmap",
     "href": "index.html#roadmap",
-    "title": "book-of-abstracts",
+    "title": "Digital History Switzerland 2024 Book of Abstracts",
     "section": "",
     "text": "Add all submissions to the Book of Abstracts\nAdd a Table of Contents to the Book of Abstracts\nAdd an introduction to the Book of Abstracts\nAdd styling to the Book of Abstracts",
     "crumbs": [
@@ -249,7 +249,7 @@
   {
     "objectID": "index.html#contributing",
     "href": "index.html#contributing",
-    "title": "book-of-abstracts",
+    "title": "Digital History Switzerland 2024 Book of Abstracts",
     "section": "",
     "text": "All contributions to this repository are welcome! If you find errors or problems with the data, or if you want to add new data or features, please open an issue or pull request. Please read CONTRIBUTING.md for details on our code of conduct and the process for submitting pull requests.",
     "crumbs": [
@@ -260,7 +260,7 @@
   {
     "objectID": "index.html#versioning",
     "href": "index.html#versioning",
-    "title": "book-of-abstracts",
+    "title": "Digital History Switzerland 2024 Book of Abstracts",
     "section": "",
     "text": "We use SemVer for versioning. The available versions are listed in the tags on this repository.",
     "crumbs": [
@@ -271,7 +271,7 @@
   {
     "objectID": "index.html#authors-and-acknowledgment",
     "href": "index.html#authors-and-acknowledgment",
-    "title": "book-of-abstracts",
+    "title": "Digital History Switzerland 2024 Book of Abstracts",
     "section": "",
     "text": "Moritz Mähr - Initial work - maehr\nMoritz Twente - Submissions - mtwente\nKapitolina Kostina - Submissions - consincopa\n\nSee also the list of contributors who contributed to this project.",
     "crumbs": [
@@ -282,7 +282,7 @@
   {
     "objectID": "index.html#license",
     "href": "index.html#license",
-    "title": "book-of-abstracts",
+    "title": "Digital History Switzerland 2024 Book of Abstracts",
     "section": "",
     "text": "The data in this repository is released under the Creative Commons Attribution 4.0 International (CC BY 4.0) License - see the LICENSE-CCBYSA file for details. By using this data, you agree to give appropriate credit to the original author(s) and to indicate if any modifications have been made.\nThe code in this repository is released under the GNU Affero General Public License v3.0 - see the LICENSE-AGPL file for details. By using this code, you agree to make any modifications available under the same license.",
     "crumbs": [
@@ -308,7 +308,7 @@
     "text": "This is a placeholder for the extended abstract of the paper. It should be between 1500 and 2000 words (excluding references).\nCheck https://quarto.org/docs/authoring/markdown-basics.html for more information on how to use markdown, https://quarto.org/docs/authoring/cross-references.html for more information on how to use cross-references like this (See Figure 1 and Figure 2), and https://quarto.org/docs/authoring/footnotes-and-citations.html for more information on how to use citations like this one (Haber 2011, 11).\n\n\n\n\n\n\nFigure caption text.\n\n\n\n\nFigure 1",
     "crumbs": [
       "Abstracts",
-      "Template"
+      "Submission Template"
     ]
   },
   {
@@ -319,7 +319,7 @@
     "text": "This is a placeholder for the extended abstract of the paper. It should be between 1500 and 2000 words (excluding references).\nCheck https://quarto.org/docs/authoring/markdown-basics.html for more information on how to use markdown, https://quarto.org/docs/authoring/cross-references.html for more information on how to use cross-references like this (See Figure 1 and Figure 2), and https://quarto.org/docs/authoring/footnotes-and-citations.html for more information on how to use citations like this one (Haber 2011, 11).\n\n\n\n\n\n\nFigure caption text.\n\n\n\n\nFigure 1",
     "crumbs": [
       "Abstracts",
-      "Template"
+      "Submission Template"
     ]
   },
   {
@@ -330,7 +330,7 @@
     "text": "Section 1\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.",
     "crumbs": [
       "Abstracts",
-      "Template"
+      "Submission Template"
     ]
   },
   {
@@ -341,7 +341,7 @@
     "text": "Quarto Usage\nFor advanced users, we recommend exploring features as Code Blocks: Use triple backticks () to create code blocks. Specify the language for syntax highlighting (e.g.,python`). Quarto lets you run code and embed its output directly into your document. See https://quarto.org/docs/computations/inline-code.html for guidance.\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport numpy as np\n\n# Create some simple synthetic historical data\nnp.random.seed(0)\nyears = pd.date_range('1900-01-01', periods=120, freq='Y')\nvalues = np.random.normal(loc=0, scale=1, size=120).cumsum()\n\ndata = pd.DataFrame({\n    'Year': years.year,\n    'Value': values\n})\n\n# Save the data to a CSV file\ndata.to_csv('data/sample_data.csv', index=False)\n\n\n# Plotting the data\nplt.figure(figsize=(10, 6))\nplt.plot(data['Year'], data['Value'], marker='o')\nplt.title('Synthetic Historical Data')\nplt.xlabel('Year')\nplt.ylabel('Value')\nplt.grid(True)\nplt.show()",
     "crumbs": [
       "Abstracts",
-      "Template"
+      "Submission Template"
     ]
   }
 ]

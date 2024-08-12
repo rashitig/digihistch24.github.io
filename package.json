@@ -1,13 +1,13 @@
 {
-	"name": "REPO_NAME",
-	"description": "SHORT_DESCRIPTION",
-	"author": "FULLNAME <[INSERT CONTACT METHOD]>",
-	"url": "https://github.com/USERNAME/REPO_NAME/issues",
+	"name": "book-of-abstracts",
+	"description": "This repository contains Book of Abstracts for the Digital History Switzerland 2024. Historical Research, Digital Literacy and Algorithmic Criticism.",
+	"author": "Moritz Mähr <digital-history-2024@unibas.ch>",
+	"url": "https://github.com/digihistch24/book-of-abstracts/issues",
 	"license": "AGPL-3.0",
 	"scripts": {
-		"check": "prettier --ignore-path .gitignore  --check . '!{CODE_OF_CONDUCT.md,LICENSE-AGPL.md,LICENSE-CCBY.md,_layouts/default.html,package-lock.json,pnpm-lock.yaml,yarn.lock}'",
+		"check": "prettier --ignore-path .gitignore  --check . '!{CODE_OF_CONDUCT.md,LICENSE-AGPL.md,LICENSE-CCBYSA.md,fonts/LICENSE-OFL.md,package-lock.json,pnpm-lock.yaml,yarn.lock}'",
 		"commit": "cz",
-		"format": "prettier --ignore-path .gitignore --write . '!{CODE_OF_CONDUCT.md,LICENSE-AGPL.md,LICENSE-CCBY.md,_layouts/default.html,package-lock.json,pnpm-lock.yaml,yarn.lock}'",
+		"format": "prettier --ignore-path .gitignore --write . '!{CODE_OF_CONDUCT.md,LICENSE-AGPL.md,LICENSE-CCBYSA.md,fonts/LICENSE-OFL.md,package-lock.json,pnpm-lock.yaml,yarn.lock}'",
 		"prepare": "husky",
 		"changelog": "npm exec git-cliff -- --config cliff.toml"
 	},
@@ -15,9 +15,9 @@
 		"commitizen": "^4.3.0",
 		"cz": "^1.8.2",
 		"cz-conventional-changelog": "^3.3.0",
-		"git-cliff": "^2.2.1",
-		"husky": "^9.0.11",
-		"prettier": "^3.2.5"
+		"git-cliff": "^2.4.0",
+		"husky": "^9.1.4",
+		"prettier": "^3.3.3"
 	},
 	"type": "module",
 	"config": {

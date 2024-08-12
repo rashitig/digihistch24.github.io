@@ -2,13 +2,13 @@ project:
   type: website
 
 website:
-  title: REPO_NAME
-  favicon: android-chrome-512x512.png
+  title: DigiHistCH24 Book of Abstracts
+  favicon: logo.png
   open-graph: true
   twitter-card: true
-  site-url: https://USERNAME.github.io/REPO_NAME/
-  repo-url: https://github.com/USERNAME/REPO_NAME/
-  issue-url: https://github.com/USERNAME/REPO_NAME/issues/new/choose
+  site-url: https://digihistch24.github.io/book-of-abstracts/
+  repo-url: https://github.com/digihistch24/book-of-abstracts/
+  issue-url: https://github.com/digihistch24/book-of-abstracts/issues/new/choose
   repo-actions: [edit, issue]
   page-navigation: true
   bread-crumbs: true
@@ -17,22 +17,33 @@ website:
     show-item-context: true
     type: overlay
   navbar:
-    logo: android-chrome-512x512.png
+    background: '#a5d7d2'
     logo-alt: ''
-    title: REPO_NAME
+    title: '***DigiHistCH24*** Book of Abstracts'
     tools:
       - icon: github
-        url: https://github.com/USERNAME/REPO_NAME/
+        url: https://github.com/digihistch24/book-of-abstracts/
     left:
-      - text: Readme
+      - text: Abstracts
         href: index.qmd
-      - text: Report
-        href: report.md
+      - text: Conference Program
+        href: https://conferences.unibas.ch/frontend/index.php?page_id=1882
+      - text: Registration
+        href: https://conferences.unibas.ch/frontend/index.php?page_id=1424&booking_registration_action=show&booking_registration_controller=offer
+      - text: Call for Contributions
+        href: https://conferences.unibas.ch/frontend/index.php?folder_id=234&page_id=
+      - text: About
+        href: about.qmd
 
   sidebar:
+    style: 'docked'
     contents:
-      - section: REPO_NAME
+      - section: Abstracts
         href: index.qmd
+        contents:
+          - auto: submissions/*/index.qmd
+      - section: About
+        href: about.qmd
         contents:
           - text: Changelog
             href: CHANGELOG.md
@@ -41,22 +52,26 @@ website:
           - text: Contributing
             href: CONTRIBUTING.md
           - text: License (Data)
-            href: LICENSE-CCBY.md
+            href: LICENSE-CCBYSA.md
           - text: License (Code)
             href: LICENSE-AGPL.md
           - text: Security
             href: SECURITY.md
-      - href: report.md
-        contents: project-management/*
 
 format:
   html:
+    link-external-icon: true
+    link-external-newwindow: true
     toc: true
     theme: cosmo
     code-copy: true
     code-overflow: wrap
     css: styles.css
+    include-in-header:
+      - custom-header.html
+    license: CC BY-SA 4.0
+    page-layout: full
 
-freeze: true
+freeze: false
 
 editor: visual

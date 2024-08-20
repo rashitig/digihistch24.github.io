@@ -1,0 +1,506 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta charset="utf-8"><style>:where(img){height:auto}</style>
+
+
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+
+<meta name="author" content="Laurent Heyberger">
+<meta name="author" content="Gabriel Frossard">
+<meta name="author" content="Wissam Al-Kendi">
+<meta name="dcterms.date" content="2024-07-22">
+<meta name="keywords" content="Demographic history, Industrialization, Handwritten Text Recognition">
+
+<title>Belpop, a history-computer project to study the population of a town during early industrialization – DigiHistCH24 Book of Abstracts</title>
+<style>code{white-space:pre-wrap}span.smallcaps{font-variant:small-caps}div.columns{gap:min(4vw,1.5em);display:flex}div.column{flex:auto;overflow-x:auto}div.hanging-indent{text-indent:-1.5em;margin-left:1.5em}ul.task-list{list-style:none}ul.task-list li input[type=checkbox]{vertical-align:middle;width:.8em;margin:0 .8em .2em -1em}pre>code.sourceCode{white-space:pre;position:relative}pre>code.sourceCode>span{line-height:1.25}pre>code.sourceCode>span:empty{height:1.2em}.sourceCode{overflow:visible}code.sourceCode>span{color:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}div.sourceCode{margin:1em 0}pre.sourceCode{margin:0}@media screen{div.sourceCode{overflow:auto}}@media print{pre>code.sourceCode{white-space:pre-wrap}pre>code.sourceCode>span{text-indent:-5em;padding-left:5em;display:inline-block}}pre.numberSource code{counter-reset:source-line 0}pre.numberSource code>span{counter-increment:source-line;position:relative;left:-4em}pre.numberSource code>span>a:first-child:before{content:counter(source-line);text-align:right;vertical-align:baseline;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;-khtml-user-select:none;border:none;width:4em;padding:0 4px;display:inline-block;position:relative;left:-1em}pre.numberSource{margin-left:3em;padding-left:4px}@media screen{pre>code.sourceCode>span>a:first-child:before{text-decoration:underline}}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../submissions/453/index.html" rel="next">
+<link href="../../submissions/450/index.html" rel="prev">
+<link href="../../logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": true,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script defer="" data-domain="digihistch24.github.io/book-of-abstracts" src="https://plausible.io/js/script.outbound-links.js"></script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Belpop, a history-computer project to study the population of a town during early industrialization – DigiHistCH24 Book of Abstracts">
+<meta property="og:description" content="The Belpop project aims to reconstruct the demographic behavior of the population of a mushrooming working-class town during industrialization: Belfort. Belfort is a hapax in the French urban landscape of the 19th century, as the demographic growth of its main working- class district far outstripped that of the most dynamic Parisian suburbs. The underlying hypothesis is that the massive Alsatian migration that followed the 1870-71 conflict, and the concomitant industrialization and militarization of the city, profoundly altered the demographic behavior of the people of Belfort. This makes Belfort an ideal place to study the sexualization of social relations in 19th-century Europe. These relationships will first be understood through the study of out-of-wedlock births, in their socio-cultural and bio-demographic dimensions. In the long term, this project will also enable to answer many other questions related to event history analysis, a method that is currently undergoing major development, thanks to artificial intelligence (AI), and which is profoundly modifying the questions raised by historical demography and social history. The contributions of deep learning make it possible to plan a complete analysis of Belfort’s birth (ECN) and death (ECD) civil registers (1807-1919), thanks to HTR methods applied to these sources (two interdisciplinary computer science-history theses in progress). This project is part of the SOSI CNRS ObHisPop (Observatoire de l’Histoire de la Population française: grandes bases de données et IA), which federates seven laboratories and aims to share the advances of interdisciplinary research in terms of automating the constitution of databases in historical demography. Challenges also include linking (matching individual data) the ECN and ECD databases, and eventually the DMC database (DMC is the city’s main employer of women).">
+<meta property="og:image" content="https://digihistch24.github.io/book-of-abstracts/submissions/452/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
+<meta property="og:site_name" content="DigiHistCH24 Book of Abstracts">
+<meta name="twitter:title" content="Belpop, a history-computer project to study the population of a town during early industrialization – DigiHistCH24 Book of Abstracts">
+<meta name="twitter:description" content="The Belpop project aims to reconstruct the demographic behavior of the population of a mushrooming working-class town during industrialization: Belfort. Belfort is a hapax in the French urban landscape of the 19th century, as the demographic growth of its main working- class district far outstripped that of the most dynamic Parisian suburbs. The underlying hypothesis is that the massive Alsatian migration that followed the 1870-71 conflict, and the concomitant industrialization and militarization of the city, profoundly altered the demographic behavior of the people of Belfort. This makes Belfort an ideal place to study the sexualization of social relations in 19th-century Europe. These relationships will first be understood through the study of out-of-wedlock births, in their socio-cultural and bio-demographic dimensions. In the long term, this project will also enable to answer many other questions related to event history analysis, a method that is currently undergoing major development, thanks to artificial intelligence (AI), and which is profoundly modifying the questions raised by historical demography and social history. The contributions of deep learning make it possible to plan a complete analysis of Belfort’s birth (ECN) and death (ECD) civil registers (1807-1919), thanks to HTR methods applied to these sources (two interdisciplinary computer science-history theses in progress). This project is part of the SOSI CNRS ObHisPop (Observatoire de l’Histoire de la Population française: grandes bases de données et IA), which federates seven laboratories and aims to share the advances of interdisciplinary research in terms of automating the constitution of databases in historical demography. Challenges also include linking (matching individual data) the ECN and ECD databases, and eventually the DMC database (DMC is the city’s main employer of women).">
+<meta name="twitter:image" content="https://digihistch24.github.io/book-of-abstracts/submissions/452/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="docked nav-fixed nav-sidebar">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="fixed-top headroom">
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+      <div class="container-fluid navbar-container">
+      <div class="mx-auto navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title"><strong><em>DigiHistCH24</em></strong> Book of Abstracts</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="window.quartoToggleHeadroom&&window.quartoToggleHeadroom();
+">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="me-auto navbar-nav navbar-nav-scroll">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+<span class="menu-text">Abstracts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://conferences.unibas.ch/frontend/index.php?page_id=1882" target="_blank"> 
+<span class="menu-text">Conference Program</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://conferences.unibas.ch/frontend/index.php?page_id=1424&amp;booking_registration_action=show&amp;booking_registration_controller=offer" target="_blank"> 
+<span class="menu-text">Registration</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://conferences.unibas.ch/frontend/index.php?folder_id=234&amp;page_id=" target="_blank"> 
+<span class="menu-text">Call for Contributions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <a href="https://github.com/digihistch24/book-of-abstracts/" title="" class="px-1 quarto-navigation-tool" aria-label="" target="_blank"><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="btn quarto-btn-toggle" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="window.quartoToggleHeadroom&&window.quartoToggleHeadroom();
+">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../index.html">Abstracts</a></li><li class="breadcrumb-item"><a href="../../submissions/452/index.html">Belpop, a history-computer project to study the population of a town during early industrialization</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="window.quartoToggleHeadroom&&window.quartoToggleHeadroom();
+">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="page-columns page-layout-full page-navbar page-rows-contents quarto-container">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="collapse collapse-horizontal docked overflow-auto quarto-sidebar-collapse-item sidebar sidebar-navigation">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Abstracts</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse depth1 list-unstyled show sidebar-section">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/405/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data-Driven Approaches to Studying the History of Museums on the Web: Challenges and Opportunities for New Discoveries</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/427/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">On a solid ground. Building software for a 120-year-old research project applying modern engineering practices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/428/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tables are tricky. Testing Text Encoding Initiative (TEI) Guidelines for FAIR upcycling of digitised historical statistics.</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/429/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Training engineering students through a digital humanities project: Techn’hom Time Machine</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/431/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">From manual work to artificial intelligence: developments in data literacy using the example of the Repertorium Academicum Germanicum (2001-2024)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/438/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A handful of pixels of blood</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/445/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teaching the use of Automated Text Recognition online. Ad fontes goes ATR</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/447/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Geovistory, a LOD Research Infrastructure for Historical Sciences</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/450/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using GIS to Analyze the Development of Public Urban Green Spaces in Hamburg and Marseille (1945 - 1973)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/452/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Belpop, a history-computer project to study the population of a town during early industrialization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/453/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contributing to a Paradigm Shift in Historical Research by Teaching Digital Methods to Master’s Students</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/457/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Towards Computational Historiographical Modeling</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/459/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Literacy and the Role of Libraries</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/462/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">From record cards to the dynamics of real estate transactions: Working with automatically extracted information from Basel’s historical land register, 1400-1700</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/464/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">When the Data Becomes Meta: Quality Control for Digitized Ancient Heritage Collections</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/465/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">On the Historiographic Authority of Machine Learning Systems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/468/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Films as sources and as means of communication for knowledge gained from historical research</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/474/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">From Source-Criticism to System-Criticism, Born Digital Objects, Forensic Methods, and Digital Literacy for All</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/480/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Connecting floras and herbaria before 1850 – challenges and lessons learned in digital history of biodiversity</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/keynote/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">When Literacy Goes Digital: Rethinking the Ethics and Politics of Digitisation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse depth1 list-unstyled show sidebar-section">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../CHANGELOG.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Changelog</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../CODE_OF_CONDUCT.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Code of Conduct</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../CONTRIBUTING.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contributing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../LICENSE-CCBYSA.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">License (Data)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../LICENSE-AGPL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">License (Code)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../SECURITY.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Security</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="margin-sidebar sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#extended-abstract" id="toc-extended-abstract" class="nav-link active" data-scroll-target="#extended-abstract">Extended Abstract</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/digihistch24/book-of-abstracts/edit/main/submissions/452/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/digihistch24/book-of-abstracts/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="column-body content" id="quarto-document-content">
+
+<header id="title-block-header" class="default quarto-title-block"><nav class="quarto-page-breadcrumbs d-lg-block d-none quarto-title-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../index.html">Abstracts</a></li><li class="breadcrumb-item"><a href="../../submissions/452/index.html">Belpop, a history-computer project to study the population of a town during early industrialization</a></li></ol></nav>
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Belpop, a history-computer project to study the population of a town during early industrialization</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+  <div class="quarto-categories">
+    <div class="quarto-category">Session 6B</div>
+  </div>
+  </div>
+
+
+<div class="column-body quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliations</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Laurent Heyberger <a href="mailto:laurent.heyberger@utbm.fr" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0002-3434-5395" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==" alt=""></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            UTBM, UMR6174 FEMTO-ST/RECITS
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Gabriel Frossard <a href="mailto:gabriel.frossard@utbm.fr" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0009-0004-6655-7028" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==" alt=""></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            UTBM, CIAD UMR 7533, F-90010 Belfort cedex, France
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Wissam Al-Kendi <a href="mailto:wissam.al-kendi@utbm.fr" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0003-4239-9964" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==" alt=""></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            UTBM
+          </p>
+      </div>
+  </div>
+
+<div class="column-body quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 22, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    The Belpop project aims to reconstruct the demographic behavior of the population of a mushrooming working-class town during industrialization: Belfort. Belfort is a hapax in the French urban landscape of the 19<sup>th</sup> century, as the demographic growth of its main working- class district far outstripped that of the most dynamic Parisian suburbs. The underlying hypothesis is that the massive Alsatian migration that followed the 1870-71 conflict, and the concomitant industrialization and militarization of the city, profoundly altered the demographic behavior of the people of Belfort. This makes Belfort an ideal place to study the sexualization of social relations in 19<sup>th</sup>-century Europe. These relationships will first be understood through the study of out-of-wedlock births, in their socio-cultural and bio-demographic dimensions. In the long term, this project will also enable to answer many other questions related to event history analysis, a method that is currently undergoing major development, thanks to artificial intelligence (AI), and which is profoundly modifying the questions raised by historical demography and social history. The contributions of deep learning make it possible to plan a complete analysis of Belfort’s birth (ECN) and death (ECD) civil registers (1807-1919), thanks to HTR methods applied to these sources (two interdisciplinary computer science-history theses in progress). This project is part of the SOSI CNRS ObHisPop (Observatoire de l’Histoire de la Population française: grandes bases de données et IA), which federates seven laboratories and aims to share the advances of interdisciplinary research in terms of automating the constitution of databases in historical demography. Challenges also include linking (matching individual data) the ECN and ECD databases, and eventually the DMC database (DMC is the city’s main employer of women).
+  </div>
+</div>
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>Demographic history, Industrialization, Handwritten Text Recognition</p>
+  </div>
+</div>
+
+</header>
+
+
+<section id="extended-abstract" class="level2">
+<h2 class="anchored" data-anchor-id="extended-abstract">Extended Abstract</h2>
+<p>The Belpop project aims to reconstruct the demographic behavior of the population of a mushrooming working-class town during industrialization: Belfort. Belfort is a hapax in the French urban landscape of the 19<sup>th</sup> century, as the demographic growth of its main working- class district far outstripped that of the most dynamic Parisian suburbs. The underlying hypothesis is that the massive Alsatian migration following the 1870-71 conflict, along with concomitant industrialization and militarization of the city, profoundly altered the demographic behavior of the people of Belfort.</p>
+<p>This makes Belfort an ideal place to study the sexualization of social relations in 19th-century Europe. These relationships will first be understood through the study of out-of-wedlock births, in their socio-cultural and bio-demographic dimensions. In line with our initial hypothesis, the random sampling of 1010 birth certificates to build a manual transcription database shows that the number of births outside marriage peaks in the century in the decade following the annexation of Alsace-Moselle to Germany and then remains at a high level. In fact, after 1870, Alsatians arrived in the city in droves, first to escape annexation by Germany, then to follow Alsatian employers who were relocating their mechanical and textile industries to Belfort: the documents needed for marriage were now found beyond the new border, while the presence of a large military population (the department had by far the highest number of single men at the beginning of the 20<sup>th</sup> century) fueled legal and illegal prostitution and, in part, the number of births out of wedlock. In the long term, this project will also enable us to answer many other questions related to event history analysis, a method that is currently undergoing major development, thanks to artificial intelligence (AI), and which is profoundly modifying the questions raised by historical demography and social history.</p>
+<p>The contributions of deep learning make it possible to plan a complete analysis of Belfort’s birth (ECN) and death (ECD) civil registers (1807-1919), thanks to HTR methods applied to these sources (two interdisciplinary computer science-history theses in progress). This project is part of the SOSI CNRS ObHisPop (Observatoire de l’Histoire de la Population française: grandes bases de données et IA), which federates seven laboratories and aims to share the advances of interdisciplinary research in terms of automating the constitution of databases in historical demography. Challenges also include linking (matching individual data) the ECN and ECD databases, and eventually the DMC database (DMC is the city’s main employer of women).</p>
+<p>The Belfort Civil Registers of Birth comprise 39,627 birth declarations inscribed in French in a hybrid format (printed and handwritten text). The declarations consist of four components (declaration number, declaration name, primary paragraph, marginal annotations) and provide information such as the child’s name, parent’s name, date of birth, and other details. The pages of the registers have been scanned at a resolution of 300 dpi each.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/sample from dataset.png" class="figure-img img-fluid" alt="" loading="lazy" decoding="async"></p>
+<figcaption>A sample image from the ECN dataset with each four components</figcaption>
+</figure>
+</div>
+<p>Studying these invaluable resources is crucial for understanding the expansion of civilizations within Belfort. This necessitates establishing a knowledge database comprising all the information offered by these registers utilizing Artificial intelligence techniques, such as printed and handwritten text recognition models. The development of these models requires a training dataset to address the challenges imposed by these historical documents, such as text style variation, skewness, and overlapping words and text lines. Two stages have been carried on to construct the training dataset. First, manual transcription of 1,010 declarations and 984 marginal annotations with a total of 21,939 text lines, 189,976 words, and 1,177,354 characters. This stage involves employing structure tags like XML tags to identify the characteristics of the declarations. Second, an automatic text line detection method is utilized to extract the text lines within the primary paragraphs and the marginal annotation images in a polygon boundary to preserve the handwritten text. The method is developed based on analyzing the gaps between two consecutive text lines within the images. The detection process initially identifies the core of the text lines regardless of text skewness. Moreover, the process identifies the gaps based on the identified cores. The number of gaps between each two lines is determined based on a predefined parameter value. Each gap is analyzed by examining the density of black pixels within the central third of the gap region. If the black pixel density is low, a segment point is placed at the center. Otherwise, a histogram analysis is performed to identify minimum valleys, which are then used as potential segment points. Finally, all the localized segment points are connected to form the boundary of the text in a polygon shape. The Intersection over Union (IoU), Detection Rate (DR), Recognition Accuracy (RA), and F-Measure (FM) metrics have been employed to provide a comprehensive evaluation of different performance aspects of the method, achieving accuracies of 97.5% IoU, 99% DA, 98% (RA), and 98.50% (FM) for the detection of the text lines within the primary paragraphs. Moreover, the marginal annotations exhibit accuracies of 93.1%, 96%, 94%, and 94.79% across the same metrics, respectively. A structured data tool has been developed for correlating the extracted text line images with their corresponding transcriptions at both the paragraph and text line levels by generating .xml files. These files structure the information within the registers based on the reading order of the components within the document and assign a unique index number for each. Additionally, several essential properties are incorporated within each component block, including the component name, the coordinates within the image, and the corresponding transcribed text. The .xml file generation processes are ongoing to expand the structured declarations to enrich the dataset essential for training artificial intelligence models.</p>
+<p>Belfort Civil Registers of Death (ECD) are composed of 39,238 death declarations with 18,381 fully handwritten certificates and 20,857 hybrid certificates. This corpus spans from 1807 to 1919. ECDs have the same resolution (300 dpi) and the same structure as the Civil Registers of Birth (ECN). The information given by each declaration is somewhat different: the name, the age, the profession of the deceased, the place of death, and even the profession of the witness, can be found. Concerning ECDs, a different strategy was chosen for the text segmentation and the data extraction: the Document Attention Network (DAN). This network recently published is used to get rid of the pre-segmentation step which is highly beneficial for the heterogeneity of our dataset. It was developed for the recognition of handwritten dataset such as READ 2016 and RIMES 2009. Moreover, this architecture can focus on relevant parts of the document, improving the precision and identifying and extracting specific segments of interests. The choice was also made because this network is very efficient in handling large volumes of data while maintaining data integrity. The DAN architecture is made of a Fully Convolutional Network (FCN) encoder to extract feature maps of the input image. This type of network is the most popular approach for pixel-pixel document layout analysis because it maintains spatial hierarchies. Then, a transformer is used as a decoder to predict sequences of variable length. Indeed, the output of this network is a sequence of tokens describing characters of the French language or layout (beginning of paragraph or end of page for instance). These layout tokens or tags were made to structure the layout of a register double page and to unify the ECD and ECN datasets. The ECD training dataset was built by picking around four certificates each year of the full dataset. For the handwritten records (1807-1885) the first two declarations of the double page were annotated and the first four for the hybrid records (1886-1919). This led to annotating 460 declarations for the first period and 558 declarations for the second one to give a total of 1118 annotated death certificates. We are currently verifying these annotations to start the pre-training phase of the DAN in the coming months.</p>
+
+
+<!-- -->
+
+</section>
+
+<a onclick="return window.scrollTo(0,0),!1;
+" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">window.document.addEventListener("DOMContentLoaded",function(z){const B=o=>{const t=o.getAttribute("data-mode"),e=window.document.querySelector("body");t==="dark"?(e.classList.add("quarto-dark"),e.classList.remove("quarto-light")):(e.classList.add("quarto-light"),e.classList.remove("quarto-dark"))};(()=>{const o=window.document.querySelector("link#quarto-bootstrap");o&&B(o)})();const T="\uE9CB",b=new window.AnchorJS;b.options={placement:"right",icon:T},b.add(".anchored");const H=o=>{for(const t of o.classList)if(t.startsWith("code-annotation-"))return!0;return!1},y=function(o){const t=o.trigger;t.blur(),t.classList.add("code-copy-button-checked");var e=t.getAttribute("title");t.setAttribute("title","Copied!");let n;window.bootstrap&&(t.setAttribute("data-bs-toggle","tooltip"),t.setAttribute("data-bs-placement","left"),t.setAttribute("data-bs-title","Copied!"),n=new bootstrap.Tooltip(t,{trigger:"manual",customClass:"code-copy-button-tooltip",offset:[0,-8]}),n.show()),setTimeout(function(){n&&(n.hide(),t.removeAttribute("data-bs-title"),t.removeAttribute("data-bs-toggle"),t.removeAttribute("data-bs-placement")),t.setAttribute("title",e),t.classList.remove("code-copy-button-checked")},1e3),o.clearSelection()},v=function(o){const t=o.previousElementSibling.cloneNode(!0);for(const e of t.children)H(e)&&e.remove();return t.innerText};new window.ClipboardJS(".code-copy-button:not([data-in-quarto-modal])",{text:v}).on("success",y),window.document.getElementById("quarto-embedded-source-code-modal")&&new window.ClipboardJS(".code-copy-button[data-in-quarto-modal]",{text:v,container:window.document.getElementById("quarto-embedded-source-code-modal")}).on("success",y);const w=window.document.getElementById("quarto-view-source")||window.document.getElementById("quarto-code-tools-source");if(w){const o=w.getAttribute("data-quarto-source-url");w.addEventListener("click",function(t){return o?/\bcapabilities=\b/.test(window.location)?window.open(o):window.location.href=o:new bootstrap.Modal(document.getElementById("quarto-embedded-source-code-modal")).show(),!1})}function E(o){return function(t){const e=window.document.querySelectorAll(".cell > details > .sourceCode");for(let r=0;r<e.length;r++){const c=e[r].parentElement;o?c.open=!0:c.removeAttribute("open")}const n=window.document.querySelectorAll(".cell > .sourceCode"),i=o?"hidden":"unhidden",l=o?"unhidden":"hidden";for(let r=0;r<n.length;r++){const c=n[r];c.classList.contains(i)&&(c.classList.remove(i),c.classList.add(l))}return!1}}const A=window.document.getElementById("quarto-hide-all-code");A&&A.addEventListener("click",E(!1));const L=window.document.getElementById("quarto-show-all-code");L&&L.addEventListener("click",E(!0));for(var D=new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//),R=new RegExp(/^mailto:/),N=new RegExp("https://digihistch24.github.io/book-of-abstracts/"),Q=o=>N.test(o)||D.test(o)||R.test(o),C=window.document.querySelectorAll("a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)"),d=0;d<C.length;d++){const o=C[d];Q(o.href)||(o.dataset.originalHref!==void 0&&(o.href=o.dataset.originalHref),o.setAttribute("target","_blank"),o.getAttribute("rel")===null&&o.setAttribute("rel","noopener"),o.classList.add("external"))}function g(o,t,e,n){const i={allowHTML:!0,maxWidth:500,delay:100,arrow:!1,appendTo:function(l){return l.parentElement},interactive:!0,interactiveBorder:10,theme:"quarto",placement:"bottom-start"};t&&(i.content=t),e&&(i.onTrigger=e),n&&(i.onUntrigger=n),window.tippy(o,i)}const q=window.document.querySelectorAll('a[role="doc-noteref"]');for(var d=0;d<q.length;d++){const t=q[d];g(t,function(){let e=t.getAttribute("data-footnote-href")||t.getAttribute("href");try{e=new URL(e).hash}catch{}const n=e.replace(/^#\/?/,""),i=window.document.getElementById(n);return i?i.innerHTML:""})}const S=window.document.querySelectorAll("a.quarto-xref"),p=(o,t)=>{const e=n=>{if(n.classList.remove("page-full","page-columns"),n.children)for(const i of n.children)e(i)};if(e(t),o===null||o.startsWith("sec-")){const n=document.createElement("div");if(t.children&&t.children.length>2){n.appendChild(t.children[0].cloneNode(!0));for(let i=1;i<t.children.length;i++){const l=t.children[i];if(!(l.tagName==="P"&&l.innerText==="")){n.appendChild(l.cloneNode(!0));break}}return window.Quarto?.typesetMath&&window.Quarto.typesetMath(n),n.innerHTML}else return window.Quarto?.typesetMath&&window.Quarto.typesetMath(t),t.innerHTML}else{const n=t.querySelector("a.anchorjs-link");return n&&n.remove(),window.Quarto?.typesetMath&&window.Quarto.typesetMath(t),t.classList.contains("callout")?t.outerHTML:t.innerHTML}};for(var d=0;d<S.length;d++){const t=S[d];g(t,void 0,function(e){e.disable();let n=t.getAttribute("href"),i;if(n.startsWith("#"))i=n;else try{i=new URL(n).hash}catch{}if(i){const l=i.replace(/^#\/?/,""),r=window.document.getElementById(l);if(r!==null)try{const c=p(l,r.cloneNode(!0));e.setContent(c)}finally{e.enable(),e.show()}else fetch(n.split("#")[0]).then(c=>c.text()).then(c=>{const u=new DOMParser().parseFromString(c,"text/html").getElementById(l);if(u!==null){const a=p(l,u);e.setContent(a)}}).finally(()=>{e.enable(),e.show()})}else fetch(n).then(l=>l.text()).then(l=>{const s=new DOMParser().parseFromString(l,"text/html").querySelector("main.content");if(s!==null){s.children.length>0&&s.children[0].tagName==="HEADER"&&s.children[0].remove();const h=p(null,s);e.setContent(h)}}).finally(()=>{e.enable(),e.show()})},function(e){})}let m;const P=(o,t)=>{let e='data-code-cell="'+o+'"',n='data-code-annotation="'+t+'"';return"span["+e+"]["+n+"]"},x=o=>{const t=window.document,e=o.getAttribute("data-target-cell"),n=o.getAttribute("data-target-annotation"),r=window.document.querySelector(P(e,n)).getAttribute("data-code-lines").split(",").map(u=>e+"-"+u);let c=null,s=null,h=null;if(r.length>0){const u=window.document.getElementById(r[0]);if(c=u.offsetTop,s=u.offsetHeight,h=u.parentElement.parentElement,r.length>1){const a=window.document.getElementById(r[r.length-1]);s=a.offsetTop+a.offsetHeight-c}if(c!==null&&s!==null&&h!==null){let a=window.document.getElementById("code-annotation-line-highlight");a===null&&(a=window.document.createElement("div"),a.setAttribute("id","code-annotation-line-highlight"),a.style.position="absolute",h.appendChild(a)),a.style.top=c-2+"px",a.style.height=s+4+"px",a.style.left=0;let f=window.document.getElementById("code-annotation-line-highlight-gutter");f===null&&(f=window.document.createElement("div"),f.setAttribute("id","code-annotation-line-highlight-gutter"),f.style.position="absolute",window.document.getElementById(e).querySelector(".code-annotation-gutter").appendChild(f)),f.style.top=c-2+"px",f.style.height=s+4+"px"}m=o}},k=()=>{["code-annotation-line-highlight","code-annotation-line-highlight-gutter"].forEach(t=>{const e=window.document.getElementById(t);e&&e.remove()}),m=void 0};window.addEventListener("resize",J(()=>{elRect=void 0,m&&x(m)},10));function J(o,t){let e=!1,n;return(...i)=>{e?(n&&clearTimeout(n),n=setTimeout(()=>{o.apply(this,i),n=e=!1},t)):(o.apply(this,i),e=!0)}}const W=window.document.querySelectorAll("dt[data-target-cell]");for(const o of W)o.addEventListener("click",t=>{const e=t.target;if(e!==m){k();const n=window.document.querySelector("dt[data-target-cell].code-annotation-active");n&&n.classList.remove("code-annotation-active"),x(e),e.classList.add("code-annotation-active")}else k(),e.classList.remove("code-annotation-active")});const I=o=>{const t=o.parentElement;if(t){const e=t.dataset.cites;return e?{el:o,cites:e.split(" ")}:I(o.parentElement)}else return};for(var M=window.document.querySelectorAll('a[role="doc-biblioref"]'),d=0;d<M.length;d++){const t=M[d],e=I(t);e&&g(e.el,function(){var n=window.document.createElement("div");return e.cites.forEach(function(i){var l=window.document.createElement("div");l.classList.add("hanging-indent"),l.classList.add("csl-entry");var r=window.document.getElementById("ref-"+i);r&&(l.innerHTML=r.innerHTML),n.appendChild(l)}),n.innerHTML})}});
+</script>
+<nav class="column-body page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../submissions/450/index.html" class="pagination-link" aria-label="Using GIS to Analyze the Development of Public Urban Green Spaces in Hamburg and Marseille (1945 - 1973)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Using GIS to Analyze the Development of Public Urban Green Spaces in Hamburg and Marseille (1945 - 1973)</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../submissions/453/index.html" class="pagination-link" aria-label="Contributing to a Paradigm Shift in Historical Research by Teaching Digital Methods to Master's Students">
+        <span class="nav-page-text">Contributing to a Paradigm Shift in Historical Research by Teaching Digital Methods to Master’s Students</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="fade modal" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">submission_id:</span><span class="co"> 452</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> 'Session 6B'</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Belpop, a history-computer project to study the population of a town during early industrialization</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  - name: Laurent Heyberger</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    orcid: 0000-0002-3434-5395</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    email: laurent.heyberger@utbm.fr</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">    affiliations:</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">      - UTBM, UMR6174 FEMTO-ST/RECITS</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - name: Gabriel Frossard</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">    orcid: 0009-0004-6655-7028</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">    email: gabriel.frossard@utbm.fr</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">    affiliations:</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">      - UTBM, CIAD UMR 7533, F-90010 Belfort cedex, France</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">  - name: Wissam Al-Kendi</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">    orcid: 0000-0003-4239-9964</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">    email: wissam.al-kendi@utbm.fr</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">    affiliations:</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">      - UTBM</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="an">keywords:</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">  - Demographic history</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">  - Industrialization</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">  - Handwritten Text Recognition</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="an">abstract:</span><span class="co"> </span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co">  "The Belpop project aims to reconstruct the demographic behavior of the population of a mushrooming working-class town during industrialization: Belfort. Belfort is a hapax in the French urban landscape of the 19^th^ century, as the demographic growth of its main working- class district far outstripped that of the most dynamic Parisian suburbs. The underlying hypothesis is that the massive Alsatian migration that followed the 1870-71 conflict, and the concomitant industrialization and militarization of the city, profoundly altered the demographic behavior of the people of Belfort.</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co">  This makes Belfort an ideal place to study the sexualization of social relations in 19^th^-century Europe. These relationships will first be understood through the study of out-of-wedlock births, in their socio-cultural and bio-demographic dimensions. In the long term, this project will also enable to answer many other questions related to event history analysis, a method that is currently undergoing major development, thanks to artificial intelligence (AI), and which is profoundly modifying the questions raised by historical demography and social history.</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co">  The contributions of deep learning make it possible to plan a complete analysis of Belfort's birth (ECN) and death (ECD) civil registers (1807-1919), thanks to HTR methods applied to these sources (two interdisciplinary computer science-history theses in progress). This project is part of the SOSI CNRS ObHisPop (Observatoire de l'Histoire de la Population française: grandes bases de données et IA), which federates seven laboratories and aims to share the advances of interdisciplinary research in terms of automating the constitution of databases in historical demography. Challenges also include linking (matching individual data) the ECN and ECD databases, and eventually the DMC database (DMC is the city's main employer of women)."</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 07-22-2024</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="fu">## Extended Abstract</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>The Belpop project aims to reconstruct the demographic behavior of the population of a mushrooming working-class town during industrialization: Belfort. Belfort is a hapax in the French urban landscape of the 19^th^ century, as the demographic growth of its main working- class district far outstripped that of the most dynamic Parisian suburbs. The underlying hypothesis is that the massive Alsatian migration following the 1870-71 conflict, along with concomitant industrialization and militarization of the city, profoundly altered the demographic behavior of the people of Belfort.</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a> This makes Belfort an ideal place to study the sexualization of social relations in 19th-century Europe. These relationships will first be understood through the study of out-of-wedlock births, in their socio-cultural and bio-demographic dimensions. In line with our initial hypothesis, the random sampling of 1010 birth certificates to build a manual transcription database shows that the number of births outside marriage peaks in the century in the decade following the annexation of Alsace-Moselle to Germany and then remains at a high level. In fact, after 1870, Alsatians arrived in the city in droves, first to escape annexation by Germany, then to follow Alsatian employers who were relocating their mechanical and textile industries to Belfort: the documents needed for marriage were now found beyond the new border, while the presence of a large military population (the department had by far the highest number of single men at the beginning of the 20^th^ century) fueled legal and illegal prostitution and, in part, the number of births out of wedlock. In the long term, this project will also enable us to answer many other questions related to event history analysis, a method that is currently undergoing major development, thanks to artificial intelligence (AI), and which is profoundly modifying the questions raised by historical demography and social history.</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a> The contributions of deep learning make it possible to plan a complete analysis of Belfort's birth (ECN) and death (ECD) civil registers (1807-1919), thanks to HTR methods applied to these sources (two interdisciplinary computer science-history theses in progress). This project is part of the SOSI CNRS ObHisPop (Observatoire de l'Histoire de la Population française: grandes bases de données et IA), which federates seven laboratories and aims to share the advances of interdisciplinary research in terms of automating the constitution of databases in historical demography. Challenges also include linking (matching individual data) the ECN and ECD databases, and eventually the DMC database (DMC is the city's main employer of women).</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>The Belfort Civil Registers of Birth comprise 39,627 birth declarations inscribed in French in a hybrid format (printed and handwritten text). The declarations consist of four components (declaration number, declaration name, primary paragraph, marginal annotations) and provide information such as the child's name, parent's name, date of birth, and other details. The pages of the registers have been scanned at a resolution of 300 dpi each.</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="al">![A sample image from the ECN dataset with each four components](images/sample%20from%20dataset.png)</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>Studying these invaluable resources is crucial for understanding the expansion of civilizations within Belfort. This necessitates establishing a knowledge database comprising all the information offered by these registers utilizing Artificial intelligence techniques, such as printed and handwritten text recognition models.</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>The development of these models requires a training dataset to address the challenges imposed by these historical documents, such as text style variation, skewness, and overlapping words and text lines. </span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>Two stages have been carried on to construct the training dataset. First, manual transcription of 1,010 declarations and 984 marginal annotations with a total of 21,939 text lines, 189,976 words, and 1,177,354 characters. This stage involves employing structure tags like XML tags to identify the characteristics of the declarations. </span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>Second, an automatic text line detection method is utilized to extract the text lines within the primary paragraphs and the marginal annotation images in a polygon boundary to preserve the handwritten text. The method is developed based on analyzing the gaps between two consecutive text lines within the images. The detection process initially identifies the core of the text lines regardless of text skewness. Moreover, the process identifies the gaps based on the identified cores. The number of gaps between each two lines is determined based on a predefined parameter value. Each gap is analyzed by examining the density of black pixels within the central third of the gap region. If the black pixel density is low, a segment point is placed at the center. Otherwise, a histogram analysis is performed to identify minimum valleys, which are then used as potential segment points. Finally, all the localized segment points are connected to form the boundary of the text in a polygon shape. </span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>The Intersection over Union (IoU), Detection Rate (DR), Recognition Accuracy (RA), and F-Measure (FM) metrics have been employed to provide a comprehensive evaluation of different performance aspects of the method, achieving accuracies of 97.5% IoU, 99% DA, 98% (RA), and 98.50% (FM) for the detection of the text lines within the primary paragraphs. Moreover, the marginal annotations exhibit accuracies of 93.1%, 96%, 94%, and 94.79% across the same metrics, respectively.</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>A structured data tool has been developed for correlating the extracted text line images with their corresponding transcriptions at both the paragraph and text line levels by generating .xml files. These files structure the information within the registers based on the reading order of the components within the document and assign a unique index number for each. Additionally, several essential properties are incorporated within each component block, including the component name, the coordinates within the image, and the corresponding transcribed text. The .xml file generation processes are ongoing to expand the structured declarations to enrich the dataset essential for training artificial intelligence models.</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>Belfort Civil Registers of Death (ECD) are composed of 39,238 death declarations with 18,381 fully handwritten certificates and 20,857 hybrid certificates. This corpus spans from 1807 to 1919. ECDs have the same resolution (300 dpi) and the same structure as the Civil Registers of Birth (ECN). The information given by each declaration is somewhat different: the name, the age, the profession of the deceased, the place of death, and even the profession of the witness, can be found.</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>Concerning ECDs, a different strategy was chosen for the text segmentation and the data extraction: the Document Attention Network (DAN). This network recently published is used to get rid of the pre-segmentation step which is highly beneficial for the heterogeneity of our dataset. It was developed for the recognition of handwritten dataset such as READ 2016 and RIMES 2009. Moreover, this architecture can focus on relevant parts of the document, improving the precision and identifying and extracting specific segments of interests. The choice was also made because this network is very efficient in handling large volumes of data while maintaining data integrity.</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>The DAN architecture is made of a Fully Convolutional Network (FCN) encoder to extract feature maps of the input image. This type of network is the most popular approach for pixel-pixel document layout analysis because it maintains spatial hierarchies. Then, a transformer is used as a decoder to predict sequences of variable length. Indeed, the output of this network is a sequence of tokens describing characters of the French language or layout (beginning of paragraph or end of page for instance). These layout tokens or tags were made to structure the layout of a register double page and to unify the ECD and ECN datasets. The ECD training dataset was built by picking around four certificates each year of the full dataset. For the handwritten records (1807-1885) the first two declarations of the double page were annotated and the first four for the hybrid records (1886-1919). This led to annotating 460 declarations for the first period and 558 declarations for the second one to give a total of 1118 annotated death certificates. We are currently verifying these annotations to start the pre-training phase of the DAN in the coming months.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-md-none d-sm-block"><ul><li><a href="https://github.com/digihistch24/book-of-abstracts/edit/main/submissions/452/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/digihistch24/book-of-abstracts/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

@@ -1,0 +1,1488 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta charset="utf-8"><style>:where(img){height:auto}</style>
+
+
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+
+<meta name="author" content="Rémi Petitpierre">
+<meta name="author" content="Isabella di Lenardo">
+<meta name="author" content="Lucas Rappo">
+<meta name="dcterms.date" content="2024-07-24">
+<meta name="keywords" content="cadastral plans, vectorisation, land ownership, spatial dynamics, historical social geography">
+
+<title>Revealing the Structure of Land Ownership through the Automatic Vectorisation of Swiss Cadastral Plans – DigiHistCH24 Book of Abstracts</title>
+<style>code{white-space:pre-wrap}span.smallcaps{font-variant:small-caps}div.columns{gap:min(4vw,1.5em);display:flex}div.column{flex:auto;overflow-x:auto}div.hanging-indent{text-indent:-1.5em;margin-left:1.5em}ul.task-list{list-style:none}ul.task-list li input[type=checkbox]{vertical-align:middle;width:.8em;margin:0 .8em .2em -1em}pre>code.sourceCode{white-space:pre;position:relative}pre>code.sourceCode>span{line-height:1.25}pre>code.sourceCode>span:empty{height:1.2em}.sourceCode{overflow:visible}code.sourceCode>span{color:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}div.sourceCode{margin:1em 0}pre.sourceCode{margin:0}@media screen{div.sourceCode{overflow:auto}}@media print{pre>code.sourceCode{white-space:pre-wrap}pre>code.sourceCode>span{text-indent:-5em;padding-left:5em;display:inline-block}}pre.numberSource code{counter-reset:source-line 0}pre.numberSource code>span{counter-increment:source-line;position:relative;left:-4em}pre.numberSource code>span>a:first-child:before{content:counter(source-line);text-align:right;vertical-align:baseline;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;-khtml-user-select:none;border:none;width:4em;padding:0 4px;display:inline-block;position:relative;left:-1em}pre.numberSource{margin-left:3em;padding-left:4px}@media screen{pre>code.sourceCode>span>a:first-child:before{text-decoration:underline}}div.csl-entry{clear:both;margin-bottom:0}.hanging-indent div.csl-entry{text-indent:-2em;margin-left:2em}div.csl-left-margin{float:left;min-width:2em}div.csl-right-inline{margin-left:2em;padding-left:1em}div.csl-indent{margin-left:2em}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../submissions/457/index.html" rel="next">
+<link href="../../submissions/453/index.html" rel="prev">
+<link href="../../logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": true,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script defer="" data-domain="digihistch24.github.io/book-of-abstracts" src="https://plausible.io/js/script.outbound-links.js"></script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Revealing the Structure of Land Ownership through the Automatic Vectorisation of Swiss Cadastral Plans – DigiHistCH24 Book of Abstracts">
+<meta property="og:description" content="This paper explores how the dynamics and structure of land ownership can be studied by automating the vectorisation of historical cadastral sources. Cadastres are a granular, relatively homogeneous and abundant source. From the 18th century, they are also relatively well aligned with the paradigms of modern geodata. Digital or quantitative methods seem therefore particularly well suited to approach these substantial archival corpora. Our analysis focuses mainly on three cadastres of Lausanne (1722, 1831, 1883), which total 570 plats. The plans are first georeferenced, before being semantically segmented using a neural model, and vectorised. Compared to a manual approach, automation reduces the vectorisation workload by 12 fold. We study the dynamics of persistence by deploying a spatial matching methodology, geometrically detecting parcel fusions and divisions across temporal layers. We also investigate the social structure of ownership in Lausanne at the beginning of the 19th century by relating representative owners to their socioprofessional status based on historical population censuses.">
+<meta property="og:image" content="https://digihistch24.github.io/book-of-abstracts/submissions/454/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
+<meta property="og:site_name" content="DigiHistCH24 Book of Abstracts">
+<meta name="twitter:title" content="Revealing the Structure of Land Ownership through the Automatic Vectorisation of Swiss Cadastral Plans – DigiHistCH24 Book of Abstracts">
+<meta name="twitter:description" content="This paper explores how the dynamics and structure of land ownership can be studied by automating the vectorisation of historical cadastral sources. Cadastres are a granular, relatively homogeneous and abundant source. From the 18th century, they are also relatively well aligned with the paradigms of modern geodata. Digital or quantitative methods seem therefore particularly well suited to approach these substantial archival corpora. Our analysis focuses mainly on three cadastres of Lausanne (1722, 1831, 1883), which total 570 plats. The plans are first georeferenced, before being semantically segmented using a neural model, and vectorised. Compared to a manual approach, automation reduces the vectorisation workload by 12 fold. We study the dynamics of persistence by deploying a spatial matching methodology, geometrically detecting parcel fusions and divisions across temporal layers. We also investigate the social structure of ownership in Lausanne at the beginning of the 19th century by relating representative owners to their socioprofessional status based on historical population censuses.">
+<meta name="twitter:image" content="https://digihistch24.github.io/book-of-abstracts/submissions/454/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="docked nav-fixed nav-sidebar">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="fixed-top headroom">
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+      <div class="container-fluid navbar-container">
+      <div class="mx-auto navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title"><strong><em>DigiHistCH24</em></strong> Book of Abstracts</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="window.quartoToggleHeadroom&&window.quartoToggleHeadroom();
+">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="me-auto navbar-nav navbar-nav-scroll">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+<span class="menu-text">Abstracts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://conferences.unibas.ch/frontend/index.php?page_id=1882" target="_blank"> 
+<span class="menu-text">Conference Program</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://conferences.unibas.ch/frontend/index.php?page_id=1424&amp;booking_registration_action=show&amp;booking_registration_controller=offer" target="_blank"> 
+<span class="menu-text">Registration</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://conferences.unibas.ch/frontend/index.php?folder_id=234&amp;page_id=" target="_blank"> 
+<span class="menu-text">Call for Contributions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <a href="https://github.com/digihistch24/book-of-abstracts/" title="" class="px-1 quarto-navigation-tool" aria-label="" target="_blank"><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="btn quarto-btn-toggle" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="window.quartoToggleHeadroom&&window.quartoToggleHeadroom();
+">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../index.html">Abstracts</a></li><li class="breadcrumb-item"><a href="../../submissions/454/index.html">Revealing the Structure of Land Ownership through the Automatic Vectorisation of Swiss Cadastral Plans</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="window.quartoToggleHeadroom&&window.quartoToggleHeadroom();
+">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="page-columns page-layout-full page-navbar page-rows-contents quarto-container">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="collapse collapse-horizontal docked overflow-auto quarto-sidebar-collapse-item sidebar sidebar-navigation">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Abstracts</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse depth1 list-unstyled show sidebar-section">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/405/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data-Driven Approaches to Studying the History of Museums on the Web: Challenges and Opportunities for New Discoveries</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/427/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">On a solid ground. Building software for a 120-year-old research project applying modern engineering practices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/428/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tables are tricky. Testing Text Encoding Initiative (TEI) Guidelines for FAIR upcycling of digitised historical statistics.</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/429/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Training engineering students through a digital humanities project: Techn’hom Time Machine</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/431/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">From manual work to artificial intelligence: developments in data literacy using the example of the Repertorium Academicum Germanicum (2001-2024)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/438/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A handful of pixels of blood</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/445/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teaching the use of Automated Text Recognition online. Ad fontes goes ATR</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/447/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Geovistory, a LOD Research Infrastructure for Historical Sciences</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/450/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using GIS to Analyze the Development of Public Urban Green Spaces in Hamburg and Marseille (1945 - 1973)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/452/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Belpop, a history-computer project to study the population of a town during early industrialization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/453/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contributing to a Paradigm Shift in Historical Research by Teaching Digital Methods to Master’s Students</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/454/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Revealing the Structure of Land Ownership through the Automatic Vectorisation of Swiss Cadastral Plans</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/457/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Towards Computational Historiographical Modeling</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/458/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Efficacy of Chat GPT Correlations vs.&nbsp;Co-occurrence Networks in Deciphering Chinese History</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/459/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Literacy and the Role of Libraries</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/462/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">From record cards to the dynamics of real estate transactions: Working with automatically extracted information from Basel’s historical land register, 1400-1700</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/464/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">When the Data Becomes Meta: Quality Control for Digitized Ancient Heritage Collections</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/465/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">On the Historiographic Authority of Machine Learning Systems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/468/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Films as sources and as means of communication for knowledge gained from historical research</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/474/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">From Source-Criticism to System-Criticism, Born Digital Objects, Forensic Methods, and Digital Literacy for All</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/480/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Connecting floras and herbaria before 1850 – challenges and lessons learned in digital history of biodiversity</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../submissions/keynote/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">When Literacy Goes Digital: Rethinking the Ethics and Politics of Digitisation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse depth1 list-unstyled show sidebar-section">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../CHANGELOG.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Changelog</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../CODE_OF_CONDUCT.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Code of Conduct</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../CONTRIBUTING.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contributing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../LICENSE-CCBYSA.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">License (Data)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../LICENSE-AGPL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">License (Code)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../SECURITY.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Security</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="margin-sidebar sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#data-collection-approach" id="toc-data-collection-approach" class="nav-link" data-scroll-target="#data-collection-approach">Data collection approach</a></li>
+  <li><a href="#persistence" id="toc-persistence" class="nav-link" data-scroll-target="#persistence">Persistence</a></li>
+  <li><a href="#social-structure-of-land-ownership" id="toc-social-structure-of-land-ownership" class="nav-link" data-scroll-target="#social-structure-of-land-ownership">Social structure of land ownership</a></li>
+  <li><a href="#general-discussion-and-conclusion" id="toc-general-discussion-and-conclusion" class="nav-link" data-scroll-target="#general-discussion-and-conclusion">General discussion and Conclusion</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/digihistch24/book-of-abstracts/edit/main/submissions/454/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/digihistch24/book-of-abstracts/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="column-body content" id="quarto-document-content">
+
+<header id="title-block-header" class="default quarto-title-block"><nav class="quarto-page-breadcrumbs d-lg-block d-none quarto-title-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../index.html">Abstracts</a></li><li class="breadcrumb-item"><a href="../../submissions/454/index.html">Revealing the Structure of Land Ownership through the Automatic Vectorisation of Swiss Cadastral Plans</a></li></ol></nav>
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Revealing the Structure of Land Ownership through the Automatic Vectorisation of Swiss Cadastral Plans</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+  <div class="quarto-categories">
+    <div class="quarto-category">Session 1A</div>
+  </div>
+  </div>
+
+
+<div class="column-body quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Rémi Petitpierre <a href="mailto:remi.petitpierre@epfl.ch" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0001-9138-6727" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==" alt=""></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Time Machine Unit, EPFL
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Isabella di Lenardo <a href="mailto:isabella.dilenardo@epfl.ch" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0002-1747-9164" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==" alt=""></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Time Machine Unit, EPFL
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Lucas Rappo <a href="https://orcid.org/0000-0002-7172-2495" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==" alt=""></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Time Machine Unit, EPFL
+          </p>
+      </div>
+  </div>
+
+<div class="column-body quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 24, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    This paper explores how the dynamics and structure of land ownership can be studied by automating the vectorisation of historical cadastral sources. Cadastres are a granular, relatively homogeneous and abundant source. From the 18th century, they are also relatively well aligned with the paradigms of modern geodata. Digital or quantitative methods seem therefore particularly well suited to approach these substantial archival corpora. Our analysis focuses mainly on three cadastres of Lausanne (1722, 1831, 1883), which total 570 plats. The plans are first georeferenced, before being semantically segmented using a neural model, and vectorised. Compared to a manual approach, automation reduces the vectorisation workload by 12 fold. We study the dynamics of persistence by deploying a spatial matching methodology, geometrically detecting parcel fusions and divisions across temporal layers. We also investigate the social structure of ownership in Lausanne at the beginning of the 19th century by relating representative owners to their socioprofessional status based on historical population censuses.
+  </div>
+</div>
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>cadastral plans, vectorisation, land ownership, spatial dynamics, historical social geography</p>
+  </div>
+</div>
+
+</header>
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Cadastral plans are a granular, relatively homogeneous, and abundant source for studying land ownership and spatial relationships in 19th century Western Europe <span class="citation" data-cites="clergeot_cent_2007 di_lenardo_approche_2021 lelo_analysing_2020">(<a href="#ref-clergeot_cent_2007" role="doc-biblioref">Clergeot 2007</a>; <a href="#ref-di_lenardo_approche_2021" role="doc-biblioref">Lenardo et al. 2021</a>; <a href="#ref-lelo_analysing_2020" role="doc-biblioref">Lelo 2020</a>)</span>. Moreover, from the 18th century, cadastres are generally geometrical, and therefore well aligned with the paradigms of modern geodata. Due to the substantial number of entries and the quantitative nature of these historical sources, digital methods leveraging geographic information systems (GIS) seem most appropriate to approach these archival corpora. In addition, the Napoleonic period resulted in a remarkable harmonization of cadastral ordinances, survey methods, and conventions of representation throughout Europe, which persisted until the middle of the 19th century <span class="citation" data-cites="hennet_recueil_1811 soulier_instructions_1827 petitpierre_mapping_2023">(<a href="#ref-hennet_recueil_1811" role="doc-biblioref">Hennet 1811</a>; <a href="#ref-soulier_instructions_1827" role="doc-biblioref">Soulier and Berdez 1827</a>; <a href="#ref-petitpierre_mapping_2023" role="doc-biblioref">Petitpierre 2023</a>)</span>. This representational coherence makes cadastral plans an interesting target for automated recognition <span class="citation" data-cites="follin_detection_2021 goderle_ai-driven_2023 petitpierre_recartographier_2023 ares_oliveira_deep_2019">(<a href="#ref-follin_detection_2021" role="doc-biblioref">Follin, Simonetto, and Chalais 2021</a>; <a href="#ref-goderle_ai-driven_2023" role="doc-biblioref">Göderle et al. 2023</a>; <a href="#ref-petitpierre_recartographier_2023" role="doc-biblioref">Petitpierre, Rappo, and Lenardo 2023</a>; <a href="#ref-ares_oliveira_deep_2019" role="doc-biblioref">Ares Oliveira et al. 2019</a>)</span>. This research explores how 19th-century cadastres can be massively read and vectorised by machines, and how the resulting geodata can be used to study the dynamics of persistence in the parcel fabric and land ownership.</p>
+</section>
+<section id="data-collection-approach" class="level2">
+<h2 class="anchored" data-anchor-id="data-collection-approach">Data collection approach</h2>
+<p>Our data collection approach is based on supervised semantic segmentation. Sematic segmentation is a pixel classification method, where each pixel in the image, i.e.&nbsp;the digitised cadastral plats, is attributed a single semantic class (see <a href="#fig-1" class="quarto-xref">Figure&nbsp;1</a>). In the present case, we follow the ontology proposed by <span class="citation" data-cites="petitpierre_effective_2023">(<a href="#ref-petitpierre_effective_2023" role="doc-biblioref">Petitpierre and Guhennec 2023</a>)</span> and annotate the images with four land use classes (built, non-built, water, and road network), plus the contours, which allow us to delineate the geometries <span class="citation" data-cites="chen_vectorization_2021">(<a href="#ref-chen_vectorization_2021" role="doc-biblioref">Chen et al. 2021</a>)</span>. In total, 78 cadastral plats were manually annotated (42 for Lausanne, 10 for Neuchatel, 8 for Geneva, and 18 from various communes in the states of the First French Empire). Thirty percent of the dataset was preserved for validation (2/3), and testing (1/3). A Mask2Former <span class="citation" data-cites="cheng_masked-attention_2022 noauthor_mmsegmentation_2022">(<a href="#ref-cheng_masked-attention_2022" role="doc-biblioref">Cheng et al. 2022</a>; <a href="#ref-noauthor_mmsegmentation_2022" role="doc-biblioref">OpenMMLab 2022</a>)</span> neural model was trained on the remaining labels, using 768x768 image crops, until convergence.</p>
+<p>The trained segmentation model is used to automate the recognition of the remaining cadastral plats for three cadastral series of Lausanne <span class="citation" data-cites="melotte_plans_1722 berney_plan_1831 deluz_plans_1886">(<a href="#ref-melotte_plans_1722" role="doc-biblioref">Melotte and Perey 1722</a>; <a href="#ref-berney_plan_1831" role="doc-biblioref">Berney 1831</a>; <a href="#ref-deluz_plans_1886" role="doc-biblioref">Deluz 1886</a>)</span>, which total 570 plats. In a first step, the sheets were georeferenced and separated from the legend. Second, the semantic segmentation was applied directly on the georeferenced images. Third, the resulting predictions masks were manually reviewed, and the most salient inconsistencies were corrected. Finally, the raster masks were vectorized, as described in <span class="citation" data-cites="vaienti_machine-learning-enhanced_2023">(<a href="#ref-vaienti_machine-learning-enhanced_2023" role="doc-biblioref">Vaienti et al. 2023</a>)</span>, resulting in 69,083 extracted geometries. The data collection workload is estimated to 15 workdays for the specific annotation of 42 plats, 5 workdays for the initial correction of the predictions, and 2 workdays (excluding research and development) for the automatic segmentation and vectorisation. By contrast, the estimated workload for manually vectorising the whole corpus would be over 260 days.</p>
+<div id="fig-1" class="anchored quarto-figure quarto-figure-center quarto-float">
+<figure class="quarto-float figure quarto-float-fig">
+<div aria-describedby="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/segmentation.svg" class="img-fluid figure-img" alt="" loading="lazy" decoding="async">
+</div>
+<figcaption class="quarto-float-fig quarto-float-caption quarto-float-caption-bottom" id="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Illustration of the raster/pixel annotation of the 1886 cadastre of Lausanne by Louis Deluz, using five semantic classes (red: built, dark grey: non-built, light grey: road network, violet: water, white: contours, black: background).
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="persistence" class="level2">
+<h2 class="anchored" data-anchor-id="persistence">Persistence</h2>
+<p>We adopt two complementary approaches for studying the structure of land ownership. The first is based on the measure of persistence in the parcel fabric. The second, which will be presented later, focuses on the social structure of land ownership, through the analysis of owners. Regarding persistence, two processes are considered: the division of a plot into two or more plots, or the fusion –i.e.&nbsp;the grouping– of two or more plots together. We call continuity the state in which parcel fabric is unchanged. Finally, discontinuity denotes a situation in which the parcel fabric has been otherwise altered by rezoning.</p>
+<p>Fusion and division are measured separately. The detection of both processes is based on the spatial matching of the parcels in two distinct historical layers. Only child parcels whose overlap with the parent is at least 50% are considered for division, and vice versa for fusion. For fusion, the measure of shape similarity is based on the computation of the absolute difference of turning functions <span class="citation" data-cites="arkin_efficiently_1991">(<a href="#ref-arkin_efficiently_1991" role="doc-biblioref">Arkin et al. 1991</a>)</span> between the child parcels and the parent one, and vice versa. This method, which intuitively focuses on a shape’s salient angles, excels at comparing shapes which exhibit inequal level of detail or resolution, which is precisely the case for the extracted geometries, originating from diverse series<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. This process allows us to establish maps of land persistence and continuity (<a href="#fig-2" class="quarto-xref">Figure&nbsp;2</a>, <a href="#fig-4" class="quarto-xref">Figure&nbsp;4</a>, and <a href="#fig-6" class="quarto-xref">Figure&nbsp;6</a>), whose results will be presented and discussed in a chronological order. The relative code is published along with this article.</p>
+<div id="fig-2" class="anchored quarto-figure quarto-figure-center quarto-float">
+<figure class="quarto-float figure quarto-float-fig">
+<div aria-describedby="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/persistence_1727_1831_light.svg" class="img-fluid figure-img" alt="" loading="lazy" decoding="async">
+</div>
+<figcaption class="quarto-float-fig quarto-float-caption quarto-float-caption-bottom" id="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Dynamics of land plot persistence in Lausanne between 1722 and 1831. The red areas underwent fusion processes, whereas division dynamics are observed in blue areas. Magenta indicates continuity.
+</figcaption>
+</figure>
+</div>
+<p><img src="images/center_melotte_v2.svg" class="img-fluid" alt="" loading="lazy" decoding="async"></p>
+<div id="fig-3" class="anchored quarto-figure quarto-figure-center quarto-float">
+<figure class="quarto-float figure quarto-float-fig">
+<div aria-describedby="fig-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/center_berney_v2.svg" class="img-fluid figure-img" alt="" loading="lazy" decoding="async">
+</div>
+<figcaption class="quarto-float-fig quarto-float-caption quarto-float-caption-bottom" id="fig-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Expansion of the city outside its historical enclosure between 1722 (top) and 1831 (bottom).
+</figcaption>
+</figure>
+</div>
+<p>While the changes observed in the first time stratum (1722-1831, <a href="#fig-2" class="quarto-xref">Figure&nbsp;2</a>) might appear somehow disordered at first sight, it is in fact due to the complexity of the dynamics observed. At the beginning of the 18th century, the development of the city was mainly contained within its enclosure, to the exception of the three faubourgs: Halle, Martheray and Chêne<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. The demand for space was stimulating the densification of buildings within the enclosure <span class="citation" data-cites="rickli_lausanne_1978">(<a href="#ref-rickli_lausanne_1978" role="doc-biblioref">Rickli 1978</a>)</span>. The Rôtillon neighbourhood is a good example of this phenomenon. The vegetable gardens found there, whose yield was probably not very profitable since they were in the shadow of the hill of Bourg, were replaced by small buildings.</p>
+<p>Facing continued demand for space, the city’s medieval fortifications were progressively dismantled. The new buildings and the reorganization of land parcels at that time (<a href="#fig-2" class="quarto-xref">Figure&nbsp;2</a>) met four distinct demands. The first two impacted development in the immediate vicinity of the city (<a href="#fig-3" class="quarto-xref">Figure&nbsp;3</a>). First, infrastructures, such as the chapel and the charity school of Valentin, the casino to the south, and the “maison de force” (prison) to the east. Second, the expansion of productive areas, concentrating mainly along the Flon, downstream (sawmills, mills) and upstream (mills, tanneries) of the town. The two remaining demands impacted not only the close suburbs, but the whole commune. The first was the multiplication of dispersed rural housing, with the construction of several small agricultural estates scattered across the territory. We can also observe the emergence of periurban land estates, such as the most spectacular mansion in Mon Repos, owned by Alexandre Perdonnet (<a href="#fig-3" class="quarto-xref">Figure&nbsp;3</a>), but also the new estate of Bellerive (<a href="#fig-2" class="quarto-xref">Figure&nbsp;2</a>), reconstructed around 1787 by the Francillon family, for example <span class="citation" data-cites="grandjean_lausanne_1982">(<a href="#ref-grandjean_lausanne_1982" role="doc-biblioref">Grandjean 1982</a>)</span>. Farms and estates had contrasting effects on the redrawing of parcels, fueling both fusions and divisions. It is noteworthy, however, that their impact is above all localized and dispersed; hence the strong alternation between both dynamics observed in <a href="#fig-2" class="quarto-xref">Figure&nbsp;2</a>. Finally, let us also highlight that many plots to the south-east and south-west of the town show remarkable persistence. These are mainly vineyards, which stability also suggests continuity in the economic and cultural value of these lands.</p>
+<div id="fig-4" class="anchored quarto-figure quarto-figure-center quarto-float">
+<figure class="quarto-float figure quarto-float-fig">
+<div aria-describedby="fig-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/persistence_1831_1888_light.svg" class="img-fluid figure-img" alt="" loading="lazy" decoding="async">
+</div>
+<figcaption class="quarto-float-fig quarto-float-caption quarto-float-caption-bottom" id="fig-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Dynamics of land plot persistence in Lausanne between 1831 and 1883.
+</figcaption>
+</figure>
+</div>
+<div id="fig-5" class="anchored quarto-figure quarto-figure-center quarto-float">
+<figure class="quarto-float figure quarto-float-fig">
+<div aria-describedby="fig-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/prelaz_renove.svg" class="img-fluid figure-img" alt="" loading="lazy" decoding="async">
+</div>
+<figcaption class="quarto-float-fig quarto-float-caption quarto-float-caption-bottom" id="fig-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Morcellation of the land in Prélaz (west), as depicted in the 1883 cadastre.
+</figcaption>
+</figure>
+</div>
+<p>This stability contrasts with the dynamics observed in the 19th and 20th centuries (<a href="#fig-4" class="quarto-xref">Figure&nbsp;4</a>). Between 1831 and 1883, the prevailing trend was to extend the city westwards (to Prélaz, <a href="#fig-5" class="quarto-xref">Figure&nbsp;5</a>) and southwards (to Georgette), in the direction of the new railway station. This expansion is taking place precisely at the expense of the vineyards. It is characterized by the division of agricultural plots into smaller subdivisions on which mainly apartment buildings are built. Near Ponthaise<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, we note a marked fusion trend. This is due to the purchase of fields by the State of Vaud and the Commune for the construction of new training grounds and barracks, to replace the place d’armes in Montbenon, reallocated for the new Federal Court of Justice. It is noteworthy that the plots of land located in the historic city center remain relatively stable, despite the first major works including the construction of the Grand Pont and the vaulting of the Flon and Louve rivers.</p>
+<div id="fig-6" class="anchored quarto-figure quarto-figure-center quarto-float">
+<figure class="quarto-float figure quarto-float-fig">
+<div aria-describedby="fig-6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/persistence_1888_2020_light.svg" class="img-fluid figure-img" alt="" loading="lazy" decoding="async">
+</div>
+<figcaption class="quarto-float-fig quarto-float-caption quarto-float-caption-bottom" id="fig-6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Dynamics of land plot persistence in Lausanne between 1883 and 2023.
+</figcaption>
+</figure>
+</div>
+<p><img src="images/center_renove.svg" class="img-fluid" alt="" loading="lazy" decoding="async"></p>
+<div id="fig-7" class="anchored quarto-figure quarto-figure-center quarto-float">
+<figure class="quarto-float figure quarto-float-fig">
+<div aria-describedby="fig-7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/center_2020.svg" class="img-fluid figure-img" alt="" loading="lazy" decoding="async">
+</div>
+<figcaption class="quarto-float-fig quarto-float-caption quarto-float-caption-bottom" id="fig-7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Dynamics of parcel fusions in the city center between 1883 (top) and 2023 (bottom).
+</figcaption>
+</figure>
+</div>
+<p>From 1883 onwards, on the contrary, the layout of the downtown area changed significantly (<a href="#fig-6" class="quarto-xref">Figure&nbsp;6</a>, <a href="#fig-7" class="quarto-xref">Figure&nbsp;7</a>). Following the 1896 publication of the Schnetzler report on health conditions, most of the buildings, deemed dilapidated, and particularly the entire Rôtillon district, were demolished to be replaced by modern housing. The scale of this work can be seen in the impressive dynamics of plot mergers, through which old buildings were being replaced by larger constructions. Urban sprawl, on the other hand, is characterized by a dynamic of morcellation, which no longer impacts only the former vineyards, but in fact all agricultural land, which was sold in allotments to meet the high demand for city. The main exceptions are large infrastructures such as the Milan, Mon Repos, Valency and Bourget public parks, the Montoie cemetery, the Sébeillon train marshalling yard, the Blécherette airport, the CHUV hospital and the Rovéréaz agricultural estate. However, despite the time that separates both cadastres, several plots of land remain, such as the urban houses in Maupas.</p>
+</section>
+<section id="social-structure-of-land-ownership" class="level2">
+<h2 class="anchored" data-anchor-id="social-structure-of-land-ownership">Social structure of land ownership</h2>
+<p>To investigate the social structure of land ownership, we adopt a distinct approach. More specifically, we rank the owners in the 1831 cadastre of Lausanne by the total area they own. From this, we randomly pick a representative sample of 60 owners. We cross-reference these owners by looking for a corresponding entry in the 1832 and 1835 population censuses of Lausanne <span class="citation" data-cites="petitpierre_1805-1898_2023">Petitpierre, Kramer, and Rappo (<a href="#ref-petitpierre_endtoend_2023" role="doc-biblioref">2023</a>)</span>. We gather two kinds of information from that source: occupation, and number of servants. This makes it possible to relate the ownership strata back with the social status of individuals.</p>
+<p>The aggregated results of that step are described in <a href="#fig-8" class="quarto-xref">Figure&nbsp;8</a>. The first thing that can be noted is the great disparity in the repartition of land ownership. The upper decile owned several hectares of land, which almost always included a landed estate and its dependencies, a vineyard, farmlands, and forests. Most of them simply define their occupation as “owners” (propriétaires); other occupations in the sample include “banker” and “marshal”. Just after come also an “annuitant” (rentier) and a “district judge”. This social stratum also typically employs one, two, or up to eight household servants. Later in the sample, we also encounter farmers, winegrowers, and forester. These typically own farmlands, along with a farm, usually comprising a stable, barn and hayloft. Finally, a third category of owners is composed of craftsmen and merchants. They usually own a house inside the city, sometimes accompanied by a courtyard, a garden, barn or other annexes. They sometimes employ one or two servants. Finally, the last category, by far the largest, is composed of non-owners. They were 86.4% of the adult population at the time. A large part of them were tenants, but also servants or boarders, who did not event live with a nuclear family of their own. In comparison, in 2022, the non-owners represent 61.3% of the households. Even if we exclude the fact that, in 1831, married women were generally denied shared ownership, we still reach an estimate of 72% of men who were non-owners. The Gini index of land ownership in Lausanne in 1831 would equal to 0.9, which indicates a particularly unequal distribution<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
+<div id="fig-8" class="anchored quarto-figure quarto-figure-center quarto-float">
+<figure class="quarto-float figure quarto-float-fig">
+<div aria-describedby="fig-8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/owners_chart.svg" class="img-fluid figure-img" alt="" loading="lazy" decoding="async">
+</div>
+<figcaption class="quarto-float-fig quarto-float-caption quarto-float-caption-bottom" id="fig-8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: Representative samples of owners (n=60) from the 1831 cadastre, ranked by total area owned (blue, in hectares), along with the number of servants employed in their household (red). The occupation of each owner, extracted from the 1832 or 1835 population census, is indicated after their names, in the labels of the horizontal axis.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="general-discussion-and-conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="general-discussion-and-conclusion">General discussion and Conclusion</h2>
+<p>Spatial matching and the measure of morphological proximity is key to harnessing the wealth of geodata and operationalizing the analysis of plot dynamics. Spatial analysis of the territory reveals complex, protean trends that would be difficult to uncover without a spatial, quantitative and comparative approach based on digitized sources. Although certain manual steps, such as georeferencing, are still required, segmentation and vectorization are instrumental to processing such large cartographic corpora.</p>
+<p>Digitization also makes it possible to create links between sources, such as cadastres and censuses, by making their content searchable. Disambiguating individuals remains partly qualitative, as it is often necessary to reason on a cluster of clues. This is due in particular to a scant pool of names, resulting in many homonyms: for instance, there were eight household heads named “Jean Louis Blanc” in Lausanne in 1835. Digitisation therefore also highlights this type of contradiction, which might otherwise go unnoticed when reading the sources in progressive order.</p>
+<!---
+## Code
+
+### Imports
+```
+import shapefile, tqdm, cv2, json
+import numpy as np
+import pandas as pd
+
+from shapely.geometry import Polygon, MultiPolygon, Point
+from shapely.ops import unary_union
+
+import geopandas as gpd
+
+import rtree
+from rtree import index
+
+from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.model_selection import train_test_split
+
+from PIL import Image
+
+import matplotlib.pyplot as plt
+%matplotlib inline
+```
+
+### Functions
+```
+def createIndex(gdf: gpd.GeoDataFrame):
+    '''Creates an Index to accelerate data processing'''
+    
+    idx = index.Index()
+    valid_geometries = list()
+    
+    for pos, geom in enumerate(gdf.geometry):
+        
+        # Skip null or empty geometries
+        if geom is None:
+            continue
+        if geom.is_empty:
+            continue
+            
+        # Validate and possibly fix geometry
+        if not geom.is_valid:
+            geom = geom.buffer(0)
+            if not geom.is_valid or geom.is_empty:
+                continue  # Skip still invalid or empty geometries after fixing
+                
+        valid_geometries.append(geom)
+        
+        # Ensure the bounds are in the correct format
+        if len(geom.bounds) == 4:
+            idx.insert(pos, geom.bounds)
+        else:
+            print(f"Skipped geometry at position {pos} with invalid bounds: {geom.bounds}")
+            
+    gdf.geometry = gpd.GeoSeries(valid_geometries)
+    
+    return idx, gdf
+
+def matchParcels(gdf_1: gpd.GeoDataFrame, gdf_2: gpd.GeoDataFrame, index_1: rtree.Index, index_2: rtree.Index):
+    '''Check which geometries are matching together and computes the relative overlap'''
+    
+    matches = dict()
+
+    for i, poly1 in enumerate(tqdm.tqdm(gdf_1.geometry)):
+
+        if poly1 is None:
+            continue
+
+        # Find potential matches based on bounding box overlap
+        potential_indices = list(index_2.intersection(poly1.bounds))
+        
+        if potential_indices:
+            
+            # Focus on actual matches
+            potential_matches = gdf_2.geometry.iloc[potential_indices]
+            overlaps = potential_matches.overlaps(poly1)
+            actual_matches = np.array(potential_indices)[overlaps.values]
+            
+            # Computes the overlap
+            actual_overlaps = gdf_2.geometry.iloc[actual_matches]
+            overlap_ratio = actual_overlaps.intersection(poly1).area / poly1.area
+            overlapping_matches = actual_matches[overlap_ratio > 0.5]
+
+            if any(overlapping_matches):
+                matches[i] = overlapping_matches.tolist()
+                
+    return matches
+
+def reverseMatches(matches: dict):
+    '''Get reciprocal matching relations'''
+    
+    rev_matches = dict()
+    for key in matches.keys():
+        matches_list = matches[key]
+        for match in matches_list:
+            if match in rev_matches.keys():
+                rev_matches[match].append(key)
+            else:
+                rev_matches[match] = [key]
+                
+    return rev_matches
+
+def create_polygons(parcel_list: list):
+    '''Convert list of tuples to Shapely Polygon objects.'''
+    polygons = list()
+    for parcel in parcel_list:
+        poly = Polygon(parcel)
+        if not(poly.is_valid):
+            poly = poly.buffer(0) # Adding a buffer of width 0 is a way of fixing invalid geometries
+        if poly.area > 5:
+            polygons.append(poly)
+        
+    return polygons
+
+def overlap_percentage(old_poly: Polygon, new_poly: Polygon):
+    '''Calculate the percentage of the old polygon's area covered by the new polygon'''
+    try:
+        intersection = old_poly.intersection(new_poly).area
+        return (intersection / old_poly.area)
+    except:
+        return 0
+    
+def calculate_angles(polygon: Polygon):
+    '''Calculate the angles of a polygon'''
+    
+    # Convert the polygon to a numpy array
+    points = np.array(polygon.exterior.coords)
+
+    # Calculate the vectors between points
+    vectors = np.diff(points, axis=0)
+
+    # Calculate the angles between vectors
+    angles = np.arctan2(vectors[:,1], vectors[:,0])
+
+    # Accumulate the angles to get the turning function
+    turning_function = np.cumsum(np.diff(angles))
+
+    # Normalize the turning function
+    turning_function = turning_function / (2 * np.pi)
+
+    return turning_function
+
+
+def compare_polygons(polygon1: Polygon, polygon2: Polygon):
+    '''Compare two polygons using their turning functions'''
+    
+    min_area = np.inf
+
+    # Calculate the turning functions of each polygon for every possible starting point
+    for i in range(len(polygon1.exterior.coords)-1):
+        for j in range(len(polygon2.exterior.coords)-1):
+            
+            # Rotate the coordinates to start at a different point
+            coords1 = np.roll(polygon1.exterior.coords, -i, axis=0)
+            coords2 = np.roll(polygon2.exterior.coords, -j, axis=0)
+
+            # Create new polygons with the rotated coordinates
+            rotated_polygon1 = Polygon(coords1)
+            rotated_polygon2 = Polygon(coords2)
+
+            # Calculate the turning functions
+            tf1 = calculate_angles(rotated_polygon1)
+            tf2 = calculate_angles(rotated_polygon2)
+
+            # Interpolate the turning functions to a common set of points
+            x = np.linspace(0, 1, 1000)
+            tf1_interp = np.interp(x, np.linspace(0, 1, len(tf1)), tf1)
+            tf2_interp = np.interp(x, np.linspace(0, 1, len(tf2)), tf2)
+
+            # Calculate the area between the turning functions
+            area = np.sum(np.abs(tf1_interp - tf2_interp)) / len(x)
+
+            # Update minimum area
+            min_area = min(min_area, area)
+
+    return min_area
+
+def create_image(polygons: Polygon, bounds: tuple, grid_size: int = 2, max_score: float = 1.):
+    '''Create an image from a list of polygons with associated Turning function scores.'''
+
+    min_x, min_y, max_x, max_y = bounds
+    
+    # Initialize an empty canvas
+    width = int((max_x - min_x + 1) / grid_size)
+    height = int((max_y - min_y + 1) / grid_size)
+    img = Image.new('L', (width, height))
+
+    # Create an R-tree index for the polygons
+    idx = index.Index()
+    for i, poly in enumerate(polygons):
+        idx.insert(i, poly['polygon'].bounds)
+
+    # Go through each pixel in the image
+    for x in tqdm.tqdm(range(width)):
+        for y in range(height):
+            # Create a point at the current pixel
+            point = Point((x * grid_size) + min_x, (height - 1 - y) * grid_size + min_y)
+
+            # Find the polygons that might contain this point
+            for i in idx.intersection(point.coords[0]):
+                poly = polygons[i]
+                if poly['polygon'].contains(point):
+                    
+                    # Convert the Turning function score to a pixel intensity
+                    score = min(max_score, poly['turning_score'])
+                    intensity = int((1 - score) * 255)
+
+                    # Set the pixel's intensity
+                    img.putpixel((x, y), intensity)
+                    break
+
+    return img
+
+def computeDynamics(rev_matches: dict, gdf_1: gpd.GeoDataFrame, gdf_2: gpd.GeoDataFrame):
+    '''Compute fusion dynamics between gdf_1 and gdf_2'''
+    
+    dynamic = list()
+    
+    for key in tqdm.tqdm(rev_matches.keys()):
+        poly_2 = gdf_2['geometry'][key]
+
+        if len(rev_matches[key]) == 1:
+            # one to one match
+            poly_1 = gdf_1['geometry'][rev_matches[key][0]]
+            match_type = 'one-to-one'
+
+        else:
+            # many to one
+            poly_1 = unary_union(gdf_1['geometry'][rev_matches[key]])
+            match_type = 'many-to-one'
+            
+        if not(poly_1.type == 'Polygon'):
+            poly_1 = convert_multipolygon_to_polygon(poly_1)
+            if not (poly_1.type == 'Polygon'):
+                poly_1 = poly_1.geoms[np.argmax([geom.area for geom in poly_1.geoms])]
+                
+        if not(poly_2.type == 'Polygon'):
+            poly_2 = Polygon(convert_multipolygon_to_polygon(poly_2))
+            if not (poly_2.type == 'Polygon'):
+                poly_2 = poly_2.geoms[np.argmax([geom.area for geom in poly_2.geoms])]
+            
+        dist = compare_polygons(poly_2, poly_1)
+
+        dynamic.append({
+            '1': rev_matches[key],
+            '2': key,
+            'match_type': match_type,
+            'dist': dist,
+        })
+        
+    return dynamic
+
+def convert_multipolygon_to_polygon(multipolygon: MultiPolygon):
+    '''Convert multipolygons to polygons by filling the gaps between parts'''
+    
+    # Start with the first polygon
+    polygon = multipolygon.geoms[0]
+    
+    # Iterate over the remaining polygons in the MultiPolygon
+    for part in multipolygon.geoms[1:]:
+        if part.area < 0.5:
+            continue
+        distance = polygon.distance(part)
+        buffered_polygon = polygon.buffer(2*distance)
+        buffered_part = part.buffer(2*distance)
+        
+        # Unary union of the buffered shapes
+        polygon = unary_union([buffered_polygon, buffered_part])
+        
+        # Apply negative buffer to shrink back
+        polygon = polygon.buffer(-2*distance)
+    
+    return polygon
+
+def compute_legend():
+    '''Compute color red-pink-blue-white palette and legend for plotting'''
+
+    size = 256
+    legend = np.zeros((size, size, 3))
+
+    colors = np.array([
+        [1, 0, 0],  # Red
+        [1, 0, 1],  # Pink
+        [0, 0, 1],  # Blue
+        [1, 1, 1],  # White
+    ])
+
+    for x in range(size):
+        for y in range(size):
+            # Calculate the weights for each corner
+            weights = [
+                ((size - x) * (size - y)) / (size ** 2),
+                (x * (size - y)) / (size ** 2),
+                (x * y) / (size ** 2),
+                ((size - x) * y) / (size ** 2)
+            ]
+
+            # Calculate the color for the pixel
+            color = sum(w * c for w, c in zip(weights, colors))
+            legend[x, y] = color
+
+    legend = (legend*255).astype('uint8')
+    legend = np.rot90(legend)
+    
+    return legend, colors
+```
+### Load data
+```
+path = '1722.shp'
+gdf_1 = gpd.read_file(path)
+gdf_1 = gdf_1[(gdf_1['class'] == 'built') | (gdf_1['class'] == 'non-built')].reset_index(drop=True)
+
+path = '1831.shp'
+gdf_2 = gpd.read_file(path)
+gdf_2 = gdf_2[(gdf_2['class'] == 'built') | (gdf_2['class'] == 'non-built')].reset_index(drop=True)
+```
+
+### Match geometries
+```
+index_1, gdf_1 = createIndex(gdf_1)
+index_2, gdf_2 = createIndex(gdf_2)
+
+matches_1_2 = matchParcels(gdf_1, gdf_2, index_1, index_2)
+matches_2_1 = matchParcels(gdf_2, gdf_1, index_2, index_1)
+
+rev_matches_1_2 = reverseMatches(matches_1_2)
+rev_matches_2_1 = reverseMatches(matches_2_1)
+```
+
+### Detection of persistence, fusion, division
+```
+fusion = computeDynamics(rev_matches_1_2, gdf_1, gdf_2)
+division = computeDynamics(rev_matches_2_1, gdf_2, gdf_1)
+
+df_pers_fusion = pd.DataFrame(fusion)
+df_pers_division = pd.DataFrame(division)
+df_pers_fusion['turning_score'] = df_pers_fusion['dist'].rank()/len(df_pers_fusion)
+df_pers_division['turning_score'] = df_pers_division['dist'].rank()/len(df_pers_division)
+fusion_dict = df_pers_fusion.to_dict(orient='records')
+division_dict = df_pers_division.to_dict(orient='records')
+```
+
+### Draw and save persistence plot
+```
+legend, colors = compute_legend()
+cv2.imwrite('persistence_legend_red_blue.png', legend)
+
+bounds = (2534054.043, 1150650.392, 2544978.007, 1161552.53)
+min_x, min_y, max_x, max_y = bounds
+
+for item in fusion:
+    item['polygon'] = gdf_2.iloc[item['2']]['geometry']
+img_fusion = create_image(fusion, bounds, grid_size=3)
+
+for item in division:
+    item['polygon'] = gdf_1.iloc[item['2']]['geometry']
+img_fusion = create_image(division, bounds, grid_size=3)
+
+merge_img = cv2.merge([np.array(img_division), np.zeros(np.array(img_fusion).shape, dtype='uint8'), np.array(img_fusion)])
+cv2.imwrite('persistence_1723_1831.png', merge_img) # Black mode
+
+light_img = np.zeros(np.array(merge_img).shape, dtype='uint8')
+for i in tqdm.tqdm(range(light_img.shape[0])):
+    for j in range(light_img.shape[1]):
+        r, g, b = merge_img[i, j]
+        light_img[i, j] = legend[r, b]
+cv2.imwrite('persistence_1888_2020_light.png', light_img) # Light mode
+```
+-->
+
+
+<!-- -->
+
+
+</section>
+
+
+<a onclick="return window.scrollTo(0,0),!1;
+" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="csl-bib-body hanging-indent references" data-entry-spacing="0" role="list">
+<div id="ref-ares_oliveira_deep_2019" class="csl-entry" role="listitem">
+Ares Oliveira, Sofia, Isabella di Lenardo, Bastien Tourenc, and Frederic Kaplan. 2019. <span>“A Deep Learning Approach to <span>Cadastral</span> <span>Computing</span>.”</span> In <em><span>DH2019</span></em>. Utrecht, Netherlands. <a href="https://dev.clariah.nl/files/dh2019/boa/0691.html">https://dev.clariah.nl/files/dh2019/boa/0691.html</a>.
+</div>
+<div id="ref-arkin_efficiently_1991" class="csl-entry" role="listitem">
+Arkin, E. M., L. P. Chew, D. P. Huttenlocher, K. Kedem, and J. S. B. Mitchell. 1991. <span>“An Efficiently Computable Metric for Comparing Polygonal Shapes.”</span> <em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em> 13 (3): 209–16. <a href="https://doi.org/10.1109/34.75509">https://doi.org/10.1109/34.75509</a>.
+</div>
+<div id="ref-berney_plan_1831" class="csl-entry" role="listitem">
+Berney, Abraham. 1831. <span>“Plan Cadastral Par l’arpenteur <span>Abraham</span> <span>Berney</span>.”</span>
+</div>
+<div id="ref-chen_vectorization_2021" class="csl-entry" role="listitem">
+Chen, Yizi, Edwin Carlinet, Joseph Chazalon, Clément Mallet, Bertrand Duménieu, and Julien Perret. 2021. <span>“Vectorization of <span>Historical</span> <span>Maps</span> <span>Using</span> <span>Deep</span> <span>Edge</span> <span>Filtering</span> and <span>Closed</span> <span>Shape</span> <span>Extraction</span>.”</span> In <em>Document <span>Analysis</span> and <span>Recognition</span> – <span>ICDAR</span> 2021</em>, edited by Josep Lladós, Daniel Lopresti, and Seiichi Uchida, 510–25. Cham: Springer International Publishing.
+</div>
+<div id="ref-cheng_masked-attention_2022" class="csl-entry" role="listitem">
+Cheng, Bowen, Ishan Misra, Alexander G. Schwing, Alexander Kirillov, and Rohit Girdhar. 2022. <span>“Masked-Attention <span>Mask</span> <span>Transformer</span> for <span>Universal</span> <span>Image</span> <span>Segmentation</span>.”</span> arXiv. <a href="https://doi.org/10.48550/arXiv.2112.01527">https://doi.org/10.48550/arXiv.2112.01527</a>.
+</div>
+<div id="ref-clergeot_cent_2007" class="csl-entry" role="listitem">
+Clergeot, Pierre. 2007. <em>Cent Millions de Parcelles En <span>France</span>: 1807, Un Cadastre Pour l’<span>Empire</span></em>. Paris: Editions Publi-Topex.
+</div>
+<div id="ref-deluz_plans_1886" class="csl-entry" role="listitem">
+Deluz, Louis. 1886. <span>“Plans de <span>Lausanne</span>.”</span>
+</div>
+<div id="ref-follin_detection_2021" class="csl-entry" role="listitem">
+Follin, Jean-Michel, Élisabeth Simonetto, and Anthony Chalais. 2021. <span>“Détection Automatique Des Parcelles Sur Les Plans Napoléoniens : Comparaison de Deux Méthodes.”</span> <em>Humanités Numériques</em>, no. 3 (May). <a href="https://doi.org/10.4000/revuehn.1779">https://doi.org/10.4000/revuehn.1779</a>.
+</div>
+<div id="ref-goderle_ai-driven_2023" class="csl-entry" role="listitem">
+Göderle, Wolfgang, Christian Macher, Katrin Mauthner, Oliver Pimas, and Fabian Rampetsreiter. 2023. <span>“<span>AI</span>-Driven <span>Structure</span> <span>Detection</span> and <span>Information</span> <span>Extraction</span> from <span>Historical</span> <span>Cadastral</span> <span>Maps</span> (<span>Early</span> 19th <span>Century</span> <span>Franciscean</span> <span>Cadastre</span> in the <span>Province</span> of <span>Styria</span>) and <span>Current</span> <span>High</span>-Resolution <span>Satellite</span> and <span>Aerial</span> <span>Imagery</span> for <span>Remote</span> <span>Sensing</span>.”</span> arXiv. <a href="https://doi.org/10.48550/arXiv.2312.07560">https://doi.org/10.48550/arXiv.2312.07560</a>.
+</div>
+<div id="ref-grandjean_lausanne_1982" class="csl-entry" role="listitem">
+Grandjean, Marcel. 1982. <em>Lausanne: Villages, Hameaux Et Maisons de l’ancienne Campagne Lausannoise</em>. Birkhäuser. Vol. 4. Monuments d’art Et d’histoire Du <span>Canton</span> de <span>Vaud</span>. Basel.
+</div>
+<div id="ref-hennet_recueil_1811" class="csl-entry" role="listitem">
+Hennet, Albert-Joseph-Ulpien. 1811. <em>Recueil Méthodique Des Lois, Décrets, Règlemens, Instructions Et Décisions Sur Le Cadastre de La <span>France</span></em>. Paris: Imprimerie impériale.
+</div>
+<div id="ref-lelo_analysing_2020" class="csl-entry" role="listitem">
+Lelo, Keti. 2020. <span>“Analysing Spatial Relationships Through the Urban Cadastre of Nineteenth-Century <span>Rome</span>.”</span> <em>Urban History</em> 47 (3): 467–87. <a href="https://doi.org/10.1017/S0963926820000188">https://doi.org/10.1017/S0963926820000188</a>.
+</div>
+<div id="ref-di_lenardo_approche_2021" class="csl-entry" role="listitem">
+Lenardo, Isabella di, Raphaël Barman, Federica Pardini, and Frédéric Kaplan. 2021. <span>“Une Approche Computationnelle Du Cadastre Napoléonien de <span>Venise</span>.”</span> <em>Humanités Numériques</em> 3 (May). <a href="https://doi.org/0.4000/revuehn.1786">https://doi.org/0.4000/revuehn.1786</a>.
+</div>
+<div id="ref-melotte_plans_1722" class="csl-entry" role="listitem">
+Melotte, Sebastian, and Claude Perey. 1722. <span>“Plans Du Territoire de <span>Lausanne</span>.”</span>
+</div>
+<div id="ref-noauthor_mmsegmentation_2022" class="csl-entry" role="listitem">
+OpenMMLab. 2022. <span>“<span>MMSegmentation</span>: <span>OpenMMLab</span> <span>Semantic</span> <span>Segmentation</span> <span>Toolbox</span> and <span>Benchmark</span>.”</span> OpenMMLab. <a href="https://github.com/open-mmlab/mmsegmentation">https://github.com/open-mmlab/mmsegmentation</a>.
+</div>
+<div id="ref-petitpierre_mapping_2023" class="csl-entry" role="listitem">
+Petitpierre, Remi. 2023. <span>“Mapping <span>Memes</span> in the <span>Napoleonic</span> <span>Cadastre</span>: <span>Expanding</span> <span>Frontiers</span> in <span>Memetics</span>.”</span> In <em>Digital <span>Humanities</span> 2023: <span>Book</span> of <span>Abstracts</span></em>, 3. Graz, Austria: Zenodo. <a href="https://doi.org/10.5281/zenodo.8107916">https://doi.org/10.5281/zenodo.8107916</a>.
+</div>
+<div id="ref-petitpierre_effective_2023" class="csl-entry" role="listitem">
+Petitpierre, Remi, and Paul Guhennec. 2023. <span>“Effective Annotation for the Automatic Vectorization of Cadastral Maps.”</span> <em>Digital Scholarship in the Humanities</em>, March. <a href="https://doi.org/10.1093/llc/fqad006">https://doi.org/10.1093/llc/fqad006</a>.
+</div>
+<div id="ref-petitpierre_endtoend_2023" class="csl-entry" role="listitem">
+Petitpierre, Remi, Marion Kramer, and Lucas Rappo. 2023. <span>“An End-to-End Pipeline for Historical Censuses Processing.”</span> <em>International Journal on Document Analysis and Recognition (IJDAR)</em>, March. <a href="https://doi.org/10.1007/s10032-023-00428-9">https://doi.org/10.1007/s10032-023-00428-9</a>.
+</div>
+<div id="ref-petitpierre_1805-1898_2023" class="csl-entry" role="listitem">
+Petitpierre, Remi, Marion Kramer, Lucas Rappo, and Isabella di Lenardo. 2023. <span>“1805-1898 <span>Census</span> <span>Records</span> of <span>Lausanne</span> : A <span>Long</span> <span>Digital</span> <span>Dataset</span> for <span>Demographic</span> <span>History</span>.”</span> <a href="https://doi.org/10.5281/zenodo.7711640">https://doi.org/10.5281/zenodo.7711640</a>.
+</div>
+<div id="ref-petitpierre_recartographier_2023" class="csl-entry" role="listitem">
+Petitpierre, Remi, Lucas Rappo, and Isabella di Lenardo. 2023. <span>“Recartographier l’espace Napoléonien.”</span> In. <a href="https://hal.science/hal-04109214">https://hal.science/hal-04109214</a>.
+</div>
+<div id="ref-rickli_lausanne_1978" class="csl-entry" role="listitem">
+Rickli, Jean Daniel. 1978. <span>“Lausanne: Deux Siècles de Devenir Urbain.”</span> <em>Habitation</em> 51 (12).
+</div>
+<div id="ref-soulier_instructions_1827" class="csl-entry" role="listitem">
+Soulier, and Berdez. 1827. <em>Instructions Données Par Le <span>Département</span> Des <span>Finances</span> Pour La Levée Des Plans Et l’établissement Du Cadastre, Ensuite de La Décision Du <span>Conseil</span> d’<span>Etat</span> Du 6 Décembre 1826</em>. Frères Blanchard. Lausanne.
+</div>
+<div id="ref-vaienti_machine-learning-enhanced_2023" class="csl-entry" role="listitem">
+Vaienti, Beatrice, Rémi Petitpierre, Isabella di Lenardo, and Frédéric Kaplan. 2023. <span>“Machine-<span>Learning</span>-<span>Enhanced</span> <span>Procedural</span> <span>Modeling</span> for <span>4D</span> <span>Historical</span> <span>Cities</span> <span>Reconstruction</span>.”</span> <em>Remote Sensing</em> 15 (13): 3352. <a href="https://doi.org/10.3390/rs15133352">https://doi.org/10.3390/rs15133352</a>.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Note that here we use the absolute difference L1 instead of the squared difference L2, which is favored by Arkin. This is intentional, as we believe that shape dissimilarities should be equally weighted in the present use case.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Here, we use the historical spelling of place names, as given in the sources.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>idem.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>In comparison, we can easily estimate the distribution of fortune in Switzerland in 2022 by interpolating the aggregated statistics of the Federal Statistical Office using cubic spline, which yields a value of 0.82, still corresponding to a less unequal distribution.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">window.document.addEventListener("DOMContentLoaded",function(z){const B=o=>{const t=o.getAttribute("data-mode"),e=window.document.querySelector("body");t==="dark"?(e.classList.add("quarto-dark"),e.classList.remove("quarto-light")):(e.classList.add("quarto-light"),e.classList.remove("quarto-dark"))};(()=>{const o=window.document.querySelector("link#quarto-bootstrap");o&&B(o)})();const T="\uE9CB",b=new window.AnchorJS;b.options={placement:"right",icon:T},b.add(".anchored");const H=o=>{for(const t of o.classList)if(t.startsWith("code-annotation-"))return!0;return!1},y=function(o){const t=o.trigger;t.blur(),t.classList.add("code-copy-button-checked");var e=t.getAttribute("title");t.setAttribute("title","Copied!");let n;window.bootstrap&&(t.setAttribute("data-bs-toggle","tooltip"),t.setAttribute("data-bs-placement","left"),t.setAttribute("data-bs-title","Copied!"),n=new bootstrap.Tooltip(t,{trigger:"manual",customClass:"code-copy-button-tooltip",offset:[0,-8]}),n.show()),setTimeout(function(){n&&(n.hide(),t.removeAttribute("data-bs-title"),t.removeAttribute("data-bs-toggle"),t.removeAttribute("data-bs-placement")),t.setAttribute("title",e),t.classList.remove("code-copy-button-checked")},1e3),o.clearSelection()},v=function(o){const t=o.previousElementSibling.cloneNode(!0);for(const e of t.children)H(e)&&e.remove();return t.innerText};new window.ClipboardJS(".code-copy-button:not([data-in-quarto-modal])",{text:v}).on("success",y),window.document.getElementById("quarto-embedded-source-code-modal")&&new window.ClipboardJS(".code-copy-button[data-in-quarto-modal]",{text:v,container:window.document.getElementById("quarto-embedded-source-code-modal")}).on("success",y);const w=window.document.getElementById("quarto-view-source")||window.document.getElementById("quarto-code-tools-source");if(w){const o=w.getAttribute("data-quarto-source-url");w.addEventListener("click",function(t){return o?/\bcapabilities=\b/.test(window.location)?window.open(o):window.location.href=o:new bootstrap.Modal(document.getElementById("quarto-embedded-source-code-modal")).show(),!1})}function E(o){return function(t){const e=window.document.querySelectorAll(".cell > details > .sourceCode");for(let r=0;r<e.length;r++){const c=e[r].parentElement;o?c.open=!0:c.removeAttribute("open")}const n=window.document.querySelectorAll(".cell > .sourceCode"),i=o?"hidden":"unhidden",l=o?"unhidden":"hidden";for(let r=0;r<n.length;r++){const c=n[r];c.classList.contains(i)&&(c.classList.remove(i),c.classList.add(l))}return!1}}const A=window.document.getElementById("quarto-hide-all-code");A&&A.addEventListener("click",E(!1));const L=window.document.getElementById("quarto-show-all-code");L&&L.addEventListener("click",E(!0));for(var D=new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//),R=new RegExp(/^mailto:/),N=new RegExp("https://digihistch24.github.io/book-of-abstracts/"),Q=o=>N.test(o)||D.test(o)||R.test(o),C=window.document.querySelectorAll("a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)"),d=0;d<C.length;d++){const o=C[d];Q(o.href)||(o.dataset.originalHref!==void 0&&(o.href=o.dataset.originalHref),o.setAttribute("target","_blank"),o.getAttribute("rel")===null&&o.setAttribute("rel","noopener"),o.classList.add("external"))}function g(o,t,e,n){const i={allowHTML:!0,maxWidth:500,delay:100,arrow:!1,appendTo:function(l){return l.parentElement},interactive:!0,interactiveBorder:10,theme:"quarto",placement:"bottom-start"};t&&(i.content=t),e&&(i.onTrigger=e),n&&(i.onUntrigger=n),window.tippy(o,i)}const q=window.document.querySelectorAll('a[role="doc-noteref"]');for(var d=0;d<q.length;d++){const t=q[d];g(t,function(){let e=t.getAttribute("data-footnote-href")||t.getAttribute("href");try{e=new URL(e).hash}catch{}const n=e.replace(/^#\/?/,""),i=window.document.getElementById(n);return i?i.innerHTML:""})}const S=window.document.querySelectorAll("a.quarto-xref"),p=(o,t)=>{const e=n=>{if(n.classList.remove("page-full","page-columns"),n.children)for(const i of n.children)e(i)};if(e(t),o===null||o.startsWith("sec-")){const n=document.createElement("div");if(t.children&&t.children.length>2){n.appendChild(t.children[0].cloneNode(!0));for(let i=1;i<t.children.length;i++){const l=t.children[i];if(!(l.tagName==="P"&&l.innerText==="")){n.appendChild(l.cloneNode(!0));break}}return window.Quarto?.typesetMath&&window.Quarto.typesetMath(n),n.innerHTML}else return window.Quarto?.typesetMath&&window.Quarto.typesetMath(t),t.innerHTML}else{const n=t.querySelector("a.anchorjs-link");return n&&n.remove(),window.Quarto?.typesetMath&&window.Quarto.typesetMath(t),t.classList.contains("callout")?t.outerHTML:t.innerHTML}};for(var d=0;d<S.length;d++){const t=S[d];g(t,void 0,function(e){e.disable();let n=t.getAttribute("href"),i;if(n.startsWith("#"))i=n;else try{i=new URL(n).hash}catch{}if(i){const l=i.replace(/^#\/?/,""),r=window.document.getElementById(l);if(r!==null)try{const c=p(l,r.cloneNode(!0));e.setContent(c)}finally{e.enable(),e.show()}else fetch(n.split("#")[0]).then(c=>c.text()).then(c=>{const u=new DOMParser().parseFromString(c,"text/html").getElementById(l);if(u!==null){const a=p(l,u);e.setContent(a)}}).finally(()=>{e.enable(),e.show()})}else fetch(n).then(l=>l.text()).then(l=>{const s=new DOMParser().parseFromString(l,"text/html").querySelector("main.content");if(s!==null){s.children.length>0&&s.children[0].tagName==="HEADER"&&s.children[0].remove();const h=p(null,s);e.setContent(h)}}).finally(()=>{e.enable(),e.show()})},function(e){})}let m;const P=(o,t)=>{let e='data-code-cell="'+o+'"',n='data-code-annotation="'+t+'"';return"span["+e+"]["+n+"]"},x=o=>{const t=window.document,e=o.getAttribute("data-target-cell"),n=o.getAttribute("data-target-annotation"),r=window.document.querySelector(P(e,n)).getAttribute("data-code-lines").split(",").map(u=>e+"-"+u);let c=null,s=null,h=null;if(r.length>0){const u=window.document.getElementById(r[0]);if(c=u.offsetTop,s=u.offsetHeight,h=u.parentElement.parentElement,r.length>1){const a=window.document.getElementById(r[r.length-1]);s=a.offsetTop+a.offsetHeight-c}if(c!==null&&s!==null&&h!==null){let a=window.document.getElementById("code-annotation-line-highlight");a===null&&(a=window.document.createElement("div"),a.setAttribute("id","code-annotation-line-highlight"),a.style.position="absolute",h.appendChild(a)),a.style.top=c-2+"px",a.style.height=s+4+"px",a.style.left=0;let f=window.document.getElementById("code-annotation-line-highlight-gutter");f===null&&(f=window.document.createElement("div"),f.setAttribute("id","code-annotation-line-highlight-gutter"),f.style.position="absolute",window.document.getElementById(e).querySelector(".code-annotation-gutter").appendChild(f)),f.style.top=c-2+"px",f.style.height=s+4+"px"}m=o}},k=()=>{["code-annotation-line-highlight","code-annotation-line-highlight-gutter"].forEach(t=>{const e=window.document.getElementById(t);e&&e.remove()}),m=void 0};window.addEventListener("resize",J(()=>{elRect=void 0,m&&x(m)},10));function J(o,t){let e=!1,n;return(...i)=>{e?(n&&clearTimeout(n),n=setTimeout(()=>{o.apply(this,i),n=e=!1},t)):(o.apply(this,i),e=!0)}}const W=window.document.querySelectorAll("dt[data-target-cell]");for(const o of W)o.addEventListener("click",t=>{const e=t.target;if(e!==m){k();const n=window.document.querySelector("dt[data-target-cell].code-annotation-active");n&&n.classList.remove("code-annotation-active"),x(e),e.classList.add("code-annotation-active")}else k(),e.classList.remove("code-annotation-active")});const I=o=>{const t=o.parentElement;if(t){const e=t.dataset.cites;return e?{el:o,cites:e.split(" ")}:I(o.parentElement)}else return};for(var M=window.document.querySelectorAll('a[role="doc-biblioref"]'),d=0;d<M.length;d++){const t=M[d],e=I(t);e&&g(e.el,function(){var n=window.document.createElement("div");return e.cites.forEach(function(i){var l=window.document.createElement("div");l.classList.add("hanging-indent"),l.classList.add("csl-entry");var r=window.document.getElementById("ref-"+i);r&&(l.innerHTML=r.innerHTML),n.appendChild(l)}),n.innerHTML})}});
+</script>
+<nav class="column-body page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../submissions/453/index.html" class="pagination-link" aria-label="Contributing to a Paradigm Shift in Historical Research by Teaching Digital Methods to Master's Students">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Contributing to a Paradigm Shift in Historical Research by Teaching Digital Methods to Master’s Students</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../submissions/457/index.html" class="pagination-link" aria-label="Towards Computational Historiographical Modeling">
+        <span class="nav-page-text">Towards Computational Historiographical Modeling</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="fade modal" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">submission_id:</span><span class="co"> 454</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> 'Session 1A'</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Revealing the Structure of Land Ownership through the Automatic Vectorisation of Swiss Cadastral Plans</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  - name: Rémi Petitpierre</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    orcid: 0000-0001-9138-6727</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    email: remi.petitpierre@epfl.ch</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">    affiliations:</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">      - Time Machine Unit, EPFL</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - name: Isabella di Lenardo</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">    orcid: 0000-0002-1747-9164</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">    email: isabella.dilenardo@epfl.ch</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">    affiliations:</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">      - Time Machine Unit, EPFL</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">  - name: Lucas Rappo</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">    orcid: 0000-0002-7172-2495</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">    affiliations:</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">      - Time Machine Unit, EPFL</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="an">keywords:</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">  - cadastral plans</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">  - vectorisation</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">  - land ownership</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">  - spatial dynamics</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">  - historical social geography</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="an">abstract:</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co">  This paper explores how the dynamics and structure of land ownership can be studied by automating the vectorisation of historical cadastral sources. Cadastres are a granular, relatively homogeneous and abundant source. From the 18th century, they are also relatively well aligned with the paradigms of modern geodata. Digital or quantitative methods seem therefore particularly well suited to approach these substantial archival corpora. Our analysis focuses mainly on three cadastres of Lausanne (1722, 1831, 1883), which total 570 plats. The plans are first georeferenced, before being semantically segmented using a neural model, and vectorised. Compared to a manual approach, automation reduces the vectorisation workload by 12 fold. We study the dynamics of persistence by deploying a spatial matching methodology, geometrically detecting parcel fusions and divisions across temporal layers. We also investigate the social structure of ownership in Lausanne at the beginning of the 19th century by relating representative owners to their socioprofessional status based on historical population censuses.</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="an">key-points:</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co">  - We vectorise cadastral plans using an automated approach</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co">  - We study the dynamics of parcel persistence based on geometries</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co">  - We investigate the social structure of ownership cross-matching comparing cadastral sources with population censuses</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 07-24-2024</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> references.bib</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introduction</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>Cadastral plans are a granular, relatively homogeneous, and abundant source for studying land ownership and spatial relationships in 19th century Western Europe <span class="co">[</span><span class="ot">@clergeot_cent_2007;@di_lenardo_approche_2021;@lelo_analysing_2020</span><span class="co">]</span>. Moreover, from the 18th century, cadastres are generally geometrical, and therefore well aligned with the paradigms of modern geodata. Due to the substantial number of entries and the quantitative nature of these historical sources, digital methods leveraging geographic information systems (GIS) seem most appropriate to approach these archival corpora. In addition, the Napoleonic period resulted in a remarkable harmonization of cadastral ordinances, survey methods, and conventions of representation throughout Europe, which persisted until the middle of the 19th century <span class="co">[</span><span class="ot">@hennet_recueil_1811;@soulier_instructions_1827;@petitpierre_mapping_2023</span><span class="co">]</span>. This representational coherence makes cadastral plans an interesting target for automated recognition <span class="co">[</span><span class="ot">@follin_detection_2021;@goderle_ai-driven_2023;@petitpierre_recartographier_2023;@ares_oliveira_deep_2019</span><span class="co">]</span>. This research explores how 19th-century cadastres can be massively read and vectorised by machines, and how the resulting geodata can be used to study the dynamics of persistence in the parcel fabric and land ownership.</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data collection approach</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>Our data collection approach is based on supervised semantic segmentation. Sematic segmentation is a pixel classification method, where each pixel in the image, i.e. the digitised cadastral plats, is attributed a single semantic class (see @fig-1). In the present case, we follow the ontology proposed by <span class="co">[</span><span class="ot">@petitpierre_effective_2023</span><span class="co">]</span> and annotate the images with four land use classes (built, non-built, water, and road network), plus the contours, which allow us to delineate the geometries <span class="co">[</span><span class="ot">@chen_vectorization_2021</span><span class="co">]</span>. In total, 78 cadastral plats were manually annotated (42 for Lausanne, 10 for Neuchatel, 8 for Geneva, and 18 from various communes in the states of the First French Empire). Thirty percent of the dataset was preserved for validation (2/3), and testing (1/3). A Mask2Former <span class="co">[</span><span class="ot">@cheng_masked-attention_2022;@noauthor_mmsegmentation_2022</span><span class="co">]</span> neural model was trained on the remaining labels, using 768x768 image crops, until convergence.</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>The trained segmentation model is used to automate the recognition of the remaining cadastral plats for three cadastral series of Lausanne <span class="co">[</span><span class="ot">@melotte_plans_1722;@berney_plan_1831;@deluz_plans_1886</span><span class="co">]</span>, which total 570 plats. In a first step, the sheets were georeferenced and separated from the legend. Second, the semantic segmentation was applied directly on the georeferenced images. Third, the resulting predictions masks were manually reviewed, and the most salient inconsistencies were corrected. Finally, the raster masks were vectorized, as described in <span class="co">[</span><span class="ot">@vaienti_machine-learning-enhanced_2023</span><span class="co">]</span>, resulting in 69,083 extracted geometries. The data collection workload is estimated to 15 workdays for the specific annotation of 42 plats, 5 workdays for the initial correction of the predictions, and 2 workdays (excluding research and development) for the automatic segmentation and vectorisation. By contrast, the estimated workload for manually vectorising the whole corpus would be over 260 days.</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="al">![Illustration of the raster/pixel annotation of the 1886 cadastre of Lausanne by Louis Deluz, using five semantic classes (red: built, dark grey: non-built, light grey: road network, violet: water, white: contours, black: background).](images/segmentation.svg)</span>{#fig-1}</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## Persistence</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>We adopt two complementary approaches for studying the structure of land ownership. The first is based on the measure of persistence in the parcel fabric. The second, which will be presented later, focuses on the social structure of land ownership, through the analysis of owners. Regarding persistence, two processes are considered: the division of a plot into two or more plots, or the fusion –i.e. the grouping– of two or more plots together. We call continuity the state in which parcel fabric is unchanged. Finally, discontinuity denotes a situation in which the parcel fabric has been otherwise altered by rezoning.</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>Fusion and division are measured separately. The detection of both processes is based on the spatial matching of the parcels in two distinct historical layers. Only child parcels whose overlap with the parent is at least 50% are considered for division, and vice versa for fusion. For fusion, the measure of shape similarity is based on the computation of the absolute difference of turning functions <span class="co">[</span><span class="ot">@arkin_efficiently_1991</span><span class="co">]</span> between the child parcels and the parent one, and vice versa. This method, which intuitively focuses on a shape's salient angles, excels at comparing shapes which exhibit inequal level of detail or resolution, which is precisely the case for the extracted geometries, originating from diverse series<span class="ot">[^1]</span>. This process allows us to establish maps of land persistence and continuity (@fig-2, @fig-4, and @fig-6), whose results will be presented and discussed in a chronological order. The relative code is published along with this article. </span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="al">![Dynamics of land plot persistence in Lausanne between 1722 and 1831. The red areas underwent fusion processes, whereas division dynamics are observed in blue areas. Magenta indicates continuity. ](images/persistence_1727_1831_light.svg)</span>{#fig-2}</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/center_melotte_v2.svg)</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="al">![Expansion of the city outside its historical enclosure between 1722 (top) and 1831 (bottom).](images/center_berney_v2.svg)</span>{#fig-3}</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>While the changes observed in the first time stratum (1722-1831, @fig-2) might appear somehow disordered at first sight, it is in fact due to the complexity of the dynamics observed. At the beginning of the 18th century, the development of the city was mainly contained within its enclosure, to the exception of the three faubourgs: Halle, Martheray and Chêne<span class="ot">[^2]</span>. The demand for space was stimulating the densification of buildings within the enclosure <span class="co">[</span><span class="ot">@rickli_lausanne_1978</span><span class="co">]</span>. The Rôtillon neighbourhood is a good example of this phenomenon. The vegetable gardens found there, whose yield was probably not very profitable since they were in the shadow of the hill of Bourg, were replaced by small buildings.</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>Facing continued demand for space, the city's medieval fortifications were progressively dismantled. The new buildings and the reorganization of land parcels at that time (@fig-2) met four distinct demands. The first two impacted development in the immediate vicinity of the city (@fig-3). First, infrastructures, such as the chapel and the charity school of Valentin, the casino to the south, and the "maison de force" (prison) to the east. Second, the expansion of productive areas, concentrating mainly along the Flon, downstream (sawmills, mills) and upstream (mills, tanneries) of the town. The two remaining demands impacted not only the close suburbs, but the whole commune. The first was the multiplication of dispersed rural housing, with the construction of several small agricultural estates scattered across the territory. We can also observe the emergence of periurban land estates, such as the most spectacular mansion in Mon Repos, owned by Alexandre Perdonnet (@fig-3), but also the new estate of Bellerive (@fig-2), reconstructed around 1787 by the Francillon family, for example <span class="co">[</span><span class="ot">@grandjean_lausanne_1982</span><span class="co">]</span>. Farms and estates had contrasting effects on the redrawing of parcels, fueling both fusions and divisions. It is noteworthy, however, that their impact is above all localized and dispersed; hence the strong alternation between both dynamics observed in @fig-2. Finally, let us also highlight that many plots to the south-east and south-west of the town show remarkable persistence. These are mainly vineyards, which stability also suggests continuity in the economic and cultural value of these lands.</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="al">![Dynamics of land plot persistence in Lausanne between 1831 and 1883.](images/persistence_1831_1888_light.svg)</span>{#fig-4}</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="al">![Morcellation of the land in Prélaz (west), as depicted in the 1883 cadastre.](images/prelaz_renove.svg)</span>{#fig-5}</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>This stability contrasts with the dynamics observed in the 19th and 20th centuries (@fig-4). Between 1831 and 1883, the prevailing trend was to extend the city westwards (to Prélaz, @fig-5) and southwards (to Georgette), in the direction of the new railway station. This expansion is taking place precisely at the expense of the vineyards. It is characterized by the division of agricultural plots into smaller subdivisions on which mainly apartment buildings are built. Near Ponthaise<span class="ot">[^3]</span>, we note a marked fusion trend. This is due to the purchase of fields by the State of Vaud and the Commune for the construction of new training grounds and barracks, to replace the place d'armes in Montbenon, reallocated for the new Federal Court of Justice. It is noteworthy that the plots of land located in the historic city center remain relatively stable, despite the first major works including the construction of the Grand Pont and the vaulting of the Flon and Louve rivers.</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="al">![Dynamics of land plot persistence in Lausanne between 1883 and 2023.](images/persistence_1888_2020_light.svg)</span>{#fig-6}</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/center_renove.svg)</span></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="al">![Dynamics of parcel fusions in the city center between 1883 (top) and 2023 (bottom). ](images/center_2020.svg)</span>{#fig-7}</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>From 1883 onwards, on the contrary, the layout of the downtown area changed significantly (@fig-6, @fig-7). Following the 1896 publication of the Schnetzler report on health conditions, most of the buildings, deemed dilapidated, and particularly the entire Rôtillon district, were demolished to be replaced by modern housing. The scale of this work can be seen in the impressive dynamics of plot mergers, through which old buildings were being replaced by larger constructions. Urban sprawl, on the other hand, is characterized by a dynamic of morcellation, which no longer impacts only the former vineyards, but in fact all agricultural land, which was sold in allotments to meet the high demand for city. The main exceptions are large infrastructures such as the Milan, Mon Repos, Valency and Bourget public parks, the Montoie cemetery, the Sébeillon train marshalling yard, the Blécherette airport, the CHUV hospital and the Rovéréaz agricultural estate. However, despite the time that separates both cadastres, several plots of land remain, such as the urban houses in Maupas.</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="fu">## Social structure of land ownership</span></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>To investigate the social structure of land ownership, we adopt a distinct approach. More specifically, we rank the owners in the 1831 cadastre of Lausanne by the total area they own. From this, we randomly pick a representative sample of 60 owners. We cross-reference these owners by looking for a corresponding entry in the 1832 and 1835 population censuses of Lausanne <span class="co">[</span><span class="ot">@petitpierre_1805-1898_2023,@petitpierre_endtoend_2023</span><span class="co">]</span>. We gather two kinds of information from that source: occupation, and number of servants. This makes it possible to relate the ownership strata back with the social status of individuals.</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>The aggregated results of that step are described in @fig-8. The first thing that can be noted is the great disparity in the repartition of land ownership. The upper decile owned several hectares of land, which almost always included a landed estate and its dependencies, a vineyard, farmlands, and forests. Most of them simply define their occupation as "owners" (propriétaires); other occupations in the sample include "banker" and "marshal". Just after come also an "annuitant" (rentier) and a "district judge". This social stratum also typically employs one, two, or up to eight household servants. Later in the sample, we also encounter farmers, winegrowers, and forester. These typically own farmlands, along with a farm, usually comprising a stable, barn and hayloft. Finally, a third category of owners is composed of craftsmen and merchants. They usually own a house inside the city, sometimes accompanied by a courtyard, a garden, barn or other annexes. They sometimes employ one or two servants. Finally, the last category, by far the largest, is composed of non-owners. They were 86.4% of the adult population at the time. A large part of them were tenants, but also servants or boarders, who did not event live with a nuclear family of their own. In comparison, in 2022, the non-owners represent 61.3% of the households. Even if we exclude the fact that, in 1831, married women were generally denied shared ownership, we still reach an estimate of 72% of men who were non-owners. The Gini index of land ownership in Lausanne in 1831 would equal to 0.9, which indicates a particularly unequal distribution<span class="ot">[^4]</span>.</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="al">![Representative samples of owners (n=60) from the 1831 cadastre, ranked by total area owned (blue, in hectares), along with the number of servants employed in their household (red). The occupation of each owner, extracted from the 1832 or 1835 population census, is indicated after their names, in the labels of the horizontal axis.](images/owners_chart.svg)</span>{#fig-8}</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="fu">## General discussion and Conclusion</span></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>Spatial matching and the measure of morphological proximity is key to harnessing the wealth of geodata and operationalizing the analysis of plot dynamics. Spatial analysis of the territory reveals complex, protean trends that would be difficult to uncover without a spatial, quantitative and comparative approach based on digitized sources. Although certain manual steps, such as georeferencing, are still required, segmentation and vectorization are instrumental to processing such large cartographic corpora.</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>Digitization also makes it possible to create links between sources, such as cadastres and censuses, by making their content searchable. Disambiguating individuals remains partly qualitative, as it is often necessary to reason on a cluster of clues. This is due in particular to a scant pool of names, resulting in many homonyms: for instance, there were eight household heads named "Jean Louis Blanc" in Lausanne in 1835. Digitisation therefore also highlights this type of contradiction, which might otherwise go unnoticed when reading the sources in progressive order.</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!---</span></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="co">## Code</span></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="al">###</span><span class="co"> Imports</span></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a><span class="co">import shapefile, tqdm, cv2, json</span></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a><span class="co">import numpy as np</span></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="co">import pandas as pd</span></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="co">from shapely.geometry import Polygon, MultiPolygon, Point</span></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a><span class="co">from shapely.ops import unary_union</span></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a><span class="co">import geopandas as gpd</span></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a><span class="co">import rtree</span></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="co">from rtree import index</span></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="co">from sklearn.linear_model import LinearRegression</span></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="co">from sklearn.preprocessing import PolynomialFeatures</span></span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="co">from sklearn.model_selection import train_test_split</span></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="co">from PIL import Image</span></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="co">import matplotlib.pyplot as plt</span></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="co">%matplotlib inline</span></span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="al">###</span><span class="co"> Functions</span></span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="co">def createIndex(gdf: gpd.GeoDataFrame):</span></span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a><span class="co">    '''Creates an Index to accelerate data processing'''</span></span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a><span class="co">    idx = index.Index()</span></span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a><span class="co">    valid_geometries = list()</span></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="co">    for pos, geom in enumerate(gdf.geometry):</span></span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a><span class="co">        # Skip null or empty geometries</span></span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="co">        if geom is None:</span></span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="co">            continue</span></span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="co">        if geom.is_empty:</span></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="co">            continue</span></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a><span class="co">            </span></span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="co">        # Validate and possibly fix geometry</span></span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a><span class="co">        if not geom.is_valid:</span></span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a><span class="co">            geom = geom.buffer(0)</span></span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="co">            if not geom.is_valid or geom.is_empty:</span></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a><span class="co">                continue  # Skip still invalid or empty geometries after fixing</span></span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="co">                </span></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a><span class="co">        valid_geometries.append(geom)</span></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a><span class="co">        # Ensure the bounds are in the correct format</span></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="co">        if len(geom.bounds) == 4:</span></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="co">            idx.insert(pos, geom.bounds)</span></span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a><span class="co">        else:</span></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="co">            print(f"Skipped geometry at position {pos} with invalid bounds: {geom.bounds}")</span></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a><span class="co">            </span></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="co">    gdf.geometry = gpd.GeoSeries(valid_geometries)</span></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="co">    return idx, gdf</span></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="co">def matchParcels(gdf_1: gpd.GeoDataFrame, gdf_2: gpd.GeoDataFrame, index_1: rtree.Index, index_2: rtree.Index):</span></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a><span class="co">    '''Check which geometries are matching together and computes the relative overlap'''</span></span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="co">    matches = dict()</span></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="co">    for i, poly1 in enumerate(tqdm.tqdm(gdf_1.geometry)):</span></span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a><span class="co">        if poly1 is None:</span></span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a><span class="co">            continue</span></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a><span class="co">        # Find potential matches based on bounding box overlap</span></span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a><span class="co">        potential_indices = list(index_2.intersection(poly1.bounds))</span></span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a><span class="co">        if potential_indices:</span></span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a><span class="co">            </span></span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a><span class="co">            # Focus on actual matches</span></span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a><span class="co">            potential_matches = gdf_2.geometry.iloc[potential_indices]</span></span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="co">            overlaps = potential_matches.overlaps(poly1)</span></span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="co">            actual_matches = np.array(potential_indices)[overlaps.values]</span></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="co">            </span></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a><span class="co">            # Computes the overlap</span></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a><span class="co">            actual_overlaps = gdf_2.geometry.iloc[actual_matches]</span></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a><span class="co">            overlap_ratio = actual_overlaps.intersection(poly1).area / poly1.area</span></span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="co">            overlapping_matches = actual_matches[overlap_ratio &gt; 0.5]</span></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a><span class="co">            if any(overlapping_matches):</span></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a><span class="co">                matches[i] = overlapping_matches.tolist()</span></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a><span class="co">                </span></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a><span class="co">    return matches</span></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="co">def reverseMatches(matches: dict):</span></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="co">    '''Get reciprocal matching relations'''</span></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a><span class="co">    rev_matches = dict()</span></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a><span class="co">    for key in matches.keys():</span></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="co">        matches_list = matches[key]</span></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="co">        for match in matches_list:</span></span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="co">            if match in rev_matches.keys():</span></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="co">                rev_matches[match].append(key)</span></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="co">            else:</span></span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="co">                rev_matches[match] = [key]</span></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="co">                </span></span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a><span class="co">    return rev_matches</span></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a><span class="co">def create_polygons(parcel_list: list):</span></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a><span class="co">    '''Convert list of tuples to Shapely Polygon objects.'''</span></span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="co">    polygons = list()</span></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="co">    for parcel in parcel_list:</span></span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="co">        poly = Polygon(parcel)</span></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="co">        if not(poly.is_valid):</span></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="co">            poly = poly.buffer(0) # Adding a buffer of width 0 is a way of fixing invalid geometries</span></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="co">        if poly.area &gt; 5:</span></span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="co">            polygons.append(poly)</span></span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="co">    return polygons</span></span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a><span class="co">def overlap_percentage(old_poly: Polygon, new_poly: Polygon):</span></span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a><span class="co">    '''Calculate the percentage of the old polygon's area covered by the new polygon'''</span></span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a><span class="co">    try:</span></span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="co">        intersection = old_poly.intersection(new_poly).area</span></span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a><span class="co">        return (intersection / old_poly.area)</span></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a><span class="co">    except:</span></span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a><span class="co">        return 0</span></span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="co">def calculate_angles(polygon: Polygon):</span></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="co">    '''Calculate the angles of a polygon'''</span></span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="co">    # Convert the polygon to a numpy array</span></span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="co">    points = np.array(polygon.exterior.coords)</span></span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a><span class="co">    # Calculate the vectors between points</span></span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="co">    vectors = np.diff(points, axis=0)</span></span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="co">    # Calculate the angles between vectors</span></span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a><span class="co">    angles = np.arctan2(vectors[:,1], vectors[:,0])</span></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a><span class="co">    # Accumulate the angles to get the turning function</span></span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a><span class="co">    turning_function = np.cumsum(np.diff(angles))</span></span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="co">    # Normalize the turning function</span></span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a><span class="co">    turning_function = turning_function / (2 * np.pi)</span></span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="co">    return turning_function</span></span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="co">def compare_polygons(polygon1: Polygon, polygon2: Polygon):</span></span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a><span class="co">    '''Compare two polygons using their turning functions'''</span></span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a><span class="co">    min_area = np.inf</span></span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a><span class="co">    # Calculate the turning functions of each polygon for every possible starting point</span></span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a><span class="co">    for i in range(len(polygon1.exterior.coords)-1):</span></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a><span class="co">        for j in range(len(polygon2.exterior.coords)-1):</span></span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="co">            </span></span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a><span class="co">            # Rotate the coordinates to start at a different point</span></span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="co">            coords1 = np.roll(polygon1.exterior.coords, -i, axis=0)</span></span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a><span class="co">            coords2 = np.roll(polygon2.exterior.coords, -j, axis=0)</span></span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a><span class="co">            # Create new polygons with the rotated coordinates</span></span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="co">            rotated_polygon1 = Polygon(coords1)</span></span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a><span class="co">            rotated_polygon2 = Polygon(coords2)</span></span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a><span class="co">            # Calculate the turning functions</span></span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a><span class="co">            tf1 = calculate_angles(rotated_polygon1)</span></span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a><span class="co">            tf2 = calculate_angles(rotated_polygon2)</span></span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a><span class="co">            # Interpolate the turning functions to a common set of points</span></span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a><span class="co">            x = np.linspace(0, 1, 1000)</span></span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a><span class="co">            tf1_interp = np.interp(x, np.linspace(0, 1, len(tf1)), tf1)</span></span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a><span class="co">            tf2_interp = np.interp(x, np.linspace(0, 1, len(tf2)), tf2)</span></span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a><span class="co">            # Calculate the area between the turning functions</span></span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a><span class="co">            area = np.sum(np.abs(tf1_interp - tf2_interp)) / len(x)</span></span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="co">            # Update minimum area</span></span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a><span class="co">            min_area = min(min_area, area)</span></span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="co">    return min_area</span></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="co">def create_image(polygons: Polygon, bounds: tuple, grid_size: int = 2, max_score: float = 1.):</span></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="co">    '''Create an image from a list of polygons with associated Turning function scores.'''</span></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a><span class="co">    min_x, min_y, max_x, max_y = bounds</span></span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a><span class="co">    # Initialize an empty canvas</span></span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a><span class="co">    width = int((max_x - min_x + 1) / grid_size)</span></span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a><span class="co">    height = int((max_y - min_y + 1) / grid_size)</span></span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a><span class="co">    img = Image.new('L', (width, height))</span></span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a><span class="co">    # Create an R-tree index for the polygons</span></span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a><span class="co">    idx = index.Index()</span></span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a><span class="co">    for i, poly in enumerate(polygons):</span></span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a><span class="co">        idx.insert(i, poly['polygon'].bounds)</span></span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a><span class="co">    # Go through each pixel in the image</span></span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a><span class="co">    for x in tqdm.tqdm(range(width)):</span></span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a><span class="co">        for y in range(height):</span></span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a><span class="co">            # Create a point at the current pixel</span></span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a><span class="co">            point = Point((x * grid_size) + min_x, (height - 1 - y) * grid_size + min_y)</span></span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a><span class="co">            # Find the polygons that might contain this point</span></span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a><span class="co">            for i in idx.intersection(point.coords[0]):</span></span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a><span class="co">                poly = polygons[i]</span></span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a><span class="co">                if poly['polygon'].contains(point):</span></span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a><span class="co">                    </span></span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a><span class="co">                    # Convert the Turning function score to a pixel intensity</span></span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a><span class="co">                    score = min(max_score, poly['turning_score'])</span></span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a><span class="co">                    intensity = int((1 - score) * 255)</span></span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a><span class="co">                    # Set the pixel's intensity</span></span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a><span class="co">                    img.putpixel((x, y), intensity)</span></span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a><span class="co">                    break</span></span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a><span class="co">    return img</span></span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a><span class="co">def computeDynamics(rev_matches: dict, gdf_1: gpd.GeoDataFrame, gdf_2: gpd.GeoDataFrame):</span></span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a><span class="co">    '''Compute fusion dynamics between gdf_1 and gdf_2'''</span></span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a><span class="co">    dynamic = list()</span></span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a><span class="co">    for key in tqdm.tqdm(rev_matches.keys()):</span></span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a><span class="co">        poly_2 = gdf_2['geometry'][key]</span></span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a><span class="co">        if len(rev_matches[key]) == 1:</span></span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a><span class="co">            # one to one match</span></span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a><span class="co">            poly_1 = gdf_1['geometry'][rev_matches[key][0]]</span></span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a><span class="co">            match_type = 'one-to-one'</span></span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a><span class="co">        else:</span></span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a><span class="co">            # many to one</span></span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a><span class="co">            poly_1 = unary_union(gdf_1['geometry'][rev_matches[key]])</span></span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a><span class="co">            match_type = 'many-to-one'</span></span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a><span class="co">            </span></span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a><span class="co">        if not(poly_1.type == 'Polygon'):</span></span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a><span class="co">            poly_1 = convert_multipolygon_to_polygon(poly_1)</span></span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a><span class="co">            if not (poly_1.type == 'Polygon'):</span></span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a><span class="co">                poly_1 = poly_1.geoms[np.argmax([geom.area for geom in poly_1.geoms])]</span></span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a><span class="co">                </span></span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a><span class="co">        if not(poly_2.type == 'Polygon'):</span></span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a><span class="co">            poly_2 = Polygon(convert_multipolygon_to_polygon(poly_2))</span></span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a><span class="co">            if not (poly_2.type == 'Polygon'):</span></span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a><span class="co">                poly_2 = poly_2.geoms[np.argmax([geom.area for geom in poly_2.geoms])]</span></span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a><span class="co">            </span></span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a><span class="co">        dist = compare_polygons(poly_2, poly_1)</span></span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a><span class="co">        dynamic.append({</span></span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a><span class="co">            '1': rev_matches[key],</span></span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a><span class="co">            '2': key,</span></span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a><span class="co">            'match_type': match_type,</span></span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a><span class="co">            'dist': dist,</span></span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a><span class="co">        })</span></span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a><span class="co">    return dynamic</span></span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a><span class="co">def convert_multipolygon_to_polygon(multipolygon: MultiPolygon):</span></span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a><span class="co">    '''Convert multipolygons to polygons by filling the gaps between parts'''</span></span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a><span class="co">    # Start with the first polygon</span></span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a><span class="co">    polygon = multipolygon.geoms[0]</span></span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a><span class="co">    # Iterate over the remaining polygons in the MultiPolygon</span></span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a><span class="co">    for part in multipolygon.geoms[1:]:</span></span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a><span class="co">        if part.area &lt; 0.5:</span></span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a><span class="co">            continue</span></span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a><span class="co">        distance = polygon.distance(part)</span></span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a><span class="co">        buffered_polygon = polygon.buffer(2*distance)</span></span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a><span class="co">        buffered_part = part.buffer(2*distance)</span></span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a><span class="co">        # Unary union of the buffered shapes</span></span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a><span class="co">        polygon = unary_union([buffered_polygon, buffered_part])</span></span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a><span class="co">        # Apply negative buffer to shrink back</span></span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a><span class="co">        polygon = polygon.buffer(-2*distance)</span></span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a><span class="co">    return polygon</span></span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a><span class="co">def compute_legend():</span></span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a><span class="co">    '''Compute color red-pink-blue-white palette and legend for plotting'''</span></span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a><span class="co">    size = 256</span></span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a><span class="co">    legend = np.zeros((size, size, 3))</span></span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a><span class="co">    colors = np.array([</span></span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a><span class="co">        [1, 0, 0],  # Red</span></span>
+<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a><span class="co">        [1, 0, 1],  # Pink</span></span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a><span class="co">        [0, 0, 1],  # Blue</span></span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a><span class="co">        [1, 1, 1],  # White</span></span>
+<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a><span class="co">    ])</span></span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a><span class="co">    for x in range(size):</span></span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a><span class="co">        for y in range(size):</span></span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a><span class="co">            # Calculate the weights for each corner</span></span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a><span class="co">            weights = [</span></span>
+<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a><span class="co">                ((size - x) * (size - y)) / (size ** 2),</span></span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a><span class="co">                (x * (size - y)) / (size ** 2),</span></span>
+<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a><span class="co">                (x * y) / (size ** 2),</span></span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a><span class="co">                ((size - x) * y) / (size ** 2)</span></span>
+<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a><span class="co">            ]</span></span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a><span class="co">            # Calculate the color for the pixel</span></span>
+<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a><span class="co">            color = sum(w * c for w, c in zip(weights, colors))</span></span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a><span class="co">            legend[x, y] = color</span></span>
+<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a><span class="co">    legend = (legend*255).astype('uint8')</span></span>
+<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a><span class="co">    legend = np.rot90(legend)</span></span>
+<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a><span class="co">    return legend, colors</span></span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
+<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a><span class="al">###</span><span class="co"> Load data</span></span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
+<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a><span class="co">path = '1722.shp'</span></span>
+<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a><span class="co">gdf_1 = gpd.read_file(path)</span></span>
+<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a><span class="co">gdf_1 = gdf_1[(gdf_1['class'] == 'built') | (gdf_1['class'] == 'non-built')].reset_index(drop=True)</span></span>
+<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a><span class="co">path = '1831.shp'</span></span>
+<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a><span class="co">gdf_2 = gpd.read_file(path)</span></span>
+<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a><span class="co">gdf_2 = gdf_2[(gdf_2['class'] == 'built') | (gdf_2['class'] == 'non-built')].reset_index(drop=True)</span></span>
+<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
+<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a><span class="al">###</span><span class="co"> Match geometries</span></span>
+<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
+<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a><span class="co">index_1, gdf_1 = createIndex(gdf_1)</span></span>
+<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a><span class="co">index_2, gdf_2 = createIndex(gdf_2)</span></span>
+<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a><span class="co">matches_1_2 = matchParcels(gdf_1, gdf_2, index_1, index_2)</span></span>
+<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a><span class="co">matches_2_1 = matchParcels(gdf_2, gdf_1, index_2, index_1)</span></span>
+<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a><span class="co">rev_matches_1_2 = reverseMatches(matches_1_2)</span></span>
+<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a><span class="co">rev_matches_2_1 = reverseMatches(matches_2_1)</span></span>
+<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
+<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a><span class="al">###</span><span class="co"> Detection of persistence, fusion, division</span></span>
+<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
+<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a><span class="co">fusion = computeDynamics(rev_matches_1_2, gdf_1, gdf_2)</span></span>
+<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a><span class="co">division = computeDynamics(rev_matches_2_1, gdf_2, gdf_1)</span></span>
+<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a><span class="co">df_pers_fusion = pd.DataFrame(fusion)</span></span>
+<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a><span class="co">df_pers_division = pd.DataFrame(division)</span></span>
+<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a><span class="co">df_pers_fusion['turning_score'] = df_pers_fusion['dist'].rank()/len(df_pers_fusion)</span></span>
+<span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a><span class="co">df_pers_division['turning_score'] = df_pers_division['dist'].rank()/len(df_pers_division)</span></span>
+<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a><span class="co">fusion_dict = df_pers_fusion.to_dict(orient='records')</span></span>
+<span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a><span class="co">division_dict = df_pers_division.to_dict(orient='records')</span></span>
+<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
+<span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a><span class="al">###</span><span class="co"> Draw and save persistence plot</span></span>
+<span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
+<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a><span class="co">legend, colors = compute_legend()</span></span>
+<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a><span class="co">cv2.imwrite('persistence_legend_red_blue.png', legend)</span></span>
+<span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a><span class="co">bounds = (2534054.043, 1150650.392, 2544978.007, 1161552.53)</span></span>
+<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a><span class="co">min_x, min_y, max_x, max_y = bounds</span></span>
+<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a><span class="co">for item in fusion:</span></span>
+<span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a><span class="co">    item['polygon'] = gdf_2.iloc[item['2']]['geometry']</span></span>
+<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a><span class="co">img_fusion = create_image(fusion, bounds, grid_size=3)</span></span>
+<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a><span class="co">for item in division:</span></span>
+<span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a><span class="co">    item['polygon'] = gdf_1.iloc[item['2']]['geometry']</span></span>
+<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a><span class="co">img_fusion = create_image(division, bounds, grid_size=3)</span></span>
+<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a><span class="co">merge_img = cv2.merge([np.array(img_division), np.zeros(np.array(img_fusion).shape, dtype='uint8'), np.array(img_fusion)])</span></span>
+<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a><span class="co">cv2.imwrite('persistence_1723_1831.png', merge_img) # Black mode</span></span>
+<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a><span class="co">light_img = np.zeros(np.array(merge_img).shape, dtype='uint8')</span></span>
+<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a><span class="co">for i in tqdm.tqdm(range(light_img.shape[0])):</span></span>
+<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a><span class="co">    for j in range(light_img.shape[1]):</span></span>
+<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a><span class="co">        r, g, b = merge_img[i, j]</span></span>
+<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a><span class="co">        light_img[i, j] = legend[r, b]</span></span>
+<span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a><span class="co">cv2.imwrite('persistence_1888_2020_light.png', light_img) # Light mode</span></span>
+<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
+<span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
+<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-474"><a href="#cb1-474" aria-hidden="true" tabindex="-1"></a><span class="ot">[^1]: </span>Note that here we use the absolute difference L1 instead of the squared difference L2, which is favored by Arkin. This is intentional, as we believe that shape dissimilarities should be equally weighted in the present use case.</span>
+<span id="cb1-475"><a href="#cb1-475" aria-hidden="true" tabindex="-1"></a><span class="ot">[^2]: </span>Here, we use the historical spelling of place names, as given in the sources.</span>
+<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a><span class="ot">[^3]: </span>idem.</span>
+<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a><span class="ot">[^4]: </span>In comparison, we can easily estimate the distribution of fortune in Switzerland in 2022 by interpolating the aggregated statistics of the Federal Statistical Office using cubic spline, which yields a value of 0.82, still corresponding to a less unequal distribution.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-md-none d-sm-block"><ul><li><a href="https://github.com/digihistch24/book-of-abstracts/edit/main/submissions/454/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/digihistch24/book-of-abstracts/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

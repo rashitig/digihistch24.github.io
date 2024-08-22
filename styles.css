@@ -67,6 +67,10 @@
 
 /*-- scss:defaults --*/
 
+.footer {
+	display: none;
+}
+
 .navbar a:hover {
 	color: inherit;
 	text-decoration: underline;
@@ -84,4 +88,10 @@
 
 ::selection {
 	background-color: #a5d7d2;
+}
+
+.sidebar-navigation {
+	overflow: scroll;
+	scrollbar-color: #a5d7d2 white;
+	scrollbar-width: thin;
 }

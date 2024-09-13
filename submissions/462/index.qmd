@@ -46,9 +46,9 @@ When combining different sources, we must carefully select and interpret results
 
 After a short introduction on methodology, the following research questions will be addressed in this extended abstract:
 
-*   What can we discover about the interest burden on real estate?
-*   Did a higher burden of interest lead to an increased number of seizure procedures?
-*   Who made use of seizure procedures and how does this use relate to interest claims?
+* What can we discover about the interest burden on real estate?
+* Did a higher burden of interest lead to an increased number of seizure procedures?
+* Who made use of seizure procedures and how does this use relate to interest claims?
 
 ## Information Extraction
 
@@ -82,7 +82,7 @@ As our annotated dataset is very small, the extraction performance for many clas
 ### Measuring interest burden on real estate
 
 The obvious indicator to see what amount of interest a property is burdened with are description of interests. We may find these in different places: In the form of lists kept by different institutions which received interest, as part of the description of properties when they are mentioned in the documents, most often when a property is sold, and whenever an annuity is established.
-The lists of interest payments are problematic to use as they take the perspective of the beneficiary of the interest and do not mention if that property is also burdened with interest by other institutions or persons. The documents tracking lending of annuities would work, but their recognition by our automated system is still lacking. The descriptions of properties are thus a good choice, they are well detected by our automated annotation and contain information about all beneficiaries. 
+The lists of interest payments are problematic to use as they take the perspective of the beneficiary of the interest and do not mention if that property is also burdened with interest by other institutions or persons. The documents tracking lending of annuities would work, but their recognition by our automated system is still lacking. The descriptions of properties are thus a good choice, they are well detected by our automated annotation and contain information about all beneficiaries.
 
 ```{python}
 #| label: fig-3
@@ -193,7 +193,6 @@ plt.savefig("./images/fig_5.png")
 plt.show()
 ```
 
-
 Since seizure procedures were linked to interests, one could expect that interest descriptions would be more frequent in the years before the event. In fact, when comparing the 10 years before a seizure with all documents of the same decade, the relative number of entities mentioned in interest descriptions shows no difference. Thus, owing interests in itself was no reason for increased numbers of seizures. When looking at the number of entities mentioned in each interest description, one sees that in certain periods of time, this proportion was much higher for documents leading to seizure events than in the average document (see @fig-5). This is the case mainly for the time period between 1480 and 1540.
 
 In the next part, we contrast the entities in the interest descriptions to the entities taking part in seizures as claimants.
@@ -223,7 +222,6 @@ plt.grid(True)
 plt.show()
 ```
 
-
 ## Conclusions
 
 The relationship between interest burden and seizures proves to be investigable for the first time with our data. However, it is a complex relationship. The probability of a seizure increases with rising interest burden only during certain periods when seizures were infrequent. The many institutional creditors are reflected in the interest descriptions but not in the number of seizures. Further investigations need to determine whether institutions were generally more patient, whether this was due to lower interest burden, or whether our models fail to adequately capture institutions. This requires unambiguous identification of institutions, which still needs to be carried out.
@@ -251,3 +249,8 @@ On a methodological level, it becomes clear that successful recognition of entit
 | ,        | O               | O               |
 | sonstfrei| O               | O               |
 | [DESC]   | O               | O               |
+
+## References
+
+::: {#refs}
+:::

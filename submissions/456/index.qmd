@@ -40,14 +40,14 @@ bibliography: references.bib
 
 ## Introduction
 
-Among digital approaches to historical data, we can identify various types of scholarship and methodologies practiced in creating transcription corpora of documents that are valuable for research, specifically quantitative analyses. Demographic, cadastral, and geographic sources are particularly notable for their transcripts, which are instrumental in generating datasets that can be used or reused across different disciplinary contexts. 
+Among digital approaches to historical data, we can identify various types of scholarship and methodologies practiced in creating transcription corpora of documents that are valuable for research, specifically quantitative analyses. Demographic, cadastral, and geographic sources are particularly notable for their transcripts, which are instrumental in generating datasets that can be used or reused across different disciplinary contexts.
 
 From a disciplinary perspective, it is essential to observe certain trends that have fundamentally transformed the methodology of making historical data accessible and studying them. These trends extend the usability of historical data beyond the individual scholar's interpretation to a broader community. The creation of datasets that can then serve again to different communities of study is increasingly practiced by scholars; the data, before their interpretations, acquire an autonomous value, an important authorial legitimacy. Just as is already currently practiced in the natural sciences, the provision of datasets becomes crucial to history as well.
 Computational approaches, however, follow trends common to other fields, and the increasing use of artificial intelligence to extract, refine, realign, and understand historical data compels the integration of clear and well-described protocols to inform the datasets that are created.
 
 ## Lausanne and Venice Census Datasets
 
-The first example are the IIIF (International Image Interoperability Framework) protocols. These protocols allow the community to employ computational approaches to use these sources as a foundation for refining techniques to extract the embedded information. Open sources are made possible by heritage institutions that recognize the added value of studying their collections with computational approaches, thus transforming them into indispensable objects of research for interdisciplinary and ever-expanding community. 
+The first example are the IIIF (International Image Interoperability Framework) protocols. These protocols allow the community to employ computational approaches to use these sources as a foundation for refining techniques to extract the embedded information. Open sources are made possible by heritage institutions that recognize the added value of studying their collections with computational approaches, thus transforming them into indispensable objects of research for interdisciplinary and ever-expanding community.
 Another significant trend is the creation of datasets through the extraction of information contained in sources by diverse communities from various disciplinary fields. These communities might be interested in the computational methodologies, extraction techniques, or the historical content of the extracted data. The field of Digital Humanities, addressing the latter aspect, has effectively highlighted that each element extracted from historical documents should, whenever possible, be directly referenced to the document from which it was taken. This can be achieved through IIIF-compatible datasets. Moreover, the methods for extracting, processing, and normalizing the data must always be thoroughly explained and are subject to scholarly critique and evaluation.
 Emphasizing the importance of maintaining the link between extracted data and original documents ensures transparency and accuracy, thus enhancing the credibility and usability for digital historical research.
 
@@ -72,7 +72,7 @@ This means that millions of units of information can be made "searchable," even 
 
 By applying these principles to historical datasets, we can ensure that the data extracted is not only accessible and traceable, but also continuously refined and validated through collaborative efforts and methodological advances.
 
-In "Names of Lausanne", @petitpierre_1805-1898_2023 automatically extracted 72 census records of Lausanne. The complete dataset covers a century of historical demography in Lausanne (1805-1898), corresponding to 18,831 pages, and nearly 6 million cells (@fig-1). 
+In "Names of Lausanne", @petitpierre_1805-1898_2023 automatically extracted 72 census records of Lausanne. The complete dataset covers a century of historical demography in Lausanne (1805-1898), corresponding to 18,831 pages, and nearly 6 million cells (@fig-1).
 
 ![Sample page from the “Recensements de la ville de Lausanne”; (AVL) Archives de la Ville de Lausanne](images/fig1.png){#fig-1}
 
@@ -92,9 +92,13 @@ For named entity recognition, a "people" dataset was created, linking individual
 
 ![Screenshot of the search interface for the city of Venice. In the example, the filter search targeted the surname “Pasqualigo" in the dataset of Napoleonic cadaster (1808); Under the dataset name, the nature of the data extraction is specified.](images/fig4.png){#fig-4}
 
-An initial version of this dataset will be published and will already allow some key aspects of land tenure to be studied, however, not all fields of information have been standardized, which is why we can build on this version later to improve machine reading and produce new corrections. 
+An initial version of this dataset will be published and will already allow some key aspects of land tenure to be studied, however, not all fields of information have been standardized, which is why we can build on this version later to improve machine reading and produce new corrections.
 
 These projects underscore the transformative impact of OCR and HTR technologies, coupled with language models, on the extraction and correction processes of historical documents. The challenge lies in consistently documenting the computational process origins within datasets, ensuring users can evaluate the reliability of the data. As the quality of data extraction and transcription improves, new historical narratives may emerge, emphasizing the critical need to track data versions and correct older datasets to prevent potential inaccuracies.
 
+[^1]: <https://github.com/dhlab-epfl/venice-owners-1808>
 
-[^1]: https://github.com/dhlab-epfl/venice-owners-1808
+## References
+
+::: {#refs}
+:::

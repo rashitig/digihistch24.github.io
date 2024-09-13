@@ -39,7 +39,7 @@ Furthermore, digital methods allow us to quantitatively study broad changes in p
 
 ## Available Digitized Sources
 
-Because patents constitute a legal claim of exclusivity, a detailed description of the invention is required by the law, <i>inter alia</i> to allow courts to assess whether competing technical devices or processes constitute illegal imitations. From the second half of the nineteenth century onward, most countries systematically published these descriptions, so-called patent specifications. We rely on a large corpus of these documents that have been digitized by patent offices for their own current activity (especially for assessing the novelty of patent applications).
+Because patents constitute a legal claim of exclusivity, a detailed description of the invention is required by the law, *inter alia* to allow courts to assess whether competing technical devices or processes constitute illegal imitations. From the second half of the nineteenth century onward, most countries systematically published these descriptions, so-called patent specifications. We rely on a large corpus of these documents that have been digitized by patent offices for their own current activity (especially for assessing the novelty of patent applications).
 
 Our dataset currently includes around 4 million patent specifications from four large industrial countries: France, Germany, the United Kingdom and the United States. These countries represent major players in the discussions around the Paris Convention. Their residents also account for a large proportion of patents taken abroad. Furthermore, it has been proposed that they constitute distinct "patent cultures" that have constituted models for other countries [@Gooday2020]. This corpus however reproduces the historiographical tendency to neglect smaller and less-studied countries. To account for this, we plan to include patent specifications from additional states at a later point.
 
@@ -55,7 +55,6 @@ Exploration leads to a further possible operation: matching the drawings printed
 
 ![Example of two pages from different patents featuring the same drawing (left: French patent 325,985; right: German patent 142,688).](images/plates-example.png){#fig-1}
 
-
 ## Implementing Image Matching
 
 In recent years, computational exploration and analysis of images have attracted a growing interest in digital history [@Arnold2019; @Arnold2023; @Wevers2020]. Among other approaches, historians have used convolutional neural networks (CNNs) to generate numerical representations of images, so-called *image embeddings*, and then find similar pictures. Pre-trained CNNs have been shown to be useful on historical documents even though they were built for another purpose, typically classifying colored photographs in categories such as `iPod` and `hair_spray`, as in the ImageNet training data.
@@ -69,3 +68,8 @@ Best results were obtained by combining a CNN and SIFT. Image embeddings and an 
 ## Back to Exploration and Future Work
 
 Our early results prompt further exploration, leading to new insights. For instance, some of the matches point to metadata errors, e.g. wrong country indications in French patents. It also leads us to question some of our assumptions. Assuming that a patent in one country would have one corresponding patent in another, we used embeddings to get, for each segment in country A, the two segments most similar to it in country B. However, in our early results, one French patents matched *six* different German patents. This suggests that we might need to apply SIFT to compare each segment A to a greater number of similar B segments. Further future work includes combining matching the drawings and matching other data points. All in all, our use of computer vision methods, while not yet robust enough to answer our research questions, yields promising results demonstrating that the concept of internationalization can be operationalized in this way.
+
+## References
+
+::: {#refs}
+:::

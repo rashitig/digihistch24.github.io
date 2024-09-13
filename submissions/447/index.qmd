@@ -78,6 +78,7 @@ This is the goal of Geovistory. It is conceived as a virtual research and data p
 ## Geovistory as a Research Environment
 
 Geovistory aims to be a comprehensive research environment that accompanies scholars throughout the whole research cycle. Geovistory includes:
+
 - The *Geovistory Toolbox*, which allows to manage and curate projects' research data. The Toolbox is freely accessible for all individual projects. Each research project works on its own data perspective but at the same time directly contributes to a joint knowledge graph.
 - A joint *Data repository* that allows to connect and link the different research projects under a unique and modular ontology, thus creating a large Knowledge Graph.
 - The Geovistory *Publication platform* (<http://geovistory.org>), where data is published using the RDF framework and can be accessed via the community page or project-specific webpages and its graphical search tools or a SPARQL-endpoint.
@@ -94,6 +95,7 @@ As per current terms of service, all data produced in the information layer of G
 ## The aim of breaking information silos
 
 The goal of producing and publishing FAIR research data is to break the information silos that hinder the sharing and reusing of scientific data. However, achieving interoperability hinges on two critical components [@beretta2024a]:
+
 - Firstly, the unambiguous identification of real-world entities (e.g., persons, places, concepts) with unique identifiers (e.g., URIs in Linked Open Data) and the establishment of links between identical entities across different projects (e.g., ensuring that the entity "Paris" is identified by the same URI in all projects);
 - Secondly, the utilization of explicit ontologies that can be aligned across projects. Nevertheless, mapping between ontologies may prove challenging, or even unfeasible, particularly when divergent structural frameworks are employed (e.g., an event-centric ontology may have limited compatibility with an object-centric one).
 
@@ -124,3 +126,8 @@ Geovistory has been designed as a comprehensive research environment tailored by
 The forthcoming years mark a critical juncture for Geovistory, as the tools and infrastructures of the environment recently transitioned into the public domain. This needed change will ease collaboration with future public institutions within Europe, but a greater part of public fundings will be needed to ensure the sustainability of the ecosystem.
 
 Nonetheless, the Digital Humanities ecosystem remains unstable, attributed to the lack of sustained funding for infrastructural initiatives by national funding agencies and the absence of cohesive coordination among institutions. To ameliorate this landscape, prioritizing the establishment of robust collaborations and partnerships among diverse tools and infrastructures in Switzerland and Europe is imperative. Leveraging the specialized expertise of each institution holds the promise of engendering a harmonized and synergistic, distributed environment conducive to scholarly pursuits.
+
+## References
+
+::: {#refs}
+:::

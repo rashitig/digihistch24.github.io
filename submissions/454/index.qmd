@@ -43,15 +43,13 @@ Our data collection approach is based on supervised semantic segmentation. Semat
 
 The trained segmentation model is used to automate the recognition of the remaining cadastral plats for three cadastral series of Lausanne [@melotte_plans_1722;@berney_plan_1831;@deluz_plans_1886], which total 570 plats. In a first step, the sheets were georeferenced and separated from the legend. Second, the semantic segmentation was applied directly on the georeferenced images. Third, the resulting predictions masks were manually reviewed, and the most salient inconsistencies were corrected. Finally, the raster masks were vectorized, as described in [@vaienti_machine-learning-enhanced_2023], resulting in 69,083 extracted geometries. The data collection workload is estimated to 15 workdays for the specific annotation of 42 plats, 5 workdays for the initial correction of the predictions, and 2 workdays (excluding research and development) for the automatic segmentation and vectorisation. By contrast, the estimated workload for manually vectorising the whole corpus would be over 260 days.
 
-
 ![Illustration of the raster/pixel annotation of the 1886 cadastre of Lausanne by Louis Deluz, using five semantic classes (red: built, dark grey: non-built, light grey: road network, violet: water, white: contours, black: background).](images/segmentation.svg){#fig-1}
 
 ## Persistence
 
 We adopt two complementary approaches for studying the structure of land ownership. The first is based on the measure of persistence in the parcel fabric. The second, which will be presented later, focuses on the social structure of land ownership, through the analysis of owners. Regarding persistence, two processes are considered: the division of a plot into two or more plots, or the fusion –i.e. the grouping– of two or more plots together. We call continuity the state in which parcel fabric is unchanged. Finally, discontinuity denotes a situation in which the parcel fabric has been otherwise altered by rezoning.
 
-Fusion and division are measured separately. The detection of both processes is based on the spatial matching of the parcels in two distinct historical layers. Only child parcels whose overlap with the parent is at least 50% are considered for division, and vice versa for fusion. For fusion, the measure of shape similarity is based on the computation of the absolute difference of turning functions [@arkin_efficiently_1991] between the child parcels and the parent one, and vice versa. This method, which intuitively focuses on a shape's salient angles, excels at comparing shapes which exhibit inequal level of detail or resolution, which is precisely the case for the extracted geometries, originating from diverse series[^1]. This process allows us to establish maps of land persistence and continuity (@fig-2, @fig-4, and @fig-6), whose results will be presented and discussed in a chronological order. The relative code is published along with this article. 
-
+Fusion and division are measured separately. The detection of both processes is based on the spatial matching of the parcels in two distinct historical layers. Only child parcels whose overlap with the parent is at least 50% are considered for division, and vice versa for fusion. For fusion, the measure of shape similarity is based on the computation of the absolute difference of turning functions [@arkin_efficiently_1991] between the child parcels and the parent one, and vice versa. This method, which intuitively focuses on a shape's salient angles, excels at comparing shapes which exhibit inequal level of detail or resolution, which is precisely the case for the extracted geometries, originating from diverse series[^1]. This process allows us to establish maps of land persistence and continuity (@fig-2, @fig-4, and @fig-6), whose results will be presented and discussed in a chronological order. The relative code is published along with this article.
 
 ![Dynamics of land plot persistence in Lausanne between 1722 and 1831. The red areas underwent fusion processes, whereas division dynamics are observed in blue areas. Magenta indicates continuity. ](images/persistence_1727_1831_light.svg){#fig-2}
 
@@ -59,27 +57,21 @@ Fusion and division are measured separately. The detection of both processes is 
 
 ![Expansion of the city outside its historical enclosure between 1722 (top) and 1831 (bottom).](images/center_berney_v2.svg){#fig-3}
 
-
-
 While the changes observed in the first time stratum (1722-1831, @fig-2) might appear somehow disordered at first sight, it is in fact due to the complexity of the dynamics observed. At the beginning of the 18th century, the development of the city was mainly contained within its enclosure, to the exception of the three faubourgs: Halle, Martheray and Chêne[^2]. The demand for space was stimulating the densification of buildings within the enclosure [@rickli_lausanne_1978]. The Rôtillon neighbourhood is a good example of this phenomenon. The vegetable gardens found there, whose yield was probably not very profitable since they were in the shadow of the hill of Bourg, were replaced by small buildings.
 
 Facing continued demand for space, the city's medieval fortifications were progressively dismantled. The new buildings and the reorganization of land parcels at that time (@fig-2) met four distinct demands. The first two impacted development in the immediate vicinity of the city (@fig-3). First, infrastructures, such as the chapel and the charity school of Valentin, the casino to the south, and the "maison de force" (prison) to the east. Second, the expansion of productive areas, concentrating mainly along the Flon, downstream (sawmills, mills) and upstream (mills, tanneries) of the town. The two remaining demands impacted not only the close suburbs, but the whole commune. The first was the multiplication of dispersed rural housing, with the construction of several small agricultural estates scattered across the territory. We can also observe the emergence of periurban land estates, such as the most spectacular mansion in Mon Repos, owned by Alexandre Perdonnet (@fig-3), but also the new estate of Bellerive (@fig-2), reconstructed around 1787 by the Francillon family, for example [@grandjean_lausanne_1982]. Farms and estates had contrasting effects on the redrawing of parcels, fueling both fusions and divisions. It is noteworthy, however, that their impact is above all localized and dispersed; hence the strong alternation between both dynamics observed in @fig-2. Finally, let us also highlight that many plots to the south-east and south-west of the town show remarkable persistence. These are mainly vineyards, which stability also suggests continuity in the economic and cultural value of these lands.
-
 
 ![Dynamics of land plot persistence in Lausanne between 1831 and 1883.](images/persistence_1831_1888_light.svg){#fig-4}
 
 ![Morcellation of the land in Prélaz (west), as depicted in the 1883 cadastre.](images/prelaz_renove.svg){#fig-5}
 
-
 This stability contrasts with the dynamics observed in the 19th and 20th centuries (@fig-4). Between 1831 and 1883, the prevailing trend was to extend the city westwards (to Prélaz, @fig-5) and southwards (to Georgette), in the direction of the new railway station. This expansion is taking place precisely at the expense of the vineyards. It is characterized by the division of agricultural plots into smaller subdivisions on which mainly apartment buildings are built. Near Ponthaise[^3], we note a marked fusion trend. This is due to the purchase of fields by the State of Vaud and the Commune for the construction of new training grounds and barracks, to replace the place d'armes in Montbenon, reallocated for the new Federal Court of Justice. It is noteworthy that the plots of land located in the historic city center remain relatively stable, despite the first major works including the construction of the Grand Pont and the vaulting of the Flon and Louve rivers.
-
 
 ![Dynamics of land plot persistence in Lausanne between 1883 and 2023.](images/persistence_1888_2020_light.svg){#fig-6}
 
 ![](images/center_renove.svg)
 
 ![Dynamics of parcel fusions in the city center between 1883 (top) and 2023 (bottom). ](images/center_2020.svg){#fig-7}
-
 
 From 1883 onwards, on the contrary, the layout of the downtown area changed significantly (@fig-6, @fig-7). Following the 1896 publication of the Schnetzler report on health conditions, most of the buildings, deemed dilapidated, and particularly the entire Rôtillon district, were demolished to be replaced by modern housing. The scale of this work can be seen in the impressive dynamics of plot mergers, through which old buildings were being replaced by larger constructions. Urban sprawl, on the other hand, is characterized by a dynamic of morcellation, which no longer impacts only the former vineyards, but in fact all agricultural land, which was sold in allotments to meet the high demand for city. The main exceptions are large infrastructures such as the Milan, Mon Repos, Valency and Bourget public parks, the Montoie cemetery, the Sébeillon train marshalling yard, the Blécherette airport, the CHUV hospital and the Rovéréaz agricultural estate. However, despite the time that separates both cadastres, several plots of land remain, such as the urban houses in Maupas.
 
@@ -90,7 +82,6 @@ To investigate the social structure of land ownership, we adopt a distinct appro
 The aggregated results of that step are described in @fig-8. The first thing that can be noted is the great disparity in the repartition of land ownership. The upper decile owned several hectares of land, which almost always included a landed estate and its dependencies, a vineyard, farmlands, and forests. Most of them simply define their occupation as "owners" (propriétaires); other occupations in the sample include "banker" and "marshal". Just after come also an "annuitant" (rentier) and a "district judge". This social stratum also typically employs one, two, or up to eight household servants. Later in the sample, we also encounter farmers, winegrowers, and forester. These typically own farmlands, along with a farm, usually comprising a stable, barn and hayloft. Finally, a third category of owners is composed of craftsmen and merchants. They usually own a house inside the city, sometimes accompanied by a courtyard, a garden, barn or other annexes. They sometimes employ one or two servants. Finally, the last category, by far the largest, is composed of non-owners. They were 86.4% of the adult population at the time. A large part of them were tenants, but also servants or boarders, who did not event live with a nuclear family of their own. In comparison, in 2022, the non-owners represent 61.3% of the households. Even if we exclude the fact that, in 1831, married women were generally denied shared ownership, we still reach an estimate of 72% of men who were non-owners. The Gini index of land ownership in Lausanne in 1831 would equal to 0.9, which indicates a particularly unequal distribution[^4].
 
 ![Representative samples of owners (n=60) from the 1831 cadastre, ranked by total area owned (blue, in hectares), along with the number of servants employed in their household (red). The occupation of each owner, extracted from the 1832 or 1835 population census, is indicated after their names, in the labels of the horizontal axis.](images/owners_chart.svg){#fig-8}
-
 
 ## General discussion and Conclusion
 
@@ -242,7 +233,6 @@ def calculate_angles(polygon: Polygon):
     turning_function = turning_function / (2 * np.pi)
 
     return turning_function
-
 
 def compare_polygons(polygon1: Polygon, polygon2: Polygon):
     '''Compare two polygons using their turning functions'''
@@ -475,3 +465,8 @@ cv2.imwrite('persistence_1888_2020_light.png', light_img) # Light mode
 [^2]: Here, we use the historical spelling of place names, as given in the sources.
 [^3]: idem.
 [^4]: In comparison, we can easily estimate the distribution of fortune in Switzerland in 2022 by interpolating the aggregated statistics of the Federal Statistical Office using cubic spline, which yields a value of 0.82, still corresponding to a less unequal distribution.
+
+## References
+
+::: {#refs}
+:::

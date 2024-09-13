@@ -12,19 +12,15 @@ author:
     orcid: 0000-0002-0905-2056
     email: johanna.schuepbach@unibas.ch
     affiliations:
-      - University of Basel
-     
+      - University of Basel  
 keywords:
   - Data Literacy
   - Academic Libraries
   - Digital Humanities
   - Experience Report
-
 abstract: |
   Libraries are finding their place in the field of data literacy and the opportunities as well as challenges of supporting students and researchers in the field of Digital Humanities. Key aspects of this development are research data management, repositories, libraries as suppliers of data sets, digitisation and more. Over the past few years, the library has undertaken steps to actively bring itself into teaching and facilitate the basics of working with digital sources. The talk shares three experience reports of such endeavours undertaken by subject librarians of the Digital Humanities Work Group (AG DH) at the University Library Basel (UB).
- 
 date: 07-26-2024
-
 ---
 
 ## Introduction
@@ -34,8 +30,8 @@ As of today, there have been three distinct formats in which the AG DH has intro
 
 ## Research Seminar/Semester Course
 
-To this end, the AG DH organised a semester course in close collaboration with Prof. Dr. phil. Erik Petry with whom they have created and then co-taught a curriculum introducing various DH tools and methods to be tried out using the UB's holdings on the topic of the first Zionist Congresses in Basel. The course was attended by MA students from the subjects of History, Jewish Studies and Digital Humanities. This research seminar was designed to provide an introduction to digital methods. 
-We have divided our course into different phases. The first introduction to work organisation, data management and data literacy was followed by sessions that combined the basics of the topic and introductions to digital methods. We focussed on different forms of sources: images, maps and text, with one session being dedicated to each type. This meant we could offer introductions to a broad spectrum of DH tools and methods such as digital storytelling and IIIF, geomapping and working with GIS, and transcription, text analysis and topic modelling. As a transition to the third phase of the project, we organised a session in which we presented various sources either from the University Library or from other institutions – the Basel-Stadt State Archives and the Jewish Museum Switzerland. The overall aim of the course was to enable students to apply their knowledge directly. To this end, they developed small projects in which they researched source material using digital methods and were able to visualise the results of their work. In the third phase of the course, students were given time to work on their own projects. In a block event at the end of the semester, the groups presented their projects and the status of their work. We were able to see for ourselves the students’ exciting approaches and good realisations. 
+To this end, the AG DH organised a semester course in close collaboration with Prof. Dr. phil. Erik Petry with whom they have created and then co-taught a curriculum introducing various DH tools and methods to be tried out using the UB's holdings on the topic of the first Zionist Congresses in Basel. The course was attended by MA students from the subjects of History, Jewish Studies and Digital Humanities. This research seminar was designed to provide an introduction to digital methods.
+We have divided our course into different phases. The first introduction to work organisation, data management and data literacy was followed by sessions that combined the basics of the topic and introductions to digital methods. We focussed on different forms of sources: images, maps and text, with one session being dedicated to each type. This meant we could offer introductions to a broad spectrum of DH tools and methods such as digital storytelling and IIIF, geomapping and working with GIS, and transcription, text analysis and topic modelling. As a transition to the third phase of the project, we organised a session in which we presented various sources either from the University Library or from other institutions – the Basel-Stadt State Archives and the Jewish Museum Switzerland. The overall aim of the course was to enable students to apply their knowledge directly. To this end, they developed small projects in which they researched source material using digital methods and were able to visualise the results of their work. In the third phase of the course, students were given time to work on their own projects. In a block event at the end of the semester, the groups presented their projects and the status of their work. We were able to see for ourselves the students’ exciting approaches and good realisations.
 The course was also a good experience for us subject librarians. Above all, we benefited from the broad knowledge in our team as well as the opportunity to gain new insights and experiences in select areas of DH. We particularly appreciated the good collaboration with Prof. Dr. Petry, who treated us as equal partners and experts. Despite the positive experience, this format is not sustainable: The effort involved in creating an entire semester course exceeds the resources available to regularly offer similar semester courses. Nevertheless, for this pilot project of the AG DH, the effort was justified because the course allowed us to make our holdings visible and they were researched.
 
 ## Data Literacy – a Session Within an Existing IDM Semester Course
@@ -60,7 +56,7 @@ While this session was also very dense, content wise, by hosting it at the UB an
 
 ## Conclusion
 
-These three different formats highlight some of the chances but also challenges the AG DH faces with regards to their work on with and for students and researchers, and the experiences and feedback from these different formats throw an important light on the role of the UB in the task of teaching skills in this field. 
+These three different formats highlight some of the chances but also challenges the AG DH faces with regards to their work on with and for students and researchers, and the experiences and feedback from these different formats throw an important light on the role of the UB in the task of teaching skills in this field.
 Generally it can be said that it needs an active involvement from and by the AG DH to get into the teaching spaces. Either through directly talking with professors/teaching staff and offering to collaborate with them in contributing to their planned classes or by getting involved in existing course formats like the IDM semester courses.
 It can thus be shown that libraries play a key role in imparting knowledge and skills as well as guardians of cultural property in their function as reliable and long-lasting institutions. We also want to highlight aspects that can still be improved. Above all, this concerns the awareness and attractiveness of such services as well as cooperation with researchers and teachers from all subject areas that work digitally, and history in particular.
 The questions that drive the AG DH are many and varied: What are the needs of researchers and students? What do you need from your university library? Where do you see the possibility for the library to support and raise awareness with working with historical documents?

@@ -52,10 +52,10 @@ This project is maintained by [@digihistch24](https://github.com/digihistch24). 
 
 ## Roadmap
 
-- [ ] Add all submissions to the Book of Abstracts
+- [x] Add all submissions to the Book of Abstracts
 - [ ] Add a Table of Contents to the Book of Abstracts
 - [ ] Add an introduction to the Book of Abstracts
-- [ ] Add styling to the Book of Abstracts
+- [x] Add styling to the Book of Abstracts
 
 ## Contributing
 

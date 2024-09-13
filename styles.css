@@ -95,3 +95,56 @@
 	scrollbar-color: #a5d7d2 white;
 	scrollbar-width: thin;
 }
+
+/* General print styles */
+@media print {
+	body {
+		padding: 0;
+	}
+	/* Hide navigation, search, and footer elements */
+	#quarto-header nav.navbar,
+	#quarto-code-tools-source,
+	#quarto-back-to-top {
+		display: none;
+	}
+
+	/* Set margins for A4 paper */
+	@page {
+		size: A4;
+		margin: 2cm;
+	}
+
+	/* Page breaks to ensure proper structure */
+	#title-block-header {
+		page-break-after: always;
+	}
+
+	figure {
+		page-break-inside: avoid;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		page-break-after: avoid;
+	}
+
+	/* Prevent orphans and widows */
+	p,
+	h1,
+	h2,
+	h3 {
+		widows: 2;
+		orphans: 2;
+	}
+
+	/* Ensure that background colors and images are printed */
+	body {
+		background-color: white;
+		/* Ensures clean background */
+		-webkit-print-color-adjust: exact;
+	}
+}

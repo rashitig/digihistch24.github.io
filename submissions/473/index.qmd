@@ -47,3 +47,8 @@ Currently, the interfaces developed are mostly internal tools that help us sharp
 
 **Team members**  
 Moritz Greiner-Petter, Mario Schulze, Sarine Waltenspül
+
+## References
+
+::: {#refs}
+:::

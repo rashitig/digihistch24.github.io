@@ -63,3 +63,8 @@ Existing and developing controlled vocabularies and gazetteers for locations [e.
 ## Conclusion
 
 This paper is a work-in-progress of a section of an ongoing dissertation project, presenting and discussing preliminary findings and continued research angles. There are further considerations to be made regarding the funding, available infrastructure and size of institutions, the priority-setting of collections, and institutional guidelines that determine if, why and how a collection is digitized. Marked changes can already be seen in the approach of institutions towards their online collections, in the direction of the tenets of the FAIR principles, making their objects more findable (DOIs, consistently maintained platforms), accessible (digitization, machine-readable metadata), interoperable (standards, nomenclature, vocabularies, IIIF) and even reusable (open licensing of images and metadata). This is also seen in how institutions are becoming increasingly sensitized to a broader audience engaging with their collections, with explicit use of the FAIR, and in some cases the CARE principles, in their online collection presentation and the steps taken to get there [@Carroll.2021].
+
+## References
+
+::: {#refs}
+:::

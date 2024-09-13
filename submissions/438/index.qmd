@@ -36,9 +36,9 @@ Classical visual analysis is limited in its ability to deal with video game imag
 
 While the framework can identify different game modes and the different functionalities those screens can encompass, more intricate details can escape an analysis. FAVR distinguishes between _tangible_, _intangible,_ and _negative space_, as well as _agents_, _in-game_ and _off-game elements_, and _interfaces_. Whereas the aspect of space concerns the overall composition of the screen, the second set of attributes circumscribes the construction of the image. Intangible space, for example, is concerned with information relevant to gameplay but without the direct agency of the player. Examples are life bars or a display of the current score. As another example, off-game denotes decorative background elements. Being of a time-based and interactive nature, some of the relevant information only unfolds as animation or through player interaction. Further, not all visual mediations of the games’ operation are represented as expected in software interfaces or classic visual compositions.
 
-![Fig. 1: Barbarian (Palace Software Inc, 1987, Amiga). Our character is attacking and blood spurting forth indicates our hit was successful.](images/barbarian_amiga_in-game.png)
+![Fig. 1: Barbarian (Palace Software Inc, 1987, Amiga). Our character is attacking and blood spurting forth indicates our hit was successful.](images/barbarian_amiga_in-game.png){width=100%}
 
-![Fig. 1: Barbarian (Palace Software Inc, 1987, DOS). A similar scene from the game's DOS version. Technical limitations, such as a limited color palette, can be a difficult factor to implement and port the same game on another system, raising questions about the tension between technology and design.](images/barbarian_dos_in-game.png)
+![Fig. 1: Barbarian (Palace Software Inc, 1987, DOS). A similar scene from the game's DOS version. Technical limitations, such as a limited color palette, can be a difficult factor to implement and port the same game on another system, raising questions about the tension between technology and design.](images/barbarian_dos_in-game.png){width=100%}
 
 A simple example could be blood spurting from an agent, which can be any gameplay-relevant character on screen. The blood holds information relevant to the player, indicating that the character on screen got hurt and may prompt a change in play behavior. Whereas a life bar can represent the player’s character health, such indications are usually absent for enemies. Some video games also play with the distinction between in- and off-game planes. In Final Fight (Capcom, 1989, Arcade), our character walks from left to right in a raging city and, on the way, fights numerous enemies entering the screen from left and right. The off-game plane, the background, is composed of run-down houses and alleyways. At one point during the game, those houses’ doors start to open and spawn enemies as well. This mixes up the formerly established convention of what visual information is relevant for gameplay in terms of interactive and decorative elements.
 
@@ -60,6 +60,11 @@ To be able to analyze large quantities of video game images towards their functi
 
 The _Framework for the Analysis of Visual Representation in Video Games_ is a welcomed vantage point for my research inquiry. After translating the framework into a linked open ontology, further work is needed to refine and expand it to encompass more subtle aspects of video game interfaces. Whereas the ontology developed so far works on a formal level, I have yet to research to what extent FAVR can be leveraged to applications of distant viewing of larger video game image corpora. Despite being implemented only in a limited form so far, the FAVR has proven to be a valuable tool in analyzing video game images towards their formal, discursive, and historical aspects.
 
+## References
+
+::: {#refs}
+:::
+
 ## Media List
 
 - Fig. 1-2: Screenshots from [Barbarian (1987) - MobyGames](https://www.mobygames.com/game/253/barbarian/), accessed July 09, 2024
@@ -76,9 +81,3 @@ The _Framework for the Analysis of Visual Representation in Video Games_ is a we
 [^5]: [favr-ontology/examples/ball-raider-1987-main-gameplay.json](https://github.com/thgie/favr-ontology/blob/main/examples/ball-raider-1987-main-gameplay.json), accessed July 09, 2024
 [^6]: [Convolutional neural network - Wikipedia](https://en.wikipedia.org/wiki/Convolutional_neural_network), accessed July 19, 2024
 [^7]: [Transformer (deep learning architecture) - Wikipedia](https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)), accessed July 19, 2024
-
-<style>
-
-  .figure-img { width: 100% !important; }
-
-</style>

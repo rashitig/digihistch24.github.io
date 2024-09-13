@@ -71,3 +71,8 @@ The overall goal of the project is to contribute to theory formation in digital 
 ## Acknowledgements {#acknowledgements .unnumbered}
 
 This research was supported by the Swiss National Science Foundation (SNSF) under grant no. 105211_204305.
+
+## References
+
+::: {#refs}
+:::

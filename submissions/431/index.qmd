@@ -39,10 +39,7 @@ Data skills in RAG can be divided into data collection, data entry and data anal
 The RAG started with a Microsoft Access database as a multi-user installation. In 2007, the switch was made to a client-server architecture, with MS Access continuing to serve as the front end and a Microsoft SQL server being added as the back end. This configuration had to be replaced in 2017 as regular software updates for the client and server had been neglected. As a result, it was no longer possible to update the MS Access client to the new architecture in good time and the server, which was running on the outdated MS SQL Server 2005 operating system, increasingly posed a security risk. In addition, publishing the data on the internet was only possible to a limited extent, as a fragmented export from the MS SQL server to a MySQL database with a PHP front end was required.
 In 2017, it was therefore decided to switch to a new system [@gubler2020].
 
-
-
 ![Fig. 1: Former frontend of the RAG project for data collection in MS Access 2003.](images/RAG Eingabemaske MS Access.jpg)
-
 
 Over one million data records on people, events, observations, locations, institutions, sources and literature were to be integrated in a database migration - a project that had previously been considered for years without success. After a evaluation of possible research environments, nodegoat was chosen [@vanBree_Kessels2013]. Nodegoat was a tip from a colleague who had attended a nodegoat workshop [@gubler2021]. With nodegoat, the RAG was able to implement the desired functions immediately:
 
@@ -52,11 +49,9 @@ Over one million data records on people, events, observations, locations, instit
 
 - Research data can be published directly from nodegoat without the need to export it to other software.
 
-
 From then on, the RAG research team worked with nodegoat in a live environment in which the data collected can be made available on the Internet immediately after a brief review. This facilitated the exchange with the research community and the interested public and significantly increased the visibility of the research project. The database migration to nodegoat meant that the biographical details of around 10,000 people could be published for the first time, which had previously not been possible due to difficulties in exporting data from the MS SQL server. On 1 January 2018, the research teams at the universities in Bern and Giessen then began collecting data in nodegoat, starting with extensive standardisation of the data. Thanks to a multi-change function in nodegoat, these standardisations could now be carried out efficiently by all users. Institutions where biographical events took place (e.g. universities, schools, cities, courts, churches, monasteries, courts) were newly introduced.
 
 ![Fig. 2: Frontend of the RAG project for data collection in nodegoat.](images/RAG nodegoat frontend for data collection.png)
-
 
 ## Methodology
 
@@ -71,7 +66,6 @@ How was this knowledge shared and passed on there? Spaces are considered both as
 
 ![Fig. 5: Network: Jurists with a doctorate from the University of Basel
 1460-1550., data: repac.ch, 07/2024.](images/Network of Basel jurists 1460-1550.png)
-
 
 ## Data literacy
 
@@ -125,7 +119,6 @@ How have the described data competences changed since the start of the project i
 
 - Collaboration: Web-based research environments have made collaboration much easier and more transparent. Teams are now able to follow each other's progress in real time, making the location of the work less important and communication smoother.
 
-
 ## Human and artificial intelligence
 
 Regarding data collection, entry, and analysis, artificial intelligence significantly impacts several, though not all, tasks within the RAG project.
@@ -134,12 +127,16 @@ Regarding data collection, entry, and analysis, artificial intelligence signific
 
 ![Fig. 7: Example settings for the algorithm for reconciling textual data in nodegoat.](images/nodegoat text reconciliation settings.png)
 
-
 - Data entry: In this area, human intelligence remains crucial. In-depth specialist knowledge of the historical field under investigation is essential, particularly concerning the history of universities and knowledge in the European Middle Ages and the Renaissance. Due to the heterogeneous and often fragmented nature of the sources, AI cannot yet replicate this expertise. The nuanced understanding required to interpret historical events and their semantic levels still necessitates human insight.
 
 - Data analysis: While AI support for data entry is still limited, it is much greater for data analysis. The epistemological framework has expanded considerably not only in digital prosopography and digital biographical research, but in history in general. Exploratory data analysis in particular will become a key methodology in history through the application of AI.
 
-##  Conclusion
+## Conclusion
 
 Since the 1990s, digital resources and tools have become increasingly prevalent in historical research. However, skills related to handling data remain underdeveloped in this field. This gap is not due to a lack of interest from students, but rather stems from a chronic lack of available training opportunities. This situation has gradually improved in recent years, with a growing number of courses and significant initiatives promoting digital history.
 Nevertheless, the responsibility now lies with academic chairs to take a more proactive role in integrating a sustainable range of digital courses into the general history curriculum. It is crucial that data literacy becomes a fundamental component of the training for history students, particularly considering their future career prospects and the increasingly complex task of evaluating information, including the critical use of artificial intelligence methods, tools and results. Especially with regard to the methodology of source criticism, which is now more important than ever in the evaluation of AI-generated results. In addition to formal teaching, more project-based learning should be offered to support students in acquiring digital skills.
+
+## References
+
+::: {#refs}
+:::

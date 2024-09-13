@@ -39,17 +39,20 @@ We began by manually creating a semi-formal qualitative model based on Piketty's
 ## LLMs and the automatic generation of historiographical diagrams: starting with a small article
 
 Our initial exploration will involve using Google’s LLM (Gemini 1.5 Pro) to convert a concise historical article by Piketty into a simplified causal diagram. This article will be A Historical Approach to Property, Inequality and Debt: Reflections on Capital in the 21st Century .
-Our previous experience with manually constructing a causal model based on Piketty's work highlighted the potential for automation using LLMs. LLMs have demonstrated remarkable capabilities in various domains, including understanding and generating code, translating languages, and even creating different creative text formats. We believe that LLMs can be trained to analyze historical texts, identify causal relationships, and automatically generate corresponding diagrammatic models. This could significantly enhance our ability to visualize and comprehend complex historical narratives, making implicit connections explicit and facilitating further exploration and analysis. 
+Our previous experience with manually constructing a causal model based on Piketty's work highlighted the potential for automation using LLMs. LLMs have demonstrated remarkable capabilities in various domains, including understanding and generating code, translating languages, and even creating different creative text formats. We believe that LLMs can be trained to analyze historical texts, identify causal relationships, and automatically generate corresponding diagrammatic models. This could significantly enhance our ability to visualize and comprehend complex historical narratives, making implicit connections explicit and facilitating further exploration and analysis.
 Historiographical theories explore the nature of historical inquiry, focusing on how historians represent and interpret the past. The use of diagrams has been considered as a means to enhance the communication and understanding of these complex theories.
-Diagrams have been utilized to represent causal narratives in historiography, providing a visual means to support historical understanding and communicate research findings effectively Diagrams have indeed been employed to represent historiographical theories, particularly to illustrate causal narratives and enhance the clarity of historical explanations. 
+Diagrams have been utilized to represent causal narratives in historiography, providing a visual means to support historical understanding and communicate research findings effectively Diagrams have indeed been employed to represent historiographical theories, particularly to illustrate causal narratives and enhance the clarity of historical explanations.
 On the other hand, Large Language Models (LLMs) have been increasingly integrated into various aspects of coding, from understanding and generating code to assisting in software development and customization. These models leverage vast amounts of data to provide support for a range of programming-related tasks. LLMs are proving to be versatile tools in the realm of coding, capable of understanding, generating, and customizing code across various programming languages and applications. They offer improvements in code-related tasks, user-friendly interactions, and support for low-resource languages. However, challenges such as bias in code generation and the need for human oversight in code review remain. Overall, LLMs are becoming an integral part of the software development process, offering both opportunities and areas for further research and development.
-
 
 ## Benefits and implications of that research
 
 The ability to automatically generate historiographical diagrams using LLMs offers several potential benefits:
--	Enhanced understanding of complex historical narratives: Visual representations can clarify intricate causal relationships and make historical analysis more accessible to a wider audience.
--	Identification of uncertainties and biases: LLMs can be trained to recognize subtle markers of uncertainty and bias within historical texts, encouraging critical engagement with historical interpretations.
--	Efficiency and scalability: Automating the process of diagram generation would save time and resources, allowing researchers and teachers to explore a wider range of historical topics and narratives.
 
+- Enhanced understanding of complex historical narratives: Visual representations can clarify intricate causal relationships and make historical analysis more accessible to a wider audience.
+- Identification of uncertainties and biases: LLMs can be trained to recognize subtle markers of uncertainty and bias within historical texts, encouraging critical engagement with historical interpretations.
+- Efficiency and scalability: Automating the process of diagram generation would save time and resources, allowing researchers and teachers to explore a wider range of historical topics and narratives.
 
+## References
+
+::: {#refs}
+:::

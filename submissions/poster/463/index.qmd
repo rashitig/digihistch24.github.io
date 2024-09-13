@@ -55,3 +55,8 @@ The central aspects of *transcriptiones* are accessibility, transparency, collab
 ## Conclusion
 
 *transcriptiones* provides the infrastructure for sharing and editing transcriptions, which it understands as research data. By doing so, it takes this type of data to the age of FAIR and open research data. As an open and collaborative platform that requires metadata during uploads to ensure proper attribution to the source and offers various search strategies, it ensures that transcriptions are findable. Accessibility is guaranteed through the free web application, which allows viewing transcriptions without registration as well as through the various export formats and the API. The latter is also an important cornerstone in providing transcriptions and metadata interoperably. Reusability is achieved through the plethora of metadata and the versioning of edited transcriptions and metadata [For further information about what the FAIR data principles are, see @wilkinsonFAIRGuidingPrinciples2016]. At the same time, *transcriptiones* prompts a reconsideration of the perception of transcriptions, encouraging contributors to open up their work to collaboration. All these parts play together towards understanding transcriptions as invaluable research data which is worth gathering, sharing, enhancing and documenting so that many historians can use them for downstream research.
+
+## References
+
+::: {#refs}
+:::

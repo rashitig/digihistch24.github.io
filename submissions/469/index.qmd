@@ -31,7 +31,7 @@ abstract: |
   Consequently, we demonstrated that self-help had consistently played a pivotal role in the Foundation’s development strategy since the Foundation’s inception. Furthermore, we scrutinised the roles ascribed by the Foundation to various actors in the development process. While the Foundation initially regarded the State as the primary actor in development, by the study period’s end, new participants such as private companies, communities, and individuals had become integral to this process. All the necessary data and scripts to reproduce this presentation can be found [here](https://github.com/ivanldf13/Master-thesis-).
 ---
 
-# Introduction
+## Introduction
 
 In our presentation, we will explore how Digital Humanities tools can be used to analyse the concept of development from a historiographical perspective. We will begin with a brief introduction to the topic, followed by an overview of our primary sources. The core of our presentation will focus on the methodology, where we will justify our choice of Structural Topic Modelling over other techniques like Hierarchical Clustering on Principal Components. Finally, we will present the results of our analysis and some remarks.
 
@@ -41,28 +41,23 @@ From the outset, governmental and non-governmental actors have been involved in 
 
 [^2]: From now on referred to as the Foundation
 
-# Primary sources
+## Primary sources
 
-We chose as primary sources the Foundation’s Annual Reports for two reasons. The first one is quantitative. The Annual Reports were published annually from 1915 to 2016, with the 1913 and 1914 reports issued jointly in 1915. With this extensive temporal coverage, the Foundation lends itself as an excellent observatory to study the evolution of the concept of development before and after the emergence of this concept. 
+We chose as primary sources the Foundation’s Annual Reports for two reasons. The first one is quantitative. The Annual Reports were published annually from 1915 to 2016, with the 1913 and 1914 reports issued jointly in 1915. With this extensive temporal coverage, the Foundation lends itself as an excellent observatory to study the evolution of the concept of development before and after the emergence of this concept.
 
-The second reason is qualitative. The main objective of annual reports is to communicate the activities of the Foundation, its financial operations, its priorities, its vision of the issues it faces, and a self-assessment of its own actions in the past and those to be adopted in the future. Although the structure of the annual reports has changed over time, the content has remained stable. The Foundation presents with them a summary of its activities but also presents a narrative that seeks to communicate the reasoning and justification behind the Foundation’s activities. In this sense, the annual reports are a showcase in which the Foundation displays, promotes and justifies its values. 
+The second reason is qualitative. The main objective of annual reports is to communicate the activities of the Foundation, its financial operations, its priorities, its vision of the issues it faces, and a self-assessment of its own actions in the past and those to be adopted in the future. Although the structure of the annual reports has changed over time, the content has remained stable. The Foundation presents with them a summary of its activities but also presents a narrative that seeks to communicate the reasoning and justification behind the Foundation’s activities. In this sense, the annual reports are a showcase in which the Foundation displays, promotes and justifies its values.
 
 Moreover, since these reports are public, they serve two functions. The first is purely functional. The reports inform the reader of the Foundation’s activities, its financial state, and other relevant details. The second function is symbolic. As Peter Goldmark Jr. (president of the Foundation from 1988 to 1997) noted, philanthropic foundations lack the three disciplines American life has: the test of the markets, the test of the elections and the press that analyses every move. [@rockefeller_foundation_annual_1998, pp. 3]  Therefore, the Foundation uses the annual reports as a form of self-evaluation, as a way to make itself accountable to the public and to offer a promotion and justification of the values that guide its activities. [@rockefeller_foundation_annual_1955, pp. 3]
 
-
-# Methodology and its twists and turns
+## Methodology and its twists and turns
 
 Confronted with the enormous amount of reports to be analysed and inspired by the working paper “Bankspeak” by Moretti and Pestre, [@moretti_bankspeak_2015] we undertook a quantitative analysis of the language used in this reports. Then, guided by the results of this analysis we interpreted the activities and institutions in which the Foundation was involved to reconstruct the evolution of its concept of development.
 
-
 We began our quantitative analysis by importing the PDF reports into R using the ‘tidy’ principle [@silge_tidytext_2016, pp.1]  and then performing the necessary text cleaning to reduce the size of the corpus. This increased the efficiency and effectiveness of the analysis.[@gurusamy_preprocessing_2014]  We then proceeded with the analysis itself.
 
-
-Initially, we employed basic text analysis techniques, namely counting the most frequent words per year and per period and using the TF-IDF. These techniques yielded promising results but were insufficient. Although the Foundation had the same objective throughout the period – “*to promote the well-being of mankind throughout the world*” – ,[@rockefeller_foundation_annual_1915, pp.7; @rockefeller_foundation_annual_1964, pp.3; @rockefeller_foundation_annual_2014, pp.3]  it used different words in absolute and relative terms to describe and justify its activities. 
-
+Initially, we employed basic text analysis techniques, namely counting the most frequent words per year and per period and using the TF-IDF. These techniques yielded promising results but were insufficient. Although the Foundation had the same objective throughout the period – “*to promote the well-being of mankind throughout the world*” – ,[@rockefeller_foundation_annual_1915, pp.7; @rockefeller_foundation_annual_1964, pp.3; @rockefeller_foundation_annual_2014, pp.3]  it used different words in absolute and relative terms to describe and justify its activities.
 
 However, in terms of visualisation, precision and displaying temporal dynamics, the capabilities of these two techniques are worse than those of Hierarchical Clustering on Principal Components (HCPC) and Structural Topic Modelling (STM). Moreover, the former techniques are unable to create clusters and topics, unlike the latter two.
-
 
 We continued with the HCPC, using only nouns, as this part of speech is the most suitable for analysing topics.[@suh_socialterm-extractor_2019, pp.2]  This technique confirmed the findings of the absolute frequency analysis and the TF-IDF. That is, there is structure in the use of words by the Foundation, as reflected both in the biplot created by the Correspondence Analysis (CA) necessary to perform the HCPC and in the final clusters. In the biplot in @fig-1.top25, the documents are organised in a temporal manner and, being together with each other, this indicates that they favour and avoid the same words regardless of the number of words in each document.[@becue-bertaut_textual_2019, pp.18-19]  Specifically, we observed that the Foundation used more frequently terms such as ‘infection’ or ‘hookworm’ and less frequently terms such as ‘resilience’ or ‘climate’ at the beginning of the period. Furthermore, when clustering after the CA and analysing the words contained in each cluster, it is observed that the Foundation, over time, diversifies the topics in which it engages, following a chronological trend. However, the visualisation of the clusters does not significantly enhance our understanding of the matter.
 
@@ -77,7 +72,7 @@ Next, we employed the STM using also only nouns. As a topic modelling technique,
 
 ![Table with the topical content](images/Topics_DHCH.png){#tbl-topics}
 
-Once we chose the number of topics, we obtained two lists of nouns associated with each topic, as shown in @tbl-topics. One list groups the nouns most likely to appear in each topic (Highest Prob list), while the other groups those that are frequent and exclusive (FREX list). These lists allow us to discover the central topics without our prior biases. We then named each topic using both lists and analysed the most representative reports for each topic. Therefore, this approach is a mixture of the methods suggested by Roberts et al.[-@roberts_structural_2014, pp.1068] and Grajzl & Murrell.[-@grajzl_toward_2019, pp.10] 
+Once we chose the number of topics, we obtained two lists of nouns associated with each topic, as shown in @tbl-topics. One list groups the nouns most likely to appear in each topic (Highest Prob list), while the other groups those that are frequent and exclusive (FREX list). These lists allow us to discover the central topics without our prior biases. We then named each topic using both lists and analysed the most representative reports for each topic. Therefore, this approach is a mixture of the methods suggested by Roberts et al.[-@roberts_structural_2014, pp.1068] and Grajzl & Murrell.[-@grajzl_toward_2019, pp.10]
 
 ![Topical prevalence of the topics correlated with time](images/plot.expected.topic.proportions.png){#fig-topical_prev}
 
@@ -87,10 +82,9 @@ Subsequently, we calculated the frequency of each topic in our corpus, as shown 
 
 Furthermore, by using STM with temporal metadata, we identified which topics the Foundation addressed in its annual reports and their statistical relation to time. This approach enabled us to observe how the frequency of particular topics changed over time. The distribution of these topics over time is illustrated in @fig-top_corr_time.
 
-
 Finally, using the Highest Prob and FREX lists @tbl-topics, and the most prominent reports of each topic, we examined the activities and institutions in which the Foundation was involved to reconstruct the development concept and the ideas underpinning it.
 
-# Results and conclusion
+## Results and conclusion
 
 This approach provided an innovative way to understand the main topics in which the Foundation was involved in its promotion of development. Despite having the ultimate goal “to promote well-being of mankind throughout the world”,  before the coining of the concept of development, the Foundation was already engaged in activities later considered development-related. These activities were strongly influenced by the political, epistemic, and economic context. Thus, we observed how the first layer of meaning of development – health – was gradually joined by economic, social, cultural, and finally, environmental layers.
 

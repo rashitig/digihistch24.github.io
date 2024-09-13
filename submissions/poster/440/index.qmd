@@ -43,7 +43,7 @@ The structure of this paper begins with an overview of the Schweizer Filmwochens
 
 The Schweizer Filmwochenschau was shown every week in the supporting programme of Swiss cinemas between 1940 and 1975 in the three national languages German, French and Italian. The programmes were commissioned by the Federal Council and featured news from the worlds of politics, culture, social and sport. In 2015, the Swiss Film Archive (*Cinémathèque suisse*)[^4], Memoriav[^5] and the SFA made the films available in the three languages as part of a joint project[^6]. The digitisation made it possible to preserve analogue films consisting of 35mm nitrate and acetate elements, positives and negatives in digital formats, as well as to provide a new access. The digitised film collection J2.143*#20 with 1,651 editions and a total running time of approximately 200 hours is part of the Federal Archives’ online access platform[^7]. Depending on their access authorisation, users can search for a variety of metatada and primary data according to their access authorisation or download the films directly via video streaming. Like all other formats, this film collection is described according to the International Standard Archival Description and indexed down to document level in the archive tree.
 
-Given the rapidly growing volume of analogue and digital born archival content[^8], in-depth exploration and indexing conducted solely by humans is hardly conceivable for the SFA. In this context, the SFA see automation and AI as resource-efficient ways of complementing traditional archiving work and offering innovative services to users. The new Archipanion Filmwochenschau platform[^9] extends the conventional search methods to include content-based discovery in the Schweizer Filmwochenschau. Archipanion is a service provided by 4eyes GmbH[^10] and is implemented on top of vitrivr[^11] [@sauter_general_2024]. 
+Given the rapidly growing volume of analogue and digital born archival content[^8], in-depth exploration and indexing conducted solely by humans is hardly conceivable for the SFA. In this context, the SFA see automation and AI as resource-efficient ways of complementing traditional archiving work and offering innovative services to users. The new Archipanion Filmwochenschau platform[^9] extends the conventional search methods to include content-based discovery in the Schweizer Filmwochenschau. Archipanion is a service provided by 4eyes GmbH[^10] and is implemented on top of vitrivr[^11] [@sauter_general_2024].
 
 ## The deployment of vitrivr and Archipanion
 
@@ -69,7 +69,7 @@ AI introduces both opportunities and challenges in research. Archipanion, specia
 
 Despite the transformative promise of predictive capabilities in AI, their effectiveness depends on fundamental factors such as the quality of training data, the accuracy of feature extraction methods, and the appropriateness of similarity metrics. Tools such as vitrivr have demonstrated progress in retrieval tasks, yet there remains a critical need for rigorous research to fully understand AI mechanisms and validate their practical applications. Human expertise remains essential in interpreting and contextualising AI-generated insights to ensure that query results are not only useful but also meaningful in advancing research agendas.
 
-The integration of AI into archival research presents both innovative methodologies and potential limitations, as highlighted by Jaillant and Aske [-@jaillant_are_2023]. Their research underscores the importance of critical engagement with AI tools, and advocates for interdisciplinary collaboration to effectively harness the capabilities of AI while navigating its inherent biases and limitations. They argue that while AI facilitates improved access to and analysis of archival materials, including textual and visual content, its use requires ongoing scrutiny and refinement to ensure scholarly integrity and accuracy. This perspective calls for an ongoing dialogue between AI practitioners, humanities scholars, and archival professionals to optimise AI technologies. 
+The integration of AI into archival research presents both innovative methodologies and potential limitations, as highlighted by Jaillant and Aske [-@jaillant_are_2023]. Their research underscores the importance of critical engagement with AI tools, and advocates for interdisciplinary collaboration to effectively harness the capabilities of AI while navigating its inherent biases and limitations. They argue that while AI facilitates improved access to and analysis of archival materials, including textual and visual content, its use requires ongoing scrutiny and refinement to ensure scholarly integrity and accuracy. This perspective calls for an ongoing dialogue between AI practitioners, humanities scholars, and archival professionals to optimise AI technologies.
 
 Collaborative efforts are essential not only to refine AI applications in archival settings, but also to maximise their societal benefits and relevance. It is crucial to address various risks associated with AI, such as potential biases in algorithmic decision-making, privacy and security issues, and challenges in maintaining the long-term accessibility and usability of digital archives.
 
@@ -77,16 +77,20 @@ Collaborative efforts are essential not only to refine AI applications in archiv
 
 Ultimately, the SFA remains committed to improving the accessibility and usability of its archival collections for both users and staff. The implementation of Archipanion represents a significant leap forward in improving access to the Filmwochenschau and other digital holdings. By harnessing AI technologies, the SFA not only facilitates the exploration and retrieval of historical materials, but also provides researchers with advanced tools for in-depth analysis and discovery. Looking ahead, the SFA continues to explore innovative ways to enhance search capabilities and ensure that its vast archival resources remain accessible and relevant in the digital age. Collaborative efforts are essential not only to refine AI applications in archival settings but also to amplify their societal benefits and relevance, thus preserving historical records and advancing scholarly research.
 
+[^1]: Swiss Federal Archives: <https://www.bar.admin.ch/>
+[^2]: Minutes of the Federal Council (1848-1972): <https://www.chgov.bar.admin.ch/>
+[^3]: tcc-metadata-anonymization: <https://github.com/SwissFederalArchives/tcc-metadata-anonymization>
+[^4]: National Film Archive: <https://www.cinematheque.ch/>
+[^5]: Memoriav: <https://memoriav.ch>
+[^6]: Filmbestand Schweizer Filmwochenschau (1940-1975): <https://memoriav.ch/de/projects/schweizer-filmwochenschau-1940-1975/>
+[^7]: Schweizer Filmwochenschau, 1940-1975 (Series): <https://www.recherche.bar.admin.ch/recherche/link/en/archive/unit/21677483>
+[^8]: Swiss Federal Archives’ facts and figures: <https://www.bar.admin.ch/bar/en/home/about-us/the-federal-archives/facts-and-figures.html>
+[^9]: Schweizerisches Bundesarchiv Filmwochenschauen: <https://wochenschau.archipanion.com/>
+[^10]: 4eyes: <https://www.4eyes.ch/>
+[^11]: vitrivr: <https://vitrivr.org/>
+[^12]: DeepL API: <https://developers.deepl.com/docs>
 
-[^1]: Swiss Federal Archives: <https://www.bar.admin.ch/> 
-[^2]: Minutes of the Federal Council (1848-1972): <https://www.chgov.bar.admin.ch/> 
-[^3]: tcc-metadata-anonymization: <https://github.com/SwissFederalArchives/tcc-metadata-anonymization> 
-[^4]: National Film Archive: <https://www.cinematheque.ch/> 
-[^5]: Memoriav: <https://memoriav.ch> 
-[^6]: Filmbestand Schweizer Filmwochenschau (1940-1975): <https://memoriav.ch/de/projects/schweizer-filmwochenschau-1940-1975/> 
-[^7]: Schweizer Filmwochenschau, 1940-1975 (Series): <https://www.recherche.bar.admin.ch/recherche/link/en/archive/unit/21677483> 
-[^8]: Swiss Federal Archives’ facts and figures: <https://www.bar.admin.ch/bar/en/home/about-us/the-federal-archives/facts-and-figures.html> 
-[^9]: Schweizerisches Bundesarchiv Filmwochenschauen: <https://wochenschau.archipanion.com/> 
-[^10]: 4eyes: <https://www.4eyes.ch/> 
-[^11]: vitrivr: <https://vitrivr.org/> 
-[^12]: DeepL API: <https://developers.deepl.com/docs> 
+## References
+
+::: {#refs}
+:::

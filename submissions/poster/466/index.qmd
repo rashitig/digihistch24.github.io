@@ -36,7 +36,6 @@ author:
     email: katrin.fuchs@unibas.ch
     affiliations:
       - University of Basel
-
 date: 08-28-2024
 ---
 

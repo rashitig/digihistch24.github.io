@@ -13,6 +13,7 @@ author:
     email: martin.stuber@unibe.ch
     affiliations:
       - University of Bern
+doi: 10.5281/zenodo.13768615
 keywords:
   - Biodiversity
   - Botanical networks
